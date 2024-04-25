@@ -1,4 +1,5 @@
-﻿namespace DBPROJ_VF
+﻿
+namespace DBPROJ_VF
 {
     partial class Login
     {

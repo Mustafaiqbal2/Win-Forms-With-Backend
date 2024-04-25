@@ -1,4 +1,5 @@
-﻿namespace DBPROJ_VF
+﻿
+namespace DBPROJ_VF
 {
     partial class Login
     {
@@ -218,7 +219,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = true;
-            this.bunifuButton1.Location = new System.Drawing.Point(600, 311);
+            this.bunifuButton1.Location = new System.Drawing.Point(608, 311);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;

@@ -5,6 +5,44 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBPROJ_VF", "DBPROJ_VF\DBPROJ_VF.csproj", "{1517BA57-D0C9-4A37-9357-FEEEEB7CD282}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95CFB7FC-BE41-4422-8917-AF964A886D66}"
+	ProjectSection(SolutionItems) = preProject
+		DBPROJ_VF\Bunifu\Bunifu.Licensing.dll = DBPROJ_VF\Bunifu\Bunifu.Licensing.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.1.5.3.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.1.5.3.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuButton.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuButton.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuCheckBox.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuCheckBox.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuColorTransition.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuColorTransition.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDatePicker.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDatePicker.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuFormDock.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuFormDock.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGauge.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGauge.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGradientPanel.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGroupBox.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuGroupBox.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuImageButton.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuImageButton.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPages.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPages.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPanel.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPanel.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPictureBox.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuPictureBox.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuRadioButton.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuRadioButton.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuRating.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuRating.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuScrollBar.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuScrollBar.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSeparator.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSeparator.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuShadowPanel.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuShapes.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuShapes.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSnackbar.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuSnackbar.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuToggleSwitch.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuToolTip.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuToolTip.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuTransition.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuTransition.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuUserControl.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.BunifuUserControl.dll
+		DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.Deprecated.dll = DBPROJ_VF\Bunifu\Bunifu.UI.WinForms.Deprecated.dll
+		DBPROJ_VF\Bunifu\README.md = DBPROJ_VF\Bunifu\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

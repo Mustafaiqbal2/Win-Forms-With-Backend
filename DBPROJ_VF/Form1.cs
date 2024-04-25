@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DBPROJ_VF
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

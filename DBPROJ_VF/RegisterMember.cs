@@ -98,7 +98,7 @@ namespace DBPROJ_VF
             else
             {
                 
-                SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
                 con.Open();
                 string queryA = "SELECT * FROM Gym_Member WHERE Uname = '" + ema + "'";
                 SqlCommand cmdA = new SqlCommand(queryA, con);

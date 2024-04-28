@@ -177,10 +177,11 @@
   </data>
   <data name="alergies.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAALYAAAAWCAYAAABt7GbqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB6SURBVGhD7duxDQJBEATBzeeSIDRcIEogENBJ73wI36qR
-        ylm73R2z7F7re3us9x2ubrd8ZD2zD8/1+cHV7ZaPrIVNh7BJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJ
-        wiZJ2CQJmyRhkyRskoRN0ilsr2FUnF7DzFqb+QPuCJbyEoLmZQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAALYAAAAiCAYAAADyByNRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACLSURBVHhe7dy7CcAwEAVBlabS1Ln8QWDcwjIDL7l44xuQ
+        tfee95ZZYPNk/Yb9HKBgnayFTYqwSRI2ScImSdgkCZskYZMkbJKETZKwSRI2ScImSdgkCZskYZMkbJKE
+        TZKwSRI2ScImSdgkCZskYZMkbJKETZKwSRI2ScImSdgk/cL2Rtgq+94IQ8sYF5mF2c1zb9bwAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
@@ -229,10 +230,11 @@
   </data>
   <data name="height.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAALYAAAAWCAYAAABt7GbqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB6SURBVGhD7duxDQJBEATBzeeSIDRcIEogENBJ73wI36qR
-        ylm73R2z7F7re3us9x2ubrd8ZD2zD8/1+cHV7ZaPrIVNh7BJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJ
-        wiZJ2CQJmyRhkyRskoRN0ilsr2FUnF7DzFqb+QPuCJbyEoLmZQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAALYAAAAiCAYAAADyByNRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACLSURBVHhe7dy7CcAwEAVBlabS1Ln8QWDcwjIDL7l44xuQ
+        tfee95ZZYPNk/Yb9HKBgnayFTYqwSRI2ScImSdgkCZskYZMkbJKETZKwSRI2ScImSdgkCZskYZMkbJKE
+        TZKwSRI2ScImSdgkCZskYZMkbJKETZKwSRI2ScImSdgk/cL2Rtgq+94IQ8sYF5mF2c1zb9bwAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">

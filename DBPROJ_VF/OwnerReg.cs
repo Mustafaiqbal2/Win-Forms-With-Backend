@@ -33,7 +33,7 @@ namespace DBPROJ_VF
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
                 con.Open();
                 string quearyA = "select * from GYM_OWNER where UName = '" + ema + "'";
                 SqlCommand cmdA = new SqlCommand(quearyA, con);
@@ -48,10 +48,10 @@ namespace DBPROJ_VF
                 }
                 string query = "insert into GYM_OWNER(UName,pWord,fName,lName,DOB)" +
                     " values(" +
-                    "'" + fna + "'," +
-                    "'" + lna + "'," +
                     "'" + ema + "'," +
                     "'" + pas + "'," +
+                    "'" + fna + "'," +
+                    "'" + lna + "'," +
                     "'" + dob1 + "'" +
                     ")";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -60,6 +60,11 @@ namespace DBPROJ_VF
                 con.Close();
                 MessageBox.Show("Registration Successful");
             }
+        }
+
+        private void pword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

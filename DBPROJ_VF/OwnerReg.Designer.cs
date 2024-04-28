@@ -56,10 +56,10 @@
             // 
             // dob
             // 
-            this.dob.BackColor = System.Drawing.Color.Transparent;
+            this.dob.BackColor = System.Drawing.Color.White;
             this.dob.BorderRadius = 1;
             this.dob.Color = System.Drawing.Color.Silver;
-            this.dob.CustomFormat = "YYYY-MM-DD";
+            this.dob.CustomFormat = "yyyy-dd-MM";
             this.dob.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dob.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dob.DisabledColor = System.Drawing.Color.Gray;
@@ -73,10 +73,10 @@
             this.dob.IconColor = System.Drawing.Color.Gray;
             this.dob.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dob.LeftTextMargin = 5;
-            this.dob.Location = new System.Drawing.Point(411, 315);
+            this.dob.Location = new System.Drawing.Point(472, 334);
             this.dob.MinimumSize = new System.Drawing.Size(4, 32);
             this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(215, 32);
+            this.dob.Size = new System.Drawing.Size(230, 32);
             this.dob.TabIndex = 0;
             // 
             // fname
@@ -107,7 +107,7 @@
             this.fname.IconRight = null;
             this.fname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.fname.Lines = new string[0];
-            this.fname.Location = new System.Drawing.Point(411, 228);
+            this.fname.Location = new System.Drawing.Point(472, 215);
             this.fname.MaxLength = 32767;
             this.fname.MinimumSize = new System.Drawing.Size(1, 1);
             this.fname.Modified = false;
@@ -143,7 +143,7 @@
             this.fname.SelectionLength = 0;
             this.fname.SelectionStart = 0;
             this.fname.ShortcutsEnabled = true;
-            this.fname.Size = new System.Drawing.Size(230, 29);
+            this.fname.Size = new System.Drawing.Size(230, 38);
             this.fname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.fname.TabIndex = 1;
             this.fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -182,7 +182,7 @@
             this.lname.IconRight = null;
             this.lname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.lname.Lines = new string[0];
-            this.lname.Location = new System.Drawing.Point(411, 263);
+            this.lname.Location = new System.Drawing.Point(472, 275);
             this.lname.MaxLength = 32767;
             this.lname.MinimumSize = new System.Drawing.Size(1, 1);
             this.lname.Modified = false;
@@ -218,7 +218,7 @@
             this.lname.SelectionLength = 0;
             this.lname.SelectionStart = 0;
             this.lname.ShortcutsEnabled = true;
-            this.lname.Size = new System.Drawing.Size(230, 29);
+            this.lname.Size = new System.Drawing.Size(230, 36);
             this.lname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.lname.TabIndex = 2;
             this.lname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -257,7 +257,7 @@
             this.email.IconRight = null;
             this.email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.email.Lines = new string[0];
-            this.email.Location = new System.Drawing.Point(411, 366);
+            this.email.Location = new System.Drawing.Point(472, 391);
             this.email.MaxLength = 32767;
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Modified = false;
@@ -293,7 +293,7 @@
             this.email.SelectionLength = 0;
             this.email.SelectionStart = 0;
             this.email.ShortcutsEnabled = true;
-            this.email.Size = new System.Drawing.Size(230, 29);
+            this.email.Size = new System.Drawing.Size(230, 39);
             this.email.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.email.TabIndex = 3;
             this.email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -332,7 +332,7 @@
             this.pword.IconRight = null;
             this.pword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.pword.Lines = new string[0];
-            this.pword.Location = new System.Drawing.Point(411, 417);
+            this.pword.Location = new System.Drawing.Point(472, 445);
             this.pword.MaxLength = 32767;
             this.pword.MinimumSize = new System.Drawing.Size(1, 1);
             this.pword.Modified = false;
@@ -368,7 +368,7 @@
             this.pword.SelectionLength = 0;
             this.pword.SelectionStart = 0;
             this.pword.ShortcutsEnabled = true;
-            this.pword.Size = new System.Drawing.Size(230, 29);
+            this.pword.Size = new System.Drawing.Size(230, 39);
             this.pword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.pword.TabIndex = 4;
             this.pword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -378,6 +378,7 @@
             this.pword.TextPlaceholder = "Enter text";
             this.pword.UseSystemPasswordChar = false;
             this.pword.WordWrap = true;
+            this.pword.TextChanged += new System.EventHandler(this.pword_TextChanged);
             // 
             // bunifuButton1
             // 
@@ -426,7 +427,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(439, 480);
+            this.bunifuButton1.Location = new System.Drawing.Point(500, 499);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -474,7 +475,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DBPROJ_VF.Properties.Resources.Trainer__3_;
-            this.ClientSize = new System.Drawing.Size(930, 505);
+            this.ClientSize = new System.Drawing.Size(963, 545);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.pword);
             this.Controls.Add(this.email);

@@ -133,38 +133,38 @@
   </data>
   <data name="fname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAdCAYAAAC+PxBhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACUSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
+        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAmCAYAAADQgucPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACuSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
         aZLN35hZdMdxvq7r+gB7rRbvLGfWMfMANvu1eE+Y0CBMCBImBAkTgoQJQcKEIGFCkDAhSJgQJEwIEiYE
-        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIegvzPN8vtcB7LVavLM0s9ZmvnJ/cRYo
-        1xOXAAAAAElFTkSuQmCC
+        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIUiYECRMCBImBAkTgoQJQcKEIGFCkDAh
+        SJgQ9BfmeT7f6wD2Wi3eWZpZazNfPCyPRgZ7DFgAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="lname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAdCAYAAAC+PxBhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACUSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
+        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAkCAYAAACdSkYEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACpSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
         aZLN35hZdMdxvq7r+gB7rRbvLGfWMfMANvu1eE+Y0CBMCBImBAkTgoQJQcKEIGFCkDAhSJgQJEwIEiYE
-        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIegvzPN8vtcB7LVavLM0s9ZmvnJ/cRYo
-        1xOXAAAAAElFTkSuQmCC
+        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIUiYECRMCBImBAkTgoQJQcKEIGFC0F+Y
+        5/l8rwPYa7V4Z2lmrc18AVkz3eFqHRmgAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="email.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAdCAYAAAC+PxBhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACUSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
+        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAnCAYAAAAb3jSqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACxSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
         aZLN35hZdMdxvq7r+gB7rRbvLGfWMfMANvu1eE+Y0CBMCBImBAkTgoQJQcKEIGFCkDAhSJgQJEwIEiYE
-        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIegvzPN8vtcB7LVavLM0s9ZmvnJ/cRYo
-        1xOXAAAAAElFTkSuQmCC
+        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIUiYECRMCBImBAkTgoQJQcKEIGFCkDAh
+        SJgQJEwI+gvzPJ/vdQB7rRbvLM2stZkvyHfn8TZOzU8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAdCAYAAAC+PxBhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACUSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
+        iVBORw0KGgoAAAANSUhEUgAAAOYAAAAnCAYAAAAb3jSqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACxSURBVHhe7dOxDcJAFETBXzpNObOQ+6AMCgCdcEIF94JZ
         aZLN35hZdMdxvq7r+gB7rRbvLGfWMfMANvu1eE+Y0CBMCBImBAkTgoQJQcKEIGFCkDAhSJgQJEwIEiYE
-        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIegvzPN8vtcB7LVavLM0s9ZmvnJ/cRYo
-        1xOXAAAAAElFTkSuQmCC
+        CROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIUiYECRMCBImBAkTgoQJQcKEIGFCkDAh
+        SJgQJEwI+gvzPJ/vdQB7rRbvLM2stZkvyHfn8TZOzU8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

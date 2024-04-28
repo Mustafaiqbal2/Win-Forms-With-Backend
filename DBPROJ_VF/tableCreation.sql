@@ -10,6 +10,7 @@
 	gender VARCHAR(50), 
 	subscription VARCHAR(50) NOT NULL, 
 	trnUName VARCHAR(50),
+	height INT,
 	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) ON DELETE CASCADE
 	);
 
@@ -26,16 +27,17 @@ CREATE TABLE Trainer(
 	fName VARCHAR(50) NOT NULL,
 	lName VARCHAR(50) NOT NULL, 
 	gender VARCHAR(50),
-	DOB DATE, wieght INT, 
+	DOB DATE, 
 	exp_lvl INT DEFAULT 0,
 	rating FLOAT(2),
 	startDate DATE
 	);
 
 CREATE TABLE TRN_PAST_GYM(
-	UName VARCHAR(50) PRIMARY KEY ,
+	UName VARCHAR(50),
 	gymName VARCHAR(50),
 	FOREIGN KEY (UName) REFERENCES Trainer(UName) ON DELETE CASCADE
+	PRIMARY KEY (UName, gymName)
 	);
 
 CREATE TABLE Training_Session(
@@ -118,7 +120,8 @@ CREATE TABLE ExerciseInDay(
 	dayFK VARCHAR(50),
 	planFK INT,
 	FOREIGN KEY (exerciseName) REFERENCES exercise(name) ON DELETE CASCADE,
-	FOREIGN KEY (planFK , dayFK) REFERENCES workout_day(planID,wDay) ON DELETE CASCADE
+	FOREIGN KEY (planFK , dayFK) REFERENCES workout_day(planID,wDay) ON DELETE CASCADE,
+	PRIMARY KEY (exerciseName, dayFK, planFK)
 	);
 CREATE TABLE Meal(
 	name VARCHAR(50) PRIMARY KEY NOT NULL,
@@ -149,7 +152,8 @@ CREATE TABLE MealInDay(
 	dayFK VARCHAR(50),
 	planFK INT,
 	FOREIGN KEY (mealName) REFERENCES Meal(name) ON DELETE CASCADE,
-	FOREIGN KEY (planFK,dayFK) REFERENCES meal_day(planID,mDay) ON DELETE CASCADE
+	FOREIGN KEY (planFK,dayFK) REFERENCES meal_day(planID,mDay) ON DELETE CASCADE,
+	PRIMARY KEY (mealName, dayFK, planFK)
 	);
 CREATE TABLE GYM_Attendance(
 	id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,

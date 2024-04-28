@@ -238,5 +238,8 @@
   <ItemGroup>
     <None Include="Resources\Trainer %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\tableCreation.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

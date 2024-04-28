@@ -21,5 +21,10 @@ namespace DBPROJ_VF
         {
 
         }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -166,17 +166,17 @@
   <data name="bunifuTextBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALYAAAAWCAYAAABt7GbqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB6SURBVGhD7duxDQJBEATBzeeSIDRcIEogENBJ73wI36qR
-        ylm73R2z7F7re3us9x2ubrd8ZD2zD8/1+cHV7ZaPrIVNh7BJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJ
-        wiZJ2CQJmyRhkyRskoRN0ilsr2FUnF7DzFqb+QPuCJbyEoLmZQAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVGhD7duxDYAwEARBl0ZnuHPAiQUlsJqTJvl40x9m
+        4Z3HY0LA0/LeOswL/m+1vCdsKoRNkrBJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJwiZJ2CQJmyRhkyRs
+        kr5hew2j4v0aZlbaGDfVaEQdBu7XDQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuTextBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALYAAAAWCAYAAABt7GbqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB6SURBVGhD7duxDQJBEATBzeeSIDRcIEogENBJ73wI36qR
-        ylm73R2z7F7re3us9x2ubrd8ZD2zD8/1+cHV7ZaPrIVNh7BJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJ
-        wiZJ2CQJmyRhkyRskoRN0ilsr2FUnF7DzFqb+QPuCJbyEoLmZQAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB3SURBVGhD7duxDYNQEAXB6wLRjTv6lEDntiwTmBJYzZMm
+        uXjTG7Pstm299n2d8HTflq+sZ37H4w3Pt84ra2FTImyShE2SsEkSNknCJknYJAmbJGGTJGyShE2SsEkS
+        NknCJknYJAmbJGGT9Be21zAqbq9hZq3NfABiAiJLmpZlKAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
@@ -234,9 +234,9 @@
   <data name="bunifuTextBox6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALYAAAAWCAYAAABt7GbqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAB6SURBVGhD7duxDQJBEATBzeeSIDRcIEogENBJ73wI36qR
-        ylm73R2z7F7re3us9x2ubrd8ZD2zD8/1+cHV7ZaPrIVNh7BJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJ
-        wiZJ2CQJmyRhkyRskoRN0ilsr2FUnF7DzFqb+QPuCJbyEoLmZQAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVGhD7duxDYAwEARBl0ZnuHPAiQUlsJqTJvl40x9m
+        4Z3HY0LA0/LeOswL/m+1vCdsKoRNkrBJEjZJwiZJ2CQJmyRhkyRskoRNkrBJEjZJwiZJ2CQJmyRhkyRs
+        kr5hew2j4v0aZlbaGDfVaEQdBu7XDQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">

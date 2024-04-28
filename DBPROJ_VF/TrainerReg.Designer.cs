@@ -355,7 +355,7 @@
             // 
             // bunifuDatePicker1
             // 
-            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bunifuDatePicker1.BorderRadius = 1;
             this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
             this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
@@ -379,7 +379,7 @@
             // 
             // bunifuDatePicker2
             // 
-            this.bunifuDatePicker2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bunifuDatePicker2.BorderRadius = 1;
             this.bunifuDatePicker2.Color = System.Drawing.Color.Silver;
             this.bunifuDatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;

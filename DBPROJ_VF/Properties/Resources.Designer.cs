@@ -59,5 +59,15 @@ namespace DBPROJ_VF.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap freepik_export_20240428105435LfBw {
+            get {
+                object obj = ResourceManager.GetObject("freepik-export-20240428105435LfBw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

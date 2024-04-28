@@ -21,5 +21,15 @@ namespace DBPROJ_VF
         {
 
         }
+
+        private void Label_uname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

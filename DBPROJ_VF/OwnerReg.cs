@@ -61,5 +61,10 @@ namespace DBPROJ_VF
                 MessageBox.Show("Registration Successful");
             }
         }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

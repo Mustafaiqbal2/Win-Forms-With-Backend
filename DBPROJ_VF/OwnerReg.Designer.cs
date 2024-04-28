@@ -56,6 +56,7 @@
             // 
             // dob
             // 
+<<<<<<< HEAD
             this.dob.BackColor = System.Drawing.Color.Transparent;
             this.dob.BorderRadius = 1;
             this.dob.Color = System.Drawing.Color.Silver;
@@ -78,6 +79,30 @@
             this.dob.Name = "dob";
             this.dob.Size = new System.Drawing.Size(215, 32);
             this.dob.TabIndex = 0;
+=======
+            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BorderRadius = 1;
+            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.DisplayWeekNumbers = false;
+            this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bunifuDatePicker1.FillDatePicker = false;
+            this.bunifuDatePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
+            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker1.LeftTextMargin = 5;
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(291, 267);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
+            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(215, 32);
+            this.bunifuDatePicker1.TabIndex = 0;
+            this.bunifuDatePicker1.Value = new System.DateTime(2024, 4, 28, 20, 49, 0, 0);
+>>>>>>> 18f5edf9220a928100df90e14f1658d11d2e69ef
             // 
             // fname
             // 
@@ -132,6 +157,7 @@
             stateProperties4.FillColor = System.Drawing.Color.Navy;
             stateProperties4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+<<<<<<< HEAD
             this.fname.OnIdleState = stateProperties4;
             this.fname.Padding = new System.Windows.Forms.Padding(3);
             this.fname.PasswordChar = '\0';
@@ -153,6 +179,30 @@
             this.fname.TextPlaceholder = "Enter text";
             this.fname.UseSystemPasswordChar = false;
             this.fname.WordWrap = true;
+=======
+            this.bunifuTextBox1.OnIdleState = stateProperties4;
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox1.PasswordChar = '\0';
+            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.bunifuTextBox1.PlaceholderText = "Enter text";
+            this.bunifuTextBox1.ReadOnly = false;
+            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBox1.SelectedText = "";
+            this.bunifuTextBox1.SelectionLength = 0;
+            this.bunifuTextBox1.SelectionStart = 0;
+            this.bunifuTextBox1.ShortcutsEnabled = true;
+            this.bunifuTextBox1.Size = new System.Drawing.Size(230, 29);
+            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox1.TabIndex = 1;
+            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox1.TextMarginBottom = 0;
+            this.bunifuTextBox1.TextMarginLeft = 3;
+            this.bunifuTextBox1.TextMarginTop = 0;
+            this.bunifuTextBox1.TextPlaceholder = "Enter text";
+            this.bunifuTextBox1.UseSystemPasswordChar = false;
+            this.bunifuTextBox1.WordWrap = true;
+            this.bunifuTextBox1.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
+>>>>>>> 18f5edf9220a928100df90e14f1658d11d2e69ef
             // 
             // lname
             // 

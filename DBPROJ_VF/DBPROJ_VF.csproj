@@ -166,6 +166,12 @@
     <Compile Include="RegisterMember.Designer.cs">
       <DependentUpon>RegisterMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainerReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerReg.Designer.cs">
+      <DependentUpon>TrainerReg.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +189,9 @@
     <EmbeddedResource Include="RegisterMember.resx">
       <DependentUpon>RegisterMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrainerReg.resx">
+      <DependentUpon>TrainerReg.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -198,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\freepik-export-20240428105435LfBw.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trainer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,5 +21,15 @@ namespace DBPROJ_VF
         {
 
         }
+
+        private void ExerciseNameInputTuesday_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExerciseNameInputMonday_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

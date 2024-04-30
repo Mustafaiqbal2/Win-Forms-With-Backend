@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutPlan));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ScheduleSessionDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.PlanNameInput = new System.Windows.Forms.TextBox();
+            this.MemberSelectDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label3 = new System.Windows.Forms.Label();
             this.ExerciseNameInputMonday = new System.Windows.Forms.TextBox();
             this.MachineNameInputMonday = new System.Windows.Forms.TextBox();
@@ -57,6 +57,18 @@
             this.SetsInputWednesday = new System.Windows.Forms.NumericUpDown();
             this.RepsInputwednesday = new System.Windows.Forms.NumericUpDown();
             this.RestIntervalInputWednesday = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ExerciseNameInputThursday = new System.Windows.Forms.TextBox();
+            this.MachineNameInputThursday = new System.Windows.Forms.TextBox();
+            this.SetsInputThursday = new System.Windows.Forms.NumericUpDown();
+            this.RepsInputThursday = new System.Windows.Forms.NumericUpDown();
+            this.RestIntervalInputThursday = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ExerciseNameInputFriday = new System.Windows.Forms.TextBox();
+            this.MachineNameInputFriday = new System.Windows.Forms.TextBox();
+            this.SetsInputFriday = new System.Windows.Forms.NumericUpDown();
+            this.RepsInputFriday = new System.Windows.Forms.NumericUpDown();
+            this.RestIntervalInputFriday = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputMonday)).BeginInit();
@@ -66,12 +78,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputWednesday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputwednesday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputWednesday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SetsInputThursday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepsInputThursday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputThursday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SetsInputFriday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepsInputFriday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputFriday)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(274, 29);
@@ -82,61 +102,63 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(330, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Plan Name";
             // 
-            // textBox1
+            // PlanNameInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(456, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
-            this.textBox1.TabIndex = 2;
+            this.PlanNameInput.Location = new System.Drawing.Point(456, 52);
+            this.PlanNameInput.Name = "PlanNameInput";
+            this.PlanNameInput.Size = new System.Drawing.Size(197, 22);
+            this.PlanNameInput.TabIndex = 2;
             // 
-            // ScheduleSessionDropDown
+            // MemberSelectDropDown
             // 
-            this.ScheduleSessionDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.ScheduleSessionDropDown.BackgroundColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.BorderColor = System.Drawing.Color.Silver;
-            this.ScheduleSessionDropDown.BorderRadius = 1;
-            this.ScheduleSessionDropDown.Color = System.Drawing.Color.Silver;
-            this.ScheduleSessionDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.ScheduleSessionDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ScheduleSessionDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ScheduleSessionDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ScheduleSessionDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ScheduleSessionDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ScheduleSessionDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ScheduleSessionDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.ScheduleSessionDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ScheduleSessionDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ScheduleSessionDropDown.FillDropDown = true;
-            this.ScheduleSessionDropDown.FillIndicator = false;
-            this.ScheduleSessionDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScheduleSessionDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ScheduleSessionDropDown.ForeColor = System.Drawing.Color.Black;
-            this.ScheduleSessionDropDown.FormattingEnabled = true;
-            this.ScheduleSessionDropDown.Icon = null;
-            this.ScheduleSessionDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ScheduleSessionDropDown.IndicatorColor = System.Drawing.Color.Gray;
-            this.ScheduleSessionDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ScheduleSessionDropDown.ItemBackColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemBorderColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemForeColor = System.Drawing.Color.Black;
-            this.ScheduleSessionDropDown.ItemHeight = 26;
-            this.ScheduleSessionDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ScheduleSessionDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemTopMargin = 3;
-            this.ScheduleSessionDropDown.Location = new System.Drawing.Point(693, 43);
-            this.ScheduleSessionDropDown.Name = "ScheduleSessionDropDown";
-            this.ScheduleSessionDropDown.Size = new System.Drawing.Size(192, 32);
-            this.ScheduleSessionDropDown.TabIndex = 7;
-            this.ScheduleSessionDropDown.Text = "Select Member";
-            this.ScheduleSessionDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ScheduleSessionDropDown.TextLeftMargin = 5;
+            this.MemberSelectDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.MemberSelectDropDown.BackgroundColor = System.Drawing.Color.White;
+            this.MemberSelectDropDown.BorderColor = System.Drawing.Color.Silver;
+            this.MemberSelectDropDown.BorderRadius = 1;
+            this.MemberSelectDropDown.Color = System.Drawing.Color.Silver;
+            this.MemberSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.MemberSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.MemberSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.MemberSelectDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.MemberSelectDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MemberSelectDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.MemberSelectDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MemberSelectDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.MemberSelectDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MemberSelectDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.MemberSelectDropDown.FillDropDown = true;
+            this.MemberSelectDropDown.FillIndicator = false;
+            this.MemberSelectDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemberSelectDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.MemberSelectDropDown.ForeColor = System.Drawing.Color.Black;
+            this.MemberSelectDropDown.FormattingEnabled = true;
+            this.MemberSelectDropDown.Icon = null;
+            this.MemberSelectDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.MemberSelectDropDown.IndicatorColor = System.Drawing.Color.Gray;
+            this.MemberSelectDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.MemberSelectDropDown.ItemBackColor = System.Drawing.Color.White;
+            this.MemberSelectDropDown.ItemBorderColor = System.Drawing.Color.White;
+            this.MemberSelectDropDown.ItemForeColor = System.Drawing.Color.Black;
+            this.MemberSelectDropDown.ItemHeight = 26;
+            this.MemberSelectDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.MemberSelectDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.MemberSelectDropDown.ItemTopMargin = 3;
+            this.MemberSelectDropDown.Location = new System.Drawing.Point(693, 43);
+            this.MemberSelectDropDown.Name = "MemberSelectDropDown";
+            this.MemberSelectDropDown.Size = new System.Drawing.Size(192, 32);
+            this.MemberSelectDropDown.TabIndex = 7;
+            this.MemberSelectDropDown.Text = "Select Member";
+            this.MemberSelectDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.MemberSelectDropDown.TextLeftMargin = 5;
             // 
             // label3
             // 
@@ -154,7 +176,7 @@
             this.ExerciseNameInputMonday.Name = "ExerciseNameInputMonday";
             this.ExerciseNameInputMonday.Size = new System.Drawing.Size(138, 22);
             this.ExerciseNameInputMonday.TabIndex = 9;
-            this.ExerciseNameInputMonday.Text = "Exercise Name";
+            this.ExerciseNameInputMonday.TextChanged += new System.EventHandler(this.ExerciseNameInputMonday_TextChanged);
             // 
             // MachineNameInputMonday
             // 
@@ -162,7 +184,6 @@
             this.MachineNameInputMonday.Name = "MachineNameInputMonday";
             this.MachineNameInputMonday.Size = new System.Drawing.Size(139, 22);
             this.MachineNameInputMonday.TabIndex = 10;
-            this.MachineNameInputMonday.Text = "Machine";
             // 
             // SetsInputMonday
             // 
@@ -188,60 +209,72 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(83, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 20);
+            this.label4.Size = new System.Drawing.Size(45, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Day";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(201, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.Size = new System.Drawing.Size(138, 22);
             this.label5.TabIndex = 15;
             this.label5.Text = "ExerciseName";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(395, 110);
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(386, 99);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.Size = new System.Drawing.Size(141, 44);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Machine Name";
+            this.label6.Text = "Machine Name\r\n(blank if none)\r\n";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(588, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 20);
+            this.label7.Size = new System.Drawing.Size(50, 22);
             this.label7.TabIndex = 17;
             this.label7.Text = "Sets";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(689, 110);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.Size = new System.Drawing.Size(56, 22);
             this.label8.TabIndex = 18;
             this.label8.Text = "Reps";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(805, 110);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 20);
+            this.label9.Size = new System.Drawing.Size(123, 22);
             this.label9.TabIndex = 19;
             this.label9.Text = "Rest Interval";
             // 
@@ -261,7 +294,7 @@
             this.ExerciseNameInputTuesday.Name = "ExerciseNameInputTuesday";
             this.ExerciseNameInputTuesday.Size = new System.Drawing.Size(138, 22);
             this.ExerciseNameInputTuesday.TabIndex = 21;
-            this.ExerciseNameInputTuesday.Text = "Exercise Name";
+            this.ExerciseNameInputTuesday.TextChanged += new System.EventHandler(this.ExerciseNameInputTuesday_TextChanged);
             // 
             // MachineNameInputTuesday
             // 
@@ -269,7 +302,6 @@
             this.MachineNameInputTuesday.Name = "MachineNameInputTuesday";
             this.MachineNameInputTuesday.Size = new System.Drawing.Size(139, 22);
             this.MachineNameInputTuesday.TabIndex = 22;
-            this.MachineNameInputTuesday.Text = "Machine";
             // 
             // SetsInputTuesday
             // 
@@ -308,7 +340,6 @@
             this.ExerciseNameInputWednesday.Name = "ExerciseNameInputWednesday";
             this.ExerciseNameInputWednesday.Size = new System.Drawing.Size(138, 22);
             this.ExerciseNameInputWednesday.TabIndex = 27;
-            this.ExerciseNameInputWednesday.Text = "Exercise Name";
             // 
             // MachineNameInputWednesday
             // 
@@ -316,7 +347,6 @@
             this.MachineNameInputWednesday.Name = "MachineNameInputWednesday";
             this.MachineNameInputWednesday.Size = new System.Drawing.Size(139, 22);
             this.MachineNameInputWednesday.TabIndex = 28;
-            this.MachineNameInputWednesday.Text = "Machine";
             // 
             // SetsInputWednesday
             // 
@@ -339,6 +369,96 @@
             this.RestIntervalInputWednesday.Size = new System.Drawing.Size(61, 22);
             this.RestIntervalInputWednesday.TabIndex = 31;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(83, 319);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Thursday";
+            // 
+            // ExerciseNameInputThursday
+            // 
+            this.ExerciseNameInputThursday.Location = new System.Drawing.Point(205, 317);
+            this.ExerciseNameInputThursday.Name = "ExerciseNameInputThursday";
+            this.ExerciseNameInputThursday.Size = new System.Drawing.Size(138, 22);
+            this.ExerciseNameInputThursday.TabIndex = 33;
+            // 
+            // MachineNameInputThursday
+            // 
+            this.MachineNameInputThursday.Location = new System.Drawing.Point(390, 317);
+            this.MachineNameInputThursday.Name = "MachineNameInputThursday";
+            this.MachineNameInputThursday.Size = new System.Drawing.Size(139, 22);
+            this.MachineNameInputThursday.TabIndex = 34;
+            // 
+            // SetsInputThursday
+            // 
+            this.SetsInputThursday.Location = new System.Drawing.Point(592, 317);
+            this.SetsInputThursday.Name = "SetsInputThursday";
+            this.SetsInputThursday.Size = new System.Drawing.Size(61, 22);
+            this.SetsInputThursday.TabIndex = 35;
+            // 
+            // RepsInputThursday
+            // 
+            this.RepsInputThursday.Location = new System.Drawing.Point(693, 317);
+            this.RepsInputThursday.Name = "RepsInputThursday";
+            this.RepsInputThursday.Size = new System.Drawing.Size(61, 22);
+            this.RepsInputThursday.TabIndex = 36;
+            // 
+            // RestIntervalInputThursday
+            // 
+            this.RestIntervalInputThursday.Location = new System.Drawing.Point(809, 317);
+            this.RestIntervalInputThursday.Name = "RestIntervalInputThursday";
+            this.RestIntervalInputThursday.Size = new System.Drawing.Size(61, 22);
+            this.RestIntervalInputThursday.TabIndex = 37;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(83, 375);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 20);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Friday";
+            // 
+            // ExerciseNameInputFriday
+            // 
+            this.ExerciseNameInputFriday.Location = new System.Drawing.Point(205, 373);
+            this.ExerciseNameInputFriday.Name = "ExerciseNameInputFriday";
+            this.ExerciseNameInputFriday.Size = new System.Drawing.Size(138, 22);
+            this.ExerciseNameInputFriday.TabIndex = 39;
+            // 
+            // MachineNameInputFriday
+            // 
+            this.MachineNameInputFriday.Location = new System.Drawing.Point(390, 373);
+            this.MachineNameInputFriday.Name = "MachineNameInputFriday";
+            this.MachineNameInputFriday.Size = new System.Drawing.Size(139, 22);
+            this.MachineNameInputFriday.TabIndex = 40;
+            // 
+            // SetsInputFriday
+            // 
+            this.SetsInputFriday.Location = new System.Drawing.Point(592, 373);
+            this.SetsInputFriday.Name = "SetsInputFriday";
+            this.SetsInputFriday.Size = new System.Drawing.Size(61, 22);
+            this.SetsInputFriday.TabIndex = 41;
+            // 
+            // RepsInputFriday
+            // 
+            this.RepsInputFriday.Location = new System.Drawing.Point(693, 373);
+            this.RepsInputFriday.Name = "RepsInputFriday";
+            this.RepsInputFriday.Size = new System.Drawing.Size(61, 22);
+            this.RepsInputFriday.TabIndex = 42;
+            // 
+            // RestIntervalInputFriday
+            // 
+            this.RestIntervalInputFriday.Location = new System.Drawing.Point(809, 373);
+            this.RestIntervalInputFriday.Name = "RestIntervalInputFriday";
+            this.RestIntervalInputFriday.Size = new System.Drawing.Size(61, 22);
+            this.RestIntervalInputFriday.TabIndex = 43;
+            // 
             // WorkoutPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -346,6 +466,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(942, 482);
+            this.Controls.Add(this.RestIntervalInputFriday);
+            this.Controls.Add(this.RepsInputFriday);
+            this.Controls.Add(this.SetsInputFriday);
+            this.Controls.Add(this.MachineNameInputFriday);
+            this.Controls.Add(this.ExerciseNameInputFriday);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.RestIntervalInputThursday);
+            this.Controls.Add(this.RepsInputThursday);
+            this.Controls.Add(this.SetsInputThursday);
+            this.Controls.Add(this.MachineNameInputThursday);
+            this.Controls.Add(this.ExerciseNameInputThursday);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.RestIntervalInputWednesday);
             this.Controls.Add(this.RepsInputwednesday);
             this.Controls.Add(this.SetsInputWednesday);
@@ -370,8 +502,8 @@
             this.Controls.Add(this.MachineNameInputMonday);
             this.Controls.Add(this.ExerciseNameInputMonday);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ScheduleSessionDropDown);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MemberSelectDropDown);
+            this.Controls.Add(this.PlanNameInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "WorkoutPlan";
@@ -385,6 +517,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputWednesday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputwednesday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputWednesday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SetsInputThursday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepsInputThursday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputThursday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SetsInputFriday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepsInputFriday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputFriday)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,8 +532,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private Bunifu.UI.WinForms.BunifuDropdown ScheduleSessionDropDown;
+        private System.Windows.Forms.TextBox PlanNameInput;
+        private Bunifu.UI.WinForms.BunifuDropdown MemberSelectDropDown;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ExerciseNameInputMonday;
         private System.Windows.Forms.TextBox MachineNameInputMonday;
@@ -420,5 +558,17 @@
         private System.Windows.Forms.NumericUpDown SetsInputWednesday;
         private System.Windows.Forms.NumericUpDown RepsInputwednesday;
         private System.Windows.Forms.NumericUpDown RestIntervalInputWednesday;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox ExerciseNameInputThursday;
+        private System.Windows.Forms.TextBox MachineNameInputThursday;
+        private System.Windows.Forms.NumericUpDown SetsInputThursday;
+        private System.Windows.Forms.NumericUpDown RepsInputThursday;
+        private System.Windows.Forms.NumericUpDown RestIntervalInputThursday;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox ExerciseNameInputFriday;
+        private System.Windows.Forms.TextBox MachineNameInputFriday;
+        private System.Windows.Forms.NumericUpDown SetsInputFriday;
+        private System.Windows.Forms.NumericUpDown RepsInputFriday;
+        private System.Windows.Forms.NumericUpDown RestIntervalInputFriday;
     }
 }

@@ -59,8 +59,8 @@ namespace DBPROJ_VF
             else if(regis =="Trainer")
             {
                 this.Hide();
-
                 TrainerReg tr = new TrainerReg();
+                tr.Show(); 
             }
         }
         private bool valLogin(string table)

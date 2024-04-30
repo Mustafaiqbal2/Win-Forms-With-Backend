@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutPlan));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PlanNameInput = new System.Windows.Forms.TextBox();
@@ -69,6 +70,7 @@
             this.SetsInputFriday = new System.Windows.Forms.NumericUpDown();
             this.RepsInputFriday = new System.Windows.Forms.NumericUpDown();
             this.RestIntervalInputFriday = new System.Windows.Forms.NumericUpDown();
+            this.WorkoutPlanSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputMonday)).BeginInit();
@@ -459,6 +461,95 @@
             this.RestIntervalInputFriday.Size = new System.Drawing.Size(61, 22);
             this.RestIntervalInputFriday.TabIndex = 43;
             // 
+            // WorkoutPlanSubmitButton
+            // 
+            this.WorkoutPlanSubmitButton.AllowAnimations = true;
+            this.WorkoutPlanSubmitButton.AllowMouseEffects = true;
+            this.WorkoutPlanSubmitButton.AllowToggling = false;
+            this.WorkoutPlanSubmitButton.AnimationSpeed = 200;
+            this.WorkoutPlanSubmitButton.AutoGenerateColors = false;
+            this.WorkoutPlanSubmitButton.AutoRoundBorders = false;
+            this.WorkoutPlanSubmitButton.AutoSizeLeftIcon = true;
+            this.WorkoutPlanSubmitButton.AutoSizeRightIcon = true;
+            this.WorkoutPlanSubmitButton.BackColor = System.Drawing.Color.Transparent;
+            this.WorkoutPlanSubmitButton.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.WorkoutPlanSubmitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WorkoutPlanSubmitButton.BackgroundImage")));
+            this.WorkoutPlanSubmitButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.WorkoutPlanSubmitButton.ButtonText = "Submit";
+            this.WorkoutPlanSubmitButton.ButtonTextMarginLeft = 0;
+            this.WorkoutPlanSubmitButton.ColorContrastOnClick = 45;
+            this.WorkoutPlanSubmitButton.ColorContrastOnHover = 45;
+            this.WorkoutPlanSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.WorkoutPlanSubmitButton.CustomizableEdges = borderEdges1;
+            this.WorkoutPlanSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.WorkoutPlanSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.WorkoutPlanSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.WorkoutPlanSubmitButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.WorkoutPlanSubmitButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.WorkoutPlanSubmitButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.WorkoutPlanSubmitButton.ForeColor = System.Drawing.Color.White;
+            this.WorkoutPlanSubmitButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.WorkoutPlanSubmitButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.WorkoutPlanSubmitButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.WorkoutPlanSubmitButton.IconMarginLeft = 11;
+            this.WorkoutPlanSubmitButton.IconPadding = 10;
+            this.WorkoutPlanSubmitButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.WorkoutPlanSubmitButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.WorkoutPlanSubmitButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.WorkoutPlanSubmitButton.IconSize = 25;
+            this.WorkoutPlanSubmitButton.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.WorkoutPlanSubmitButton.IdleBorderRadius = 1;
+            this.WorkoutPlanSubmitButton.IdleBorderThickness = 1;
+            this.WorkoutPlanSubmitButton.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.WorkoutPlanSubmitButton.IdleIconLeftImage = null;
+            this.WorkoutPlanSubmitButton.IdleIconRightImage = null;
+            this.WorkoutPlanSubmitButton.IndicateFocus = false;
+            this.WorkoutPlanSubmitButton.Location = new System.Drawing.Point(396, 428);
+            this.WorkoutPlanSubmitButton.Name = "WorkoutPlanSubmitButton";
+            this.WorkoutPlanSubmitButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.WorkoutPlanSubmitButton.OnDisabledState.BorderRadius = 1;
+            this.WorkoutPlanSubmitButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.WorkoutPlanSubmitButton.OnDisabledState.BorderThickness = 1;
+            this.WorkoutPlanSubmitButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.WorkoutPlanSubmitButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.WorkoutPlanSubmitButton.OnDisabledState.IconLeftImage = null;
+            this.WorkoutPlanSubmitButton.OnDisabledState.IconRightImage = null;
+            this.WorkoutPlanSubmitButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.WorkoutPlanSubmitButton.onHoverState.BorderRadius = 1;
+            this.WorkoutPlanSubmitButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.WorkoutPlanSubmitButton.onHoverState.BorderThickness = 1;
+            this.WorkoutPlanSubmitButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.WorkoutPlanSubmitButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.WorkoutPlanSubmitButton.onHoverState.IconLeftImage = null;
+            this.WorkoutPlanSubmitButton.onHoverState.IconRightImage = null;
+            this.WorkoutPlanSubmitButton.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.WorkoutPlanSubmitButton.OnIdleState.BorderRadius = 1;
+            this.WorkoutPlanSubmitButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.WorkoutPlanSubmitButton.OnIdleState.BorderThickness = 1;
+            this.WorkoutPlanSubmitButton.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.WorkoutPlanSubmitButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.WorkoutPlanSubmitButton.OnIdleState.IconLeftImage = null;
+            this.WorkoutPlanSubmitButton.OnIdleState.IconRightImage = null;
+            this.WorkoutPlanSubmitButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.WorkoutPlanSubmitButton.OnPressedState.BorderRadius = 1;
+            this.WorkoutPlanSubmitButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.WorkoutPlanSubmitButton.OnPressedState.BorderThickness = 1;
+            this.WorkoutPlanSubmitButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.WorkoutPlanSubmitButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.WorkoutPlanSubmitButton.OnPressedState.IconLeftImage = null;
+            this.WorkoutPlanSubmitButton.OnPressedState.IconRightImage = null;
+            this.WorkoutPlanSubmitButton.Size = new System.Drawing.Size(133, 22);
+            this.WorkoutPlanSubmitButton.TabIndex = 44;
+            this.WorkoutPlanSubmitButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.WorkoutPlanSubmitButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WorkoutPlanSubmitButton.TextMarginLeft = 0;
+            this.WorkoutPlanSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.WorkoutPlanSubmitButton.UseDefaultRadiusAndThickness = true;
+            // 
             // WorkoutPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -466,6 +557,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(942, 482);
+            this.Controls.Add(this.WorkoutPlanSubmitButton);
             this.Controls.Add(this.RestIntervalInputFriday);
             this.Controls.Add(this.RepsInputFriday);
             this.Controls.Add(this.SetsInputFriday);
@@ -570,5 +662,6 @@
         private System.Windows.Forms.NumericUpDown SetsInputFriday;
         private System.Windows.Forms.NumericUpDown RepsInputFriday;
         private System.Windows.Forms.NumericUpDown RestIntervalInputFriday;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton WorkoutPlanSubmitButton;
     }
 }

@@ -11,11 +11,13 @@
 	subscription VARCHAR(50) NOT NULL, 
 	trnUName VARCHAR(50),
 	height INT,
-	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) ON DELETE CASCADE
+	gym_ID INT,
+	FOREIGN KEY (gym_ID) REFERENCES Gym(id) ON DELETE CASCADE,
+	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) 
 	);
 
 CREATE TABLE Alergy(
-	UName VARCHAR(50) PRIMARY KEY,
+	UName VARCHAR(50),
 	alergy VARCHAR(50),
 	FOREIGN KEY (UName) REFERENCES Gym_Member(UName) ON DELETE CASCADE,
 	PRIMARY KEY (UName, alergy)
@@ -30,13 +32,15 @@ CREATE TABLE Trainer(
 	DOB DATE, 
 	exp_lvl INT DEFAULT 0,
 	rating FLOAT(2),
-	startDate DATE
+	gym_ID INT,
+	startDate DATE,
+	FOREIGN KEY (gym_ID) REFERENCES Gym(id) ON DELETE CASCADE
 	);
 
 CREATE TABLE TRN_PAST_GYM(
 	UName VARCHAR(50),
 	gymName VARCHAR(50),
-	FOREIGN KEY (UName) REFERENCES Trainer(UName) ON DELETE CASCADE
+	FOREIGN KEY (UName) REFERENCES Trainer(UName) ON DELETE CASCADE,
 	PRIMARY KEY (UName, gymName)
 	);
 
@@ -113,6 +117,9 @@ CREATE TABLE exercise(
 	name VARCHAR(50) PRIMARY KEY NOT NULL,
 	machine VARCHAR(50) NOT NULL,
 	targetMuscle VARCHAR(50) NOT NULL
+	Setss INT,
+	Reps INT,
+	RestInterval INT
 	);
 
 CREATE TABLE ExerciseInDay(
@@ -163,3 +170,5 @@ CREATE TABLE GYM_Attendance(
 	FOREIGN KEY (memberUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE,
 	FOREIGN KEY (trainerUName) REFERENCES Trainer(UName)
 	);
+
+

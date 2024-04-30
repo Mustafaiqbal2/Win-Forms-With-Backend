@@ -18,10 +18,5 @@ namespace DBPROJ_VF
         }
 
      
-
-        private void AppointmentScheduleButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

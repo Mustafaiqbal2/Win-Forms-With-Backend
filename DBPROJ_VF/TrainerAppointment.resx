@@ -118,50 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AppointmentScheduleButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AppointmentSubmitButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMYAAAA+CAYAAABwWmQpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADKSURBVHhe7dOhAYAwAMCwXbKX4b+dgR9gcP2AiKjqjnnu
-        Nc/7Bj57vWNUgH8zBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRj
-        QDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRj
-        QDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAaEMY99VYDfOvb1ANCzJwvOp+7cAAAA
-        AElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAAAWCAYAAADuKF/RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABgSURBVGhD7dIxEYAwAMBAlNQy+EMGewt3jMEBP/yUNds4
+        5jmOteA1z2eKr8CfmYIwBWEKwhSEKQhTEKYgTEGYgjAFYQrCFIQpCFMQpiBMQZiCMAVhCmIb+7y+Aj+1
+        z+sG8N6LRRlSBnkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="RescheduleAppointmentsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DeleteSessionButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAM4AAAA+CAYAAABjjSTdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADTSURBVHhe7dOxEUBAAABBlXzL9KcM+aMAjLl4g40uvmVs
-        cx/beQJ/zf0e5ykAX4wDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEg
-        MA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwD
-        gXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4Ey1jn8RSAF+s8LmMl
-        VJbeMXfiAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ViewAppointmentsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMYAAABBCAYAAACKLts9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADRSURBVHhe7dOhAYAwAMCwXbKX4b+dgR9gcP2AiKjqjnnu
-        Nc/7Bj57vWNUgH8zBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRj
-        QDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRj
-        QDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQDAGBGNAMAYEY0AwBgRjQBjz2FcF+K1jXw9FmVp9
-        qAXeVAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="CancelAppointmentsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAM4AAABBCAYAAACZ+ZvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADbSURBVHhe7dOxEUBAAABBlXzL9KcM+aMAjLl4g40uvmVs
-        cx/beQJ/zf0e5ykAX4wDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEg
-        MA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwD
-        gXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYBwLjQGAcCIwDgXEgMA4ExoHAOBAYB4JlrPN4
-        CsCLdR4XfhbIKB+I7UUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAAAWCAYAAADuKF/RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABgSURBVGhD7dIxEYAwAMBAlNQy+EMGewt3jMEBP/yUNds4
+        5jmOteA1z2eKr8CfmYIwBWEKwhSEKQhTEKYgTEGYgjAFYQrCFIQpCFMQpiBMQZiCMAVhCmIb+7y+Aj+1
+        z+sG8N6LRRlSBnkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAYAAADsEGyPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7k/Yu7/ut1rwXtpEnaJLur6epqsle6ktWs1TZp2qTJzt4cRIIEUooo
+        wQAADsEBuJFr7QAA/7JJREFUeF7k/Yu7/ut1rwXtpEnaJLur6epqsle6ktWs1TZp2qTJzt4cRIIEUooo
         yFlBOQQFATlGQEDqgm4wgEJEKVWgCChnQQNyFgwoKODfNP0+zxj3GJ8xnuf7zne+852/1dX0uu7r8z6/
         rvwD93XP8f0Dx/89/IE/8KGDP/DwoQ/pfujYD8t++Ngf2+yPHfuR+bvuRx4+/OGP2n5o7EeP98dkPyb7
         48saP3G8bQc/9uGPy3784cd+7BOb/YTsJ2N/7MMHP/YHcw8+8mM/6b9tP/KRsT8p+5rsa8f+VOxHfuzg

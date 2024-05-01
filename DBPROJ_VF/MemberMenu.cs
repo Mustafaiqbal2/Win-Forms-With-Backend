@@ -16,5 +16,15 @@ namespace DBPROJ_VF
         {
             InitializeComponent();
         }
+
+        private void CreateWorkout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChooseDiet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

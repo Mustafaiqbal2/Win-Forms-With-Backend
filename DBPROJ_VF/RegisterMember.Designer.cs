@@ -113,7 +113,7 @@
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(174, 300);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(164, 220);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -208,7 +208,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(425, 603);
+            this.bunifuButton1.Location = new System.Drawing.Point(415, 523);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -259,7 +259,7 @@
             this.fnamereg_mem.CursorType = System.Windows.Forms.Cursors.Default;
             this.fnamereg_mem.Font = new System.Drawing.Font("Segoe UI Variable Display", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnamereg_mem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fnamereg_mem.Location = new System.Drawing.Point(68, 300);
+            this.fnamereg_mem.Location = new System.Drawing.Point(58, 220);
             this.fnamereg_mem.MaximumSize = new System.Drawing.Size(100, 19);
             this.fnamereg_mem.MinimumSize = new System.Drawing.Size(100, 19);
             this.fnamereg_mem.Name = "fnamereg_mem";
@@ -278,7 +278,7 @@
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel1.Location = new System.Drawing.Point(77, 358);
+            this.bunifuLabel1.Location = new System.Drawing.Point(67, 278);
             this.bunifuLabel1.MaximumSize = new System.Drawing.Size(100, 19);
             this.bunifuLabel1.MinimumSize = new System.Drawing.Size(100, 19);
             this.bunifuLabel1.Name = "bunifuLabel1";
@@ -317,7 +317,7 @@
             this.bunifuTextBox2.IconRight = null;
             this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(174, 355);
+            this.bunifuTextBox2.Location = new System.Drawing.Point(164, 275);
             this.bunifuTextBox2.MaxLength = 32767;
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox2.Modified = false;
@@ -372,7 +372,7 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel2.Location = new System.Drawing.Point(112, 410);
+            this.bunifuLabel2.Location = new System.Drawing.Point(102, 330);
             this.bunifuLabel2.MaximumSize = new System.Drawing.Size(37, 20);
             this.bunifuLabel2.MinimumSize = new System.Drawing.Size(37, 20);
             this.bunifuLabel2.Name = "bunifuLabel2";
@@ -411,7 +411,7 @@
             this.email.IconRight = null;
             this.email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.email.Lines = new string[0];
-            this.email.Location = new System.Drawing.Point(174, 410);
+            this.email.Location = new System.Drawing.Point(164, 330);
             this.email.MaxLength = 32767;
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Modified = false;
@@ -466,7 +466,7 @@
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel3.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.bunifuLabel3.Location = new System.Drawing.Point(566, 515);
+            this.bunifuLabel3.Location = new System.Drawing.Point(556, 435);
             this.bunifuLabel3.MaximumSize = new System.Drawing.Size(89, 20);
             this.bunifuLabel3.MinimumSize = new System.Drawing.Size(89, 20);
             this.bunifuLabel3.Name = "bunifuLabel3";
@@ -506,7 +506,7 @@
             this.password.IconRight = null;
             this.password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.password.Lines = new string[0];
-            this.password.Location = new System.Drawing.Point(672, 517);
+            this.password.Location = new System.Drawing.Point(662, 437);
             this.password.MaxLength = 32767;
             this.password.MinimumSize = new System.Drawing.Size(1, 1);
             this.password.Modified = false;
@@ -582,7 +582,7 @@
             this.alergies.IconRight = null;
             this.alergies.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.alergies.Lines = new string[0];
-            this.alergies.Location = new System.Drawing.Point(672, 300);
+            this.alergies.Location = new System.Drawing.Point(662, 220);
             this.alergies.MaxLength = 32767;
             this.alergies.MinimumSize = new System.Drawing.Size(1, 1);
             this.alergies.Modified = false;
@@ -637,7 +637,7 @@
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.bunifuLabel4.Location = new System.Drawing.Point(565, 299);
+            this.bunifuLabel4.Location = new System.Drawing.Point(555, 219);
             this.bunifuLabel4.MaximumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel4.MinimumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel4.Name = "bunifuLabel4";
@@ -655,7 +655,7 @@
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel5.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.bunifuLabel5.Location = new System.Drawing.Point(566, 355);
+            this.bunifuLabel5.Location = new System.Drawing.Point(556, 275);
             this.bunifuLabel5.MaximumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel5.MinimumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel5.Name = "bunifuLabel5";
@@ -705,7 +705,7 @@
             "Muscle Gain",
             "Cardio"});
             this.goal.ItemTopMargin = 3;
-            this.goal.Location = new System.Drawing.Point(672, 355);
+            this.goal.Location = new System.Drawing.Point(662, 275);
             this.goal.Name = "goal";
             this.goal.Size = new System.Drawing.Size(182, 32);
             this.goal.TabIndex = 12;
@@ -721,7 +721,7 @@
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel6.Location = new System.Drawing.Point(77, 517);
+            this.bunifuLabel6.Location = new System.Drawing.Point(67, 437);
             this.bunifuLabel6.MaximumSize = new System.Drawing.Size(66, 20);
             this.bunifuLabel6.MinimumSize = new System.Drawing.Size(66, 20);
             this.bunifuLabel6.Name = "bunifuLabel6";
@@ -751,7 +751,7 @@
             this.join.IconColor = System.Drawing.Color.Gray;
             this.join.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.join.LeftTextMargin = 5;
-            this.join.Location = new System.Drawing.Point(174, 515);
+            this.join.Location = new System.Drawing.Point(164, 435);
             this.join.MinimumSize = new System.Drawing.Size(4, 32);
             this.join.Name = "join";
             this.join.Size = new System.Drawing.Size(221, 32);
@@ -765,7 +765,7 @@
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel7.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.bunifuLabel7.Location = new System.Drawing.Point(566, 408);
+            this.bunifuLabel7.Location = new System.Drawing.Point(556, 328);
             this.bunifuLabel7.MaximumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel7.MinimumSize = new System.Drawing.Size(60, 20);
             this.bunifuLabel7.Name = "bunifuLabel7";
@@ -783,7 +783,7 @@
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel8.Location = new System.Drawing.Point(112, 475);
+            this.bunifuLabel8.Location = new System.Drawing.Point(102, 395);
             this.bunifuLabel8.MaximumSize = new System.Drawing.Size(37, 20);
             this.bunifuLabel8.MinimumSize = new System.Drawing.Size(37, 20);
             this.bunifuLabel8.Name = "bunifuLabel8";
@@ -813,7 +813,7 @@
             this.dob.IconColor = System.Drawing.Color.Gray;
             this.dob.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dob.LeftTextMargin = 5;
-            this.dob.Location = new System.Drawing.Point(174, 463);
+            this.dob.Location = new System.Drawing.Point(164, 383);
             this.dob.MinimumSize = new System.Drawing.Size(4, 32);
             this.dob.Name = "dob";
             this.dob.Size = new System.Drawing.Size(221, 32);
@@ -827,7 +827,7 @@
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel9.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.bunifuLabel9.Location = new System.Drawing.Point(565, 463);
+            this.bunifuLabel9.Location = new System.Drawing.Point(555, 383);
             this.bunifuLabel9.MaximumSize = new System.Drawing.Size(89, 20);
             this.bunifuLabel9.MinimumSize = new System.Drawing.Size(89, 20);
             this.bunifuLabel9.Name = "bunifuLabel9";
@@ -866,7 +866,7 @@
             this.height.IconRight = null;
             this.height.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.height.Lines = new string[0];
-            this.height.Location = new System.Drawing.Point(672, 461);
+            this.height.Location = new System.Drawing.Point(662, 381);
             this.height.MaxLength = 32767;
             this.height.MinimumSize = new System.Drawing.Size(1, 1);
             this.height.Modified = false;
@@ -953,7 +953,7 @@
             "Gold",
             "Platinum"});
             this.bunfuDropdown2.ItemTopMargin = 3;
-            this.bunfuDropdown2.Location = new System.Drawing.Point(174, 615);
+            this.bunfuDropdown2.Location = new System.Drawing.Point(164, 535);
             this.bunfuDropdown2.Name = "bunfuDropdown2";
             this.bunfuDropdown2.Size = new System.Drawing.Size(165, 32);
             this.bunfuDropdown2.TabIndex = 22;
@@ -969,7 +969,7 @@
             this.bunifuLabel10.CursorType = null;
             this.bunifuLabel10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel10.Location = new System.Drawing.Point(54, 615);
+            this.bunifuLabel10.Location = new System.Drawing.Point(44, 535);
             this.bunifuLabel10.MaximumSize = new System.Drawing.Size(91, 20);
             this.bunifuLabel10.MinimumSize = new System.Drawing.Size(91, 20);
             this.bunifuLabel10.Name = "bunifuLabel10";
@@ -988,7 +988,7 @@
             this.bunifuLabel11.CursorType = null;
             this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuLabel11.Location = new System.Drawing.Point(92, 565);
+            this.bunifuLabel11.Location = new System.Drawing.Point(82, 485);
             this.bunifuLabel11.MaximumSize = new System.Drawing.Size(51, 20);
             this.bunifuLabel11.MinimumSize = new System.Drawing.Size(51, 20);
             this.bunifuLabel11.Name = "bunifuLabel11";
@@ -1040,7 +1040,7 @@
             "Male ",
             "Female"});
             this.gender.ItemTopMargin = 3;
-            this.gender.Location = new System.Drawing.Point(174, 565);
+            this.gender.Location = new System.Drawing.Point(164, 485);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(165, 32);
             this.gender.TabIndex = 24;
@@ -1077,7 +1077,7 @@
             this.weight.IconRight = null;
             this.weight.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.weight.Lines = new string[0];
-            this.weight.Location = new System.Drawing.Point(672, 408);
+            this.weight.Location = new System.Drawing.Point(662, 328);
             this.weight.MaxLength = 32767;
             this.weight.MinimumSize = new System.Drawing.Size(1, 1);
             this.weight.Modified = false;
@@ -1129,8 +1129,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DBPROJ_VF.Properties.Resources.freepik_export_20240428105435LfBw;
-            this.ClientSize = new System.Drawing.Size(965, 740);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(998, 979);
             this.Controls.Add(this.weight);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.gender);

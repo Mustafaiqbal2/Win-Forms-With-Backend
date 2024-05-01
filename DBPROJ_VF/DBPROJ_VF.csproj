@@ -188,6 +188,12 @@
     <Compile Include="gym_manage.Designer.cs">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberMenu.Designer.cs">
+      <DependentUpon>MemberMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="PROJDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gym_manage.resx">
       <DependentUpon>gym_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberMenu.resx">
+      <DependentUpon>MemberMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner.resx">
       <DependentUpon>Owner.cs</DependentUpon>

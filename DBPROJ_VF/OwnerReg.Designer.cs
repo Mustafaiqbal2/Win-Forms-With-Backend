@@ -474,7 +474,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DBPROJ_VF.Properties.Resources.Trainer__3_;
             this.ClientSize = new System.Drawing.Size(963, 545);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.pword);

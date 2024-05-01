@@ -152,17 +152,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrainers.Designer.cs">
+      <DependentUpon>AddTrainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteAccounts.Designer.cs">
+      <DependentUpon>deleteAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="DietPlan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DietPlan.Designer.cs">
       <DependentUpon>DietPlan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="feedbackMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="feedbackMember.Designer.cs">
-      <DependentUpon>feedbackMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -170,11 +182,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="sessionBookingMember.cs">
+    <Compile Include="gym_manage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sessionBookingMember.Designer.cs">
-      <DependentUpon>sessionBookingMember.cs</DependentUpon>
+    <Compile Include="gym_manage.Designer.cs">
+      <DependentUpon>gym_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PROJDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PROJDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requests.Designer.cs">
+      <DependentUpon>requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner.Designer.cs">
+      <DependentUpon>Owner.cs</DependentUpon>
     </Compile>
     <Compile Include="OwnerReg.cs">
       <SubType>Form</SubType>
@@ -220,14 +249,26 @@
     <Compile Include="WorkoutPlan.Designer.cs">
       <DependentUpon>WorkoutPlan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddTrainers.resx">
+      <DependentUpon>AddTrainers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteAccounts.resx">
+      <DependentUpon>deleteAccounts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DietPlan.resx">
       <DependentUpon>DietPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="feedbackMember.resx">
-      <DependentUpon>feedbackMember.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gym_manage.resx">
+      <DependentUpon>gym_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner.resx">
+      <DependentUpon>Owner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OwnerReg.resx">
       <DependentUpon>OwnerReg.cs</DependentUpon>
@@ -235,19 +276,13 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RegisterMember.resx">
       <DependentUpon>RegisterMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sessionBookingMember.resx">
-      <DependentUpon>sessionBookingMember.cs</DependentUpon>
+    <EmbeddedResource Include="requests.resx">
+      <DependentUpon>requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerAppointment.resx">
       <DependentUpon>TrainerAppointment.cs</DependentUpon>
@@ -264,6 +299,17 @@
     <EmbeddedResource Include="WorkoutPlan.resx">
       <DependentUpon>WorkoutPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PROJDataSet.xsc">
+      <DependentUpon>PROJDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PROJDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PROJDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PROJDataSet.xss">
+      <DependentUpon>PROJDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -293,8 +339,8 @@
     <None Include="Resources\Trainer %283%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\jeremy-bishop-G9i_plbfDgk-unsplash.jpg" />
-    <None Include="Resources\nathan-anderson-iYO-EGosrCo-unsplash.jpg" />
+    <Content Include="Resources\Admin.png" />
+    <Content Include="Resources\Owner.png" />
     <Content Include="Resources\tableCreation.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

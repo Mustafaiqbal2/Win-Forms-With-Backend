@@ -15,13 +15,20 @@ namespace DBPROJ_VF
         public gym_manage()
         {
             InitializeComponent();
+            bunifuDataGridView1.AllowUserToAddRows = false;
+            bunifuDataGridView1.AllowUserToDeleteRows = false;
         }
 
         private void gym_manage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pROJDataSet.Gym' table. You can move, or remove it, as needed.
             this.gymTableAdapter.Fill(this.pROJDataSet.Gym);
 
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            
         }
     }
 }

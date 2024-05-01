@@ -35,9 +35,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gym_manage));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.pROJDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gymBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROJDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
             this.gymTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.GymTableAdapter();
             this.revoke = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -49,14 +49,15 @@
             this.noTrainersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.financesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDataGridView1
             // 
             this.bunifuDataGridView1.AllowCustomTheming = false;
+            this.bunifuDataGridView1.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -73,7 +74,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkBox,
             this.idDataGridViewTextBoxColumn,
@@ -124,21 +125,22 @@
             this.bunifuDataGridView1.Size = new System.Drawing.Size(820, 316);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
             // 
-            // pROJDataSet
+            // gymBindingSource
             // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.gymBindingSource.DataMember = "Gym";
+            this.gymBindingSource.DataSource = this.pROJDataSetBindingSource;
             // 
             // pROJDataSetBindingSource
             // 
             this.pROJDataSetBindingSource.DataSource = this.pROJDataSet;
             this.pROJDataSetBindingSource.Position = 0;
             // 
-            // gymBindingSource
+            // pROJDataSet
             // 
-            this.gymBindingSource.DataMember = "Gym";
-            this.gymBindingSource.DataSource = this.pROJDataSetBindingSource;
+            this.pROJDataSet.DataSetName = "PROJDataSet";
+            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gymTableAdapter
             // 
@@ -235,11 +237,12 @@
             // 
             // checkBox
             // 
-            this.checkBox.DataPropertyName = "id";
+            this.checkBox.FalseValue = "0";
             this.checkBox.HeaderText = "";
+            this.checkBox.IndeterminateValue = "0";
             this.checkBox.MinimumWidth = 6;
             this.checkBox.Name = "checkBox";
-            this.checkBox.ReadOnly = true;
+            this.checkBox.TrueValue = "1";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -255,6 +258,7 @@
             this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
             this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
+            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // locationDataGridViewTextBoxColumn
             // 
@@ -262,6 +266,7 @@
             this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
             this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ownerUNameDataGridViewTextBoxColumn
             // 
@@ -269,6 +274,7 @@
             this.ownerUNameDataGridViewTextBoxColumn.HeaderText = "Owner";
             this.ownerUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ownerUNameDataGridViewTextBoxColumn.Name = "ownerUNameDataGridViewTextBoxColumn";
+            this.ownerUNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // noMembersDataGridViewTextBoxColumn
             // 
@@ -276,6 +282,7 @@
             this.noMembersDataGridViewTextBoxColumn.HeaderText = "Members";
             this.noMembersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noMembersDataGridViewTextBoxColumn.Name = "noMembersDataGridViewTextBoxColumn";
+            this.noMembersDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // noTrainersDataGridViewTextBoxColumn
             // 
@@ -283,6 +290,7 @@
             this.noTrainersDataGridViewTextBoxColumn.HeaderText = "Trainers";
             this.noTrainersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noTrainersDataGridViewTextBoxColumn.Name = "noTrainersDataGridViewTextBoxColumn";
+            this.noTrainersDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // financesDataGridViewTextBoxColumn
             // 
@@ -290,6 +298,7 @@
             this.financesDataGridViewTextBoxColumn.HeaderText = "Finances";
             this.financesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.financesDataGridViewTextBoxColumn.Name = "financesDataGridViewTextBoxColumn";
+            this.financesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gym_manage
             // 
@@ -305,9 +314,9 @@
             this.Text = "gym_manage";
             this.Load += new System.EventHandler(this.gym_manage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

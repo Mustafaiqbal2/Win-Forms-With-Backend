@@ -29,119 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(requests));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.franchiseApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.franchise_ApplicationTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Franchise_ApplicationTableAdapter();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.approve = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.ID = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.App_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proposition = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.owner_uname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            this.applications = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.pROJDataSet1 = new DBPROJ_VF.PROJDataSet1();
+            this.pROJDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.franchiseApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.franchise_ApplicationTableAdapter = new DBPROJ_VF.PROJDataSet1TableAdapters.Franchise_ApplicationTableAdapter();
+            this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.demandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ownerUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.applications)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franchiseApplicationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuDataGridView1
-            // 
-            this.bunifuDataGridView1.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView1.AutoGenerateColumns = false;
-            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.App_Id,
-            this.Location,
-            this.Demand,
-            this.Proposition,
-            this.owner_uname});
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.Name = null;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.DataSource = this.franchiseApplicationBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
-            this.bunifuDataGridView1.ReadOnly = true;
-            this.bunifuDataGridView1.RowHeadersVisible = false;
-            this.bunifuDataGridView1.RowHeadersWidth = 51;
-            this.bunifuDataGridView1.RowTemplate.Height = 40;
-            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(747, 346);
-            this.bunifuDataGridView1.TabIndex = 0;
-            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // franchiseApplicationBindingSource
-            // 
-            this.franchiseApplicationBindingSource.DataMember = "Franchise_Application";
-            this.franchiseApplicationBindingSource.DataSource = this.pROJDataSetBindingSource;
-            // 
-            // pROJDataSetBindingSource
-            // 
-            this.pROJDataSetBindingSource.DataSource = this.pROJDataSet;
-            this.pROJDataSetBindingSource.Position = 0;
-            // 
-            // pROJDataSet
-            // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // franchise_ApplicationTableAdapter
-            // 
-            this.franchise_ApplicationTableAdapter.ClearBeforeFill = true;
             // 
             // approve
             // 
@@ -321,65 +232,139 @@
             this.bunifuButton2.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
             // 
-            // ID
+            // applications
             // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 125;
+            this.applications.AllowCustomTheming = false;
+            this.applications.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.applications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.applications.AutoGenerateColumns = false;
+            this.applications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.applications.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.applications.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.applications.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.applications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.applications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.applications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.checkBox,
+            this.idDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn,
+            this.demandDataGridViewTextBoxColumn,
+            this.propositionDataGridViewTextBoxColumn,
+            this.ownerUNameDataGridViewTextBoxColumn});
+            this.applications.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.applications.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.applications.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.applications.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.applications.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.applications.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.applications.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.applications.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.applications.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.applications.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.applications.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.applications.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.applications.CurrentTheme.Name = null;
+            this.applications.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.applications.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.applications.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.applications.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.applications.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.applications.DataSource = this.franchiseApplicationBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.applications.DefaultCellStyle = dataGridViewCellStyle3;
+            this.applications.EnableHeadersVisualStyles = false;
+            this.applications.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.applications.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.applications.HeaderBgColor = System.Drawing.Color.Empty;
+            this.applications.HeaderForeColor = System.Drawing.Color.White;
+            this.applications.Location = new System.Drawing.Point(2, 12);
+            this.applications.Name = "applications";
+            this.applications.RowHeadersVisible = false;
+            this.applications.RowHeadersWidth = 51;
+            this.applications.RowTemplate.Height = 40;
+            this.applications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.applications.Size = new System.Drawing.Size(793, 358);
+            this.applications.TabIndex = 3;
+            this.applications.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.applications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.applications_CellContentClick);
             // 
-            // App_Id
+            // pROJDataSet1
             // 
-            this.App_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.App_Id.Frozen = true;
-            this.App_Id.HeaderText = "ID";
-            this.App_Id.MinimumWidth = 6;
-            this.App_Id.Name = "App_Id";
-            this.App_Id.ReadOnly = true;
-            this.App_Id.Width = 125;
+            this.pROJDataSet1.DataSetName = "PROJDataSet1";
+            this.pROJDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Location
+            // pROJDataSet1BindingSource
             // 
-            this.Location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Location.Frozen = true;
-            this.Location.HeaderText = "Location";
-            this.Location.MinimumWidth = 6;
-            this.Location.Name = "Location";
-            this.Location.ReadOnly = true;
-            this.Location.Width = 125;
+            this.pROJDataSet1BindingSource.DataSource = this.pROJDataSet1;
+            this.pROJDataSet1BindingSource.Position = 0;
             // 
-            // Demand
+            // franchiseApplicationBindingSource
             // 
-            this.Demand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Demand.Frozen = true;
-            this.Demand.HeaderText = "Amount";
-            this.Demand.MinimumWidth = 6;
-            this.Demand.Name = "Demand";
-            this.Demand.ReadOnly = true;
-            this.Demand.Width = 125;
+            this.franchiseApplicationBindingSource.DataMember = "Franchise_Application";
+            this.franchiseApplicationBindingSource.DataSource = this.pROJDataSet1BindingSource;
             // 
-            // Proposition
+            // franchise_ApplicationTableAdapter
             // 
-            this.Proposition.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Proposition.Frozen = true;
-            this.Proposition.HeaderText = "Proposition";
-            this.Proposition.MinimumWidth = 6;
-            this.Proposition.Name = "Proposition";
-            this.Proposition.ReadOnly = true;
-            this.Proposition.Width = 125;
+            this.franchise_ApplicationTableAdapter.ClearBeforeFill = true;
             // 
-            // owner_uname
+            // checkBox
             // 
-            this.owner_uname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.owner_uname.Frozen = true;
-            this.owner_uname.HeaderText = "Owner";
-            this.owner_uname.MinimumWidth = 6;
-            this.owner_uname.Name = "owner_uname";
-            this.owner_uname.ReadOnly = true;
-            this.owner_uname.Width = 125;
+            this.checkBox.HeaderText = "";
+            this.checkBox.MinimumWidth = 6;
+            this.checkBox.Name = "checkBox";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "location";
+            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // demandDataGridViewTextBoxColumn
+            // 
+            this.demandDataGridViewTextBoxColumn.DataPropertyName = "demand";
+            this.demandDataGridViewTextBoxColumn.HeaderText = "demand";
+            this.demandDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.demandDataGridViewTextBoxColumn.Name = "demandDataGridViewTextBoxColumn";
+            // 
+            // propositionDataGridViewTextBoxColumn
+            // 
+            this.propositionDataGridViewTextBoxColumn.DataPropertyName = "proposition";
+            this.propositionDataGridViewTextBoxColumn.HeaderText = "proposition";
+            this.propositionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.propositionDataGridViewTextBoxColumn.Name = "propositionDataGridViewTextBoxColumn";
+            this.propositionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.propositionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ownerUNameDataGridViewTextBoxColumn
+            // 
+            this.ownerUNameDataGridViewTextBoxColumn.DataPropertyName = "ownerUName";
+            this.ownerUNameDataGridViewTextBoxColumn.HeaderText = "ownerUName";
+            this.ownerUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ownerUNameDataGridViewTextBoxColumn.Name = "ownerUNameDataGridViewTextBoxColumn";
             // 
             // requests
             // 
@@ -388,35 +373,34 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.applications);
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.approve);
-            this.Controls.Add(this.bunifuDataGridView1);
             this.DoubleBuffered = true;
             this.Name = "requests";
             this.Text = "Applications";
             this.Load += new System.EventHandler(this.requests_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applications)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franchiseApplicationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private System.Windows.Forms.BindingSource pROJDataSetBindingSource;
-        private PROJDataSet pROJDataSet;
-        private System.Windows.Forms.BindingSource franchiseApplicationBindingSource;
-        private PROJDataSetTableAdapters.Franchise_ApplicationTableAdapter franchise_ApplicationTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton approve;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn App_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Demand;
-        private System.Windows.Forms.DataGridViewLinkColumn Proposition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn owner_uname;
+        private Bunifu.UI.WinForms.BunifuDataGridView applications;
+        private System.Windows.Forms.BindingSource pROJDataSet1BindingSource;
+        private PROJDataSet1 pROJDataSet1;
+        private System.Windows.Forms.BindingSource franchiseApplicationBindingSource;
+        private PROJDataSet1TableAdapters.Franchise_ApplicationTableAdapter franchise_ApplicationTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn demandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewLinkColumn propositionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ownerUNameDataGridViewTextBoxColumn;
     }
 }

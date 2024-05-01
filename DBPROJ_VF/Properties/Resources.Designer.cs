@@ -73,6 +73,26 @@ namespace DBPROJ_VF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jeremy_bishop_G9i_plbfDgk_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("jeremy-bishop-G9i_plbfDgk-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nathan_anderson_iYO_EGosrCo_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("nathan-anderson-iYO-EGosrCo-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trainer {
             get {
                 object obj = ResourceManager.GetObject("Trainer", resourceCulture);

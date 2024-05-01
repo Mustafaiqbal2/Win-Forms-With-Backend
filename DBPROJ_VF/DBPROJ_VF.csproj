@@ -158,11 +158,23 @@
     <Compile Include="DietPlan.Designer.cs">
       <DependentUpon>DietPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="feedbackMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedbackMember.Designer.cs">
+      <DependentUpon>feedbackMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sessionBookingMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sessionBookingMember.Designer.cs">
+      <DependentUpon>sessionBookingMember.cs</DependentUpon>
     </Compile>
     <Compile Include="OwnerReg.cs">
       <SubType>Form</SubType>
@@ -211,6 +223,9 @@
     <EmbeddedResource Include="DietPlan.resx">
       <DependentUpon>DietPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="feedbackMember.resx">
+      <DependentUpon>feedbackMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +245,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterMember.resx">
       <DependentUpon>RegisterMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sessionBookingMember.resx">
+      <DependentUpon>sessionBookingMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerAppointment.resx">
       <DependentUpon>TrainerAppointment.cs</DependentUpon>
@@ -275,6 +293,8 @@
     <None Include="Resources\Trainer %283%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\jeremy-bishop-G9i_plbfDgk-unsplash.jpg" />
+    <None Include="Resources\nathan-anderson-iYO-EGosrCo-unsplash.jpg" />
     <Content Include="Resources\tableCreation.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -211,6 +211,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PROJDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PROJDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PROJDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="requests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +342,17 @@
     <None Include="PROJDataSet.xss">
       <DependentUpon>PROJDataSet.xsd</DependentUpon>
     </None>
+    <None Include="PROJDataSet1.xsc">
+      <DependentUpon>PROJDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PROJDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PROJDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PROJDataSet1.xss">
+      <DependentUpon>PROJDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -371,6 +387,7 @@
     <Content Include="Resources\nathan-anderson-iYO-EGosrCo-unsplash.jpg" />
     <Content Include="Resources\Owner.png" />
     <Content Include="Resources\tableCreation.sql" />
+    <Content Include="Resources\tableInsertions.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

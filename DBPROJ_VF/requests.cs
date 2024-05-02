@@ -19,9 +19,18 @@ namespace DBPROJ_VF
 
         private void requests_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pROJDataSet.Franchise_Application' table. You can move, or remove it, as needed.
-            this.franchise_ApplicationTableAdapter.Fill(this.pROJDataSet.Franchise_Application);
+            // TODO: This line of code loads data into the 'pROJDataSet1.Franchise_Application' table. You can move, or remove it, as needed.
+            this.franchise_ApplicationTableAdapter.Fill(this.pROJDataSet1.Franchise_Application);
 
+        }
+
+        private void applications_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                string prop = applications.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                MessageBox.Show(prop);
+            }
         }
     }
 }

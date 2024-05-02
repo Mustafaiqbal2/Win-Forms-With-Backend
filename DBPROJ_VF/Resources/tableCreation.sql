@@ -81,9 +81,7 @@ CREATE TABLE Franchise_Application(
 	location VARCHAR(50) NOT NULL,
 	demand INT NOT NULL,
 	proposition VARCHAR(50) NOT NULL,
-	adminUName VARCHAR(50) ,
 	ownerUName VARCHAR(50),
-	FOREIGN KEY (adminUName) REFERENCES Gym_Admin(UName) ON DELETE CASCADE,
 	FOREIGN KEY (ownerUName) REFERENCES GYM_OWNER(UName) ON DELETE CASCADE
 	);
 

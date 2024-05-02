@@ -216,6 +216,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PROJDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PROJDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PROJDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="requests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +357,17 @@
     </None>
     <None Include="PROJDataSet1.xss">
       <DependentUpon>PROJDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PROJDataSet2.xsc">
+      <DependentUpon>PROJDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PROJDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PROJDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PROJDataSet2.xss">
+      <DependentUpon>PROJDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

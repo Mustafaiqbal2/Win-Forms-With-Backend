@@ -16,5 +16,12 @@ namespace DBPROJ_VF
         {
             InitializeComponent();
         }
+
+        private void TrainerFeedback_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pROJDataSet2.Trainer_Feedback' table. You can move, or remove it, as needed.
+            this.trainer_FeedbackTableAdapter.Fill(this.pROJDataSet2.Trainer_Feedback);
+
+        }
     }
 }

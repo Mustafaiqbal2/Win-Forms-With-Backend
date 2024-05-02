@@ -222,6 +222,7 @@
             this.ChooseWorkout.TextMarginLeft = 0;
             this.ChooseWorkout.TextPadding = new System.Windows.Forms.Padding(0);
             this.ChooseWorkout.UseDefaultRadiusAndThickness = true;
+            this.ChooseWorkout.Click += new System.EventHandler(this.ChooseWorkout_Click);
             // 
             // DeitPlanning
             // 

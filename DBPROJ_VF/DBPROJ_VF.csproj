@@ -188,6 +188,12 @@
     <Compile Include="gym_manage.Designer.cs">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberChooseWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberChooseWorkout.Designer.cs">
+      <DependentUpon>MemberChooseWorkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberDeitPlanSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gym_manage.resx">
       <DependentUpon>gym_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberChooseWorkout.resx">
+      <DependentUpon>MemberChooseWorkout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberDeitPlanSelect.resx">
       <DependentUpon>MemberDeitPlanSelect.cs</DependentUpon>

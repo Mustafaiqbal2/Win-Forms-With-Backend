@@ -35,16 +35,16 @@ namespace DBPROJ_VF
 
         private void Rate_Click(object sender, EventArgs e)
         {
+            this.Hide(); 
             MemberTrainerFeedback feedback = new MemberTrainerFeedback(userID);
             feedback.Show();
-            this.Close();
         }
 
         private void SessionBook_Click(object sender, EventArgs e)
         {
             MemberScheduleSession member = new MemberScheduleSession(userID);
             member.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void DeitPlanning_Click(object sender, EventArgs e)
@@ -52,6 +52,14 @@ namespace DBPROJ_VF
             this.Hide();
             MemberDietPlan dietPlan = new MemberDietPlan(userID);
             dietPlan.Show();
+        }
+
+        private void ChooseWorkout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MemberChooseWorkout workoutPlan = new MemberChooseWorkout(userID);
+            workoutPlan.Show();
+
         }
     }
 }

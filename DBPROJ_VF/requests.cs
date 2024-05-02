@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class requests : Form
     {
-        public requests()
+        string userID;
+        public requests(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void requests_Load(object sender, EventArgs e)

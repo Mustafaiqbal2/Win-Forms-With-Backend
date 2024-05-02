@@ -69,6 +69,8 @@ namespace DBPROJ_VF
                 cmd.Dispose();
                 con.Close();
                 MessageBox.Show("Trainer Registered Successfully");
+                Application.OpenForms["Form1"].Show();
+                this.Close();
             }
 
         }

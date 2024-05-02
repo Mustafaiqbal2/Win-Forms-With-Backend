@@ -128,6 +128,7 @@
             this.traiRep.TextMarginLeft = 0;
             this.traiRep.TextPadding = new System.Windows.Forms.Padding(0);
             this.traiRep.UseDefaultRadiusAndThickness = true;
+            this.traiRep.Click += new System.EventHandler(this.traiRep_Click);
             // 
             // memReport
             // 
@@ -217,6 +218,7 @@
             this.memReport.TextMarginLeft = 0;
             this.memReport.TextPadding = new System.Windows.Forms.Padding(0);
             this.memReport.UseDefaultRadiusAndThickness = true;
+            this.memReport.Click += new System.EventHandler(this.memReport_Click);
             // 
             // add_trainer
             // 
@@ -306,6 +308,7 @@
             this.add_trainer.TextMarginLeft = 0;
             this.add_trainer.TextPadding = new System.Windows.Forms.Padding(0);
             this.add_trainer.UseDefaultRadiusAndThickness = true;
+            this.add_trainer.Click += new System.EventHandler(this.add_trainer_Click);
             // 
             // manage_account
             // 
@@ -395,6 +398,7 @@
             this.manage_account.TextMarginLeft = 0;
             this.manage_account.TextPadding = new System.Windows.Forms.Padding(0);
             this.manage_account.UseDefaultRadiusAndThickness = true;
+            this.manage_account.Click += new System.EventHandler(this.manage_account_Click);
             // 
             // label1
             // 

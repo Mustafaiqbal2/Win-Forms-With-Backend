@@ -12,16 +12,51 @@ namespace DBPROJ_VF
 {
     public partial class TrainerMenu : Form
     {
-        public TrainerMenu()
+        string userID;
+        public TrainerMenu(string uname)
         {
             InitializeComponent();
+            userID = uname;
         }
 
         
 
         private void CreateDietPlanButton_Click(object sender, EventArgs e)
         {
+            DietPlan dietPlan = new DietPlan(userID);
+            dietPlan.Show();
+            this.Close();
+        }
 
+        private void CreateWorkoutButton_Click(object sender, EventArgs e)
+        {
+            WorkoutPlan workout = new WorkoutPlan(userID);
+            workout.Show();
+            this.Close();
+        }
+
+        private void AppointmentsButton_Click(object sender, EventArgs e)
+        {
+            TrainerAppointment trainer = new TrainerAppointment(userID);
+            trainer.Show();
+            this.Close();
+        }
+
+        private void DietReportsButton_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void WorkoutReportsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewFeedbackButton_Click(object sender, EventArgs e)
+        {
+            TrainerFeedback feedback = new TrainerFeedback(userID);
+            feedback.Show();
+            this.Close();
         }
     }
 }

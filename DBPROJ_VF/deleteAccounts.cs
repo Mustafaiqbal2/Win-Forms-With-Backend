@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class deleteAccounts : Form
     {
-        public deleteAccounts()
+        string userID;
+        public deleteAccounts(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void deleteAccounts_Load(object sender, EventArgs e)

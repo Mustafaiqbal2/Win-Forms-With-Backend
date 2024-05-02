@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class MemberScheduleSession : Form
     {
-        public MemberScheduleSession()
+        string userID;
+        public MemberScheduleSession(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void MemberFeedback_Load(object sender, EventArgs e)

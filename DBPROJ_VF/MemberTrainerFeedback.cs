@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class MemberTrainerFeedback : Form
     {
-        public MemberTrainerFeedback()
+        string userID;
+        public MemberTrainerFeedback(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void MemberTrainerFeedback_Load(object sender, EventArgs e)

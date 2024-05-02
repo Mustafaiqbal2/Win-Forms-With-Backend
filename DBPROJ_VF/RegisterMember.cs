@@ -136,6 +136,8 @@ namespace DBPROJ_VF
                 }
                 con.Close();
                 MessageBox.Show("Member Registered Successfully");
+                Application.OpenForms["Form1"].Show();
+                this.Close();
             }
         }
 

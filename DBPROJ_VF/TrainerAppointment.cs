@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class TrainerAppointment : Form
     {
-        public TrainerAppointment()
+        string userID;
+        public TrainerAppointment(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
      

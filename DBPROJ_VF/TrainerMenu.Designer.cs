@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainerMenu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.WorkoutReportsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AppointmentsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DietReportsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -63,11 +63,11 @@
             this.WorkoutReportsButton.ColorContrastOnClick = 45;
             this.WorkoutReportsButton.ColorContrastOnHover = 45;
             this.WorkoutReportsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges19.BottomLeft = true;
-            borderEdges19.BottomRight = true;
-            borderEdges19.TopLeft = true;
-            borderEdges19.TopRight = true;
-            this.WorkoutReportsButton.CustomizableEdges = borderEdges19;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.WorkoutReportsButton.CustomizableEdges = borderEdges1;
             this.WorkoutReportsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.WorkoutReportsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.WorkoutReportsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -132,6 +132,7 @@
             this.WorkoutReportsButton.TextMarginLeft = 0;
             this.WorkoutReportsButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.WorkoutReportsButton.UseDefaultRadiusAndThickness = true;
+            this.WorkoutReportsButton.Click += new System.EventHandler(this.WorkoutReportsButton_Click);
             // 
             // AppointmentsButton
             // 
@@ -152,11 +153,11 @@
             this.AppointmentsButton.ColorContrastOnClick = 45;
             this.AppointmentsButton.ColorContrastOnHover = 45;
             this.AppointmentsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges20.BottomLeft = true;
-            borderEdges20.BottomRight = true;
-            borderEdges20.TopLeft = true;
-            borderEdges20.TopRight = true;
-            this.AppointmentsButton.CustomizableEdges = borderEdges20;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.AppointmentsButton.CustomizableEdges = borderEdges2;
             this.AppointmentsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AppointmentsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AppointmentsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -221,6 +222,7 @@
             this.AppointmentsButton.TextMarginLeft = 0;
             this.AppointmentsButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.AppointmentsButton.UseDefaultRadiusAndThickness = true;
+            this.AppointmentsButton.Click += new System.EventHandler(this.AppointmentsButton_Click);
             // 
             // DietReportsButton
             // 
@@ -241,11 +243,11 @@
             this.DietReportsButton.ColorContrastOnClick = 45;
             this.DietReportsButton.ColorContrastOnHover = 45;
             this.DietReportsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges21.BottomLeft = true;
-            borderEdges21.BottomRight = true;
-            borderEdges21.TopLeft = true;
-            borderEdges21.TopRight = true;
-            this.DietReportsButton.CustomizableEdges = borderEdges21;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.DietReportsButton.CustomizableEdges = borderEdges3;
             this.DietReportsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DietReportsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DietReportsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -310,6 +312,7 @@
             this.DietReportsButton.TextMarginLeft = 0;
             this.DietReportsButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.DietReportsButton.UseDefaultRadiusAndThickness = true;
+            this.DietReportsButton.Click += new System.EventHandler(this.DietReportsButton_Click);
             // 
             // CreateWorkoutButton
             // 
@@ -330,11 +333,11 @@
             this.CreateWorkoutButton.ColorContrastOnClick = 45;
             this.CreateWorkoutButton.ColorContrastOnHover = 45;
             this.CreateWorkoutButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges22.BottomLeft = true;
-            borderEdges22.BottomRight = true;
-            borderEdges22.TopLeft = true;
-            borderEdges22.TopRight = true;
-            this.CreateWorkoutButton.CustomizableEdges = borderEdges22;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.CreateWorkoutButton.CustomizableEdges = borderEdges4;
             this.CreateWorkoutButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CreateWorkoutButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CreateWorkoutButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -399,6 +402,7 @@
             this.CreateWorkoutButton.TextMarginLeft = 0;
             this.CreateWorkoutButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.CreateWorkoutButton.UseDefaultRadiusAndThickness = true;
+            this.CreateWorkoutButton.Click += new System.EventHandler(this.CreateWorkoutButton_Click);
             // 
             // CreateDietPlanButton
             // 
@@ -419,11 +423,11 @@
             this.CreateDietPlanButton.ColorContrastOnClick = 45;
             this.CreateDietPlanButton.ColorContrastOnHover = 45;
             this.CreateDietPlanButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges23.BottomLeft = true;
-            borderEdges23.BottomRight = true;
-            borderEdges23.TopLeft = true;
-            borderEdges23.TopRight = true;
-            this.CreateDietPlanButton.CustomizableEdges = borderEdges23;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.CreateDietPlanButton.CustomizableEdges = borderEdges5;
             this.CreateDietPlanButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CreateDietPlanButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CreateDietPlanButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -509,11 +513,11 @@
             this.ViewFeedbackButton.ColorContrastOnClick = 45;
             this.ViewFeedbackButton.ColorContrastOnHover = 45;
             this.ViewFeedbackButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges24.BottomLeft = true;
-            borderEdges24.BottomRight = true;
-            borderEdges24.TopLeft = true;
-            borderEdges24.TopRight = true;
-            this.ViewFeedbackButton.CustomizableEdges = borderEdges24;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.ViewFeedbackButton.CustomizableEdges = borderEdges6;
             this.ViewFeedbackButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ViewFeedbackButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ViewFeedbackButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -578,6 +582,7 @@
             this.ViewFeedbackButton.TextMarginLeft = 0;
             this.ViewFeedbackButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.ViewFeedbackButton.UseDefaultRadiusAndThickness = true;
+            this.ViewFeedbackButton.Click += new System.EventHandler(this.ViewFeedbackButton_Click);
             // 
             // label1
             // 

@@ -222,10 +222,12 @@
             this.AppointmentSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.AppointmentSubmitButton.UseDefaultRadiusAndThickness = true;
             // 
-            // MemberFeedback
+            // MemberScheduleSession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AppointmentSubmitButton);
             this.Controls.Add(this.label4);
@@ -234,7 +236,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EndTimePicker);
             this.Controls.Add(this.StartTimePicker);
-            this.Name = "MemberFeedback";
+            this.Name = "MemberScheduleSession";
             this.Text = "MemberFeedback";
             this.Load += new System.EventHandler(this.MemberFeedback_Load);
             this.ResumeLayout(false);

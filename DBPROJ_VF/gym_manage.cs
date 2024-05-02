@@ -12,11 +12,13 @@ namespace DBPROJ_VF
 {
     public partial class gym_manage : Form
     {
-        public gym_manage()
+        string userID;
+        public gym_manage(string username)
         {
             InitializeComponent();
             bunifuDataGridView1.AllowUserToAddRows = false;
             bunifuDataGridView1.AllowUserToDeleteRows = false;
+            userID = username;
         }
 
         private void gym_manage_Load(object sender, EventArgs e)
@@ -24,7 +26,6 @@ namespace DBPROJ_VF
             this.gymTableAdapter.Fill(this.pROJDataSet.Gym);
 
         }
-
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            

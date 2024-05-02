@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class MemberMenu : Form
     {
-        public MemberMenu()
+        string userID;
+        public MemberMenu(string username)
         {
             InitializeComponent();
+            userID = username;
         }
 
         private void CreateWorkout_Click(object sender, EventArgs e)
@@ -25,6 +27,20 @@ namespace DBPROJ_VF
         private void ChooseDiet_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Rate_Click(object sender, EventArgs e)
+        {
+            MemberTrainerFeedback feedback = new MemberTrainerFeedback(userID);
+            feedback.Show();
+            this.Close();
+        }
+
+        private void SessionBook_Click(object sender, EventArgs e)
+        {
+            MemberScheduleSession member = new MemberScheduleSession(userID);
+            member.Show();
+            this.Close();
         }
     }
 }

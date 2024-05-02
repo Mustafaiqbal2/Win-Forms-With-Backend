@@ -114,37 +114,46 @@ namespace DBPROJ_VF
         }
         private void Admin_Click(object sender, EventArgs e)
         {
+            string uname = Username.Text;
             if(valLogin("Gym_Admin"))
             {
-                /*
                 this.Hide();
-                Admin ad = new Admin();
+                Admin ad = new Admin(uname);
                 ad.Show();
-                */
             }
         }
 
         private void member_Click(object sender, EventArgs e)
         {
-            if(valLogin("Gym_Member"))
+            string uname = Username.Text;
+            if (valLogin("Gym_Member"))
             {
-
+                this.Hide();
+                MemberMenu me = new MemberMenu(uname);
+                me.Show();
             }
         }
 
         private void trainer_Click(object sender, EventArgs e)
         {
-            if(valLogin("Trainer"))
-            {
+            string uname = Username.Text;
 
+            if (valLogin("Trainer"))
+            {
+                this.Hide();
+                TrainerMenu tr = new TrainerMenu(uname);
+                tr.Show();
             }
         }
 
         private void owner_Click(object sender, EventArgs e)
         {
-            if(valLogin("GYM_OWNER"))
+            string uname = Username.Text;
+            if (valLogin("GYM_OWNER"))
             {
-
+                this.Hide();
+                Owner ow = new Owner(uname);
+                ow.Show();
             }
         }
     }

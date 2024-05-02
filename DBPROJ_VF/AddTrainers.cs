@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class AddTrainers : Form
     {
-        public AddTrainers()
+        string userID;
+        public AddTrainers(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void AddTrainers_Load(object sender, EventArgs e)

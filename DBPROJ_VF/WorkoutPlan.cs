@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class WorkoutPlan : Form
     {
-        public WorkoutPlan()
+        string userID;
+        public WorkoutPlan(string userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.gym_man = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.gym_req = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,11 +55,11 @@
             this.gym_man.ColorContrastOnClick = 45;
             this.gym_man.ColorContrastOnHover = 45;
             this.gym_man.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.gym_man.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.gym_man.CustomizableEdges = borderEdges1;
             this.gym_man.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gym_man.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.gym_man.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -124,6 +124,7 @@
             this.gym_man.TextMarginLeft = 0;
             this.gym_man.TextPadding = new System.Windows.Forms.Padding(0);
             this.gym_man.UseDefaultRadiusAndThickness = true;
+            this.gym_man.Click += new System.EventHandler(this.gym_man_Click);
             // 
             // gym_req
             // 
@@ -144,11 +145,11 @@
             this.gym_req.ColorContrastOnClick = 45;
             this.gym_req.ColorContrastOnHover = 45;
             this.gym_req.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.gym_req.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.gym_req.CustomizableEdges = borderEdges2;
             this.gym_req.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gym_req.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.gym_req.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -213,6 +214,7 @@
             this.gym_req.TextMarginLeft = 0;
             this.gym_req.TextPadding = new System.Windows.Forms.Padding(0);
             this.gym_req.UseDefaultRadiusAndThickness = true;
+            this.gym_req.Click += new System.EventHandler(this.gym_req_Click);
             // 
             // label1
             // 

@@ -59,6 +59,8 @@ namespace DBPROJ_VF
                 cmd.Dispose();
                 con.Close();
                 MessageBox.Show("Registration Successful");
+                Application.OpenForms["Form1"].Show();
+                this.Close();
             }
         }
 

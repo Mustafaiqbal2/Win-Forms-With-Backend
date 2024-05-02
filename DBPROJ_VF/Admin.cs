@@ -12,9 +12,25 @@ namespace DBPROJ_VF
 {
     public partial class Admin : Form
     {
-        public Admin()
+        string userID;
+        public Admin(string uname)
         {
             InitializeComponent();
+            userID = uname;
+        }
+
+        private void gym_man_Click(object sender, EventArgs e)
+        {
+            gym_manage gym_ = new gym_manage(userID);
+            gym_.Show();
+            this.Close();
+        }
+
+        private void gym_req_Click(object sender, EventArgs e)
+        {
+            requests req = new requests(userID);
+            req.Show();
+            this.Close();
         }
     }
 }

@@ -73,7 +73,7 @@
             this.dob.IconColor = System.Drawing.Color.Gray;
             this.dob.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dob.LeftTextMargin = 5;
-            this.dob.Location = new System.Drawing.Point(472, 334);
+            this.dob.Location = new System.Drawing.Point(325, 280);
             this.dob.MinimumSize = new System.Drawing.Size(4, 32);
             this.dob.Name = "dob";
             this.dob.Size = new System.Drawing.Size(230, 32);
@@ -107,7 +107,7 @@
             this.fname.IconRight = null;
             this.fname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.fname.Lines = new string[0];
-            this.fname.Location = new System.Drawing.Point(472, 215);
+            this.fname.Location = new System.Drawing.Point(325, 161);
             this.fname.MaxLength = 32767;
             this.fname.MinimumSize = new System.Drawing.Size(1, 1);
             this.fname.Modified = false;
@@ -182,7 +182,7 @@
             this.lname.IconRight = null;
             this.lname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.lname.Lines = new string[0];
-            this.lname.Location = new System.Drawing.Point(472, 275);
+            this.lname.Location = new System.Drawing.Point(325, 221);
             this.lname.MaxLength = 32767;
             this.lname.MinimumSize = new System.Drawing.Size(1, 1);
             this.lname.Modified = false;
@@ -257,7 +257,7 @@
             this.email.IconRight = null;
             this.email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.email.Lines = new string[0];
-            this.email.Location = new System.Drawing.Point(472, 391);
+            this.email.Location = new System.Drawing.Point(325, 337);
             this.email.MaxLength = 32767;
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Modified = false;
@@ -332,7 +332,7 @@
             this.pword.IconRight = null;
             this.pword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.pword.Lines = new string[0];
-            this.pword.Location = new System.Drawing.Point(472, 445);
+            this.pword.Location = new System.Drawing.Point(325, 391);
             this.pword.MaxLength = 32767;
             this.pword.MinimumSize = new System.Drawing.Size(1, 1);
             this.pword.Modified = false;
@@ -427,7 +427,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(500, 499);
+            this.bunifuButton1.Location = new System.Drawing.Point(353, 445);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -474,6 +474,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(963, 545);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.pword);
@@ -481,6 +483,7 @@
             this.Controls.Add(this.lname);
             this.Controls.Add(this.fname);
             this.Controls.Add(this.dob);
+            this.DoubleBuffered = true;
             this.Name = "OwnerReg";
             this.Text = "OwnerReg";
             this.ResumeLayout(false);

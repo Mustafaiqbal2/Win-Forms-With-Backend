@@ -188,6 +188,12 @@
     <Compile Include="gym_manage.Designer.cs">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberDietPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberDietPlan.Designer.cs">
+      <DependentUpon>MemberDietPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberScheduleSession.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,12 @@
     </Compile>
     <Compile Include="MemberTrainerFeedback.Designer.cs">
       <DependentUpon>MemberTrainerFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberWorkoutPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberWorkoutPlan.Designer.cs">
+      <DependentUpon>MemberWorkoutPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="PROJDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -295,6 +307,9 @@
     <EmbeddedResource Include="gym_manage.resx">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemberDietPlan.resx">
+      <DependentUpon>MemberDietPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemberScheduleSession.resx">
       <DependentUpon>MemberScheduleSession.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberTrainerFeedback.resx">
       <DependentUpon>MemberTrainerFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberWorkoutPlan.resx">
+      <DependentUpon>MemberWorkoutPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner.resx">
       <DependentUpon>Owner.cs</DependentUpon>

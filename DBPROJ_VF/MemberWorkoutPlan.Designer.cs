@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberWorkoutPlan));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.WorkoutPlanSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.RestIntervalInputFriday = new System.Windows.Forms.NumericUpDown();
             this.RepsInputFriday = new System.Windows.Forms.NumericUpDown();
@@ -107,11 +107,11 @@
             this.WorkoutPlanSubmitButton.ColorContrastOnClick = 45;
             this.WorkoutPlanSubmitButton.ColorContrastOnHover = 45;
             this.WorkoutPlanSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.WorkoutPlanSubmitButton.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.WorkoutPlanSubmitButton.CustomizableEdges = borderEdges1;
             this.WorkoutPlanSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.WorkoutPlanSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.WorkoutPlanSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -176,6 +176,7 @@
             this.WorkoutPlanSubmitButton.TextMarginLeft = 0;
             this.WorkoutPlanSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.WorkoutPlanSubmitButton.UseDefaultRadiusAndThickness = true;
+            this.WorkoutPlanSubmitButton.Click += new System.EventHandler(this.WorkoutPlanSubmitButton_Click);
             // 
             // RestIntervalInputFriday
             // 

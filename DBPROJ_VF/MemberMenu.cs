@@ -21,12 +21,16 @@ namespace DBPROJ_VF
 
         private void CreateWorkout_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MemberWorkoutPlan createWorkout = new MemberWorkoutPlan(userID);
+            createWorkout.Show();
         }
 
         private void ChooseDiet_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MemberDeitPlanSelect dietPlan = new MemberDeitPlanSelect(userID);
+            dietPlan.Show();
         }
 
         private void Rate_Click(object sender, EventArgs e)
@@ -41,6 +45,13 @@ namespace DBPROJ_VF
             MemberScheduleSession member = new MemberScheduleSession(userID);
             member.Show();
             this.Close();
+        }
+
+        private void DeitPlanning_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MemberDietPlan dietPlan = new MemberDietPlan(userID);
+            dietPlan.Show();
         }
     }
 }

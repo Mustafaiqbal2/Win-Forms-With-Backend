@@ -12,9 +12,12 @@ namespace DBPROJ_VF
 {
     public partial class MemberDeitPlanSelect : Form
     {
-        public MemberDeitPlanSelect()
+        string userID; 
+
+        public MemberDeitPlanSelect(string userID)
         {
             InitializeComponent();
+            this.userID = userID;   
         }
 
         private void MemberDeitPlanSelect_Load(object sender, EventArgs e)

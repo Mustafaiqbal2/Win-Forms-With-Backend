@@ -12,9 +12,18 @@ namespace DBPROJ_VF
 {
     public partial class MemberWorkoutPlan : Form
     {
-        public MemberWorkoutPlan()
+        string userID;
+        public MemberWorkoutPlan(string username)
         {
             InitializeComponent();
+            userID = username;
+        }
+
+        private void WorkoutPlanSubmitButton_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+            MemberMenu menu = new MemberMenu(userID);
+            menu.Show();
         }
     }
 }

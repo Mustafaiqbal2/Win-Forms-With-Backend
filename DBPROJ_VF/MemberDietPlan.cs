@@ -12,9 +12,11 @@ namespace DBPROJ_VF
 {
     public partial class MemberDietPlan : Form
     {
-        public MemberDietPlan()
+        string userID; 
+        public MemberDietPlan(string userID)
         {
             InitializeComponent();
+            this.userID = userID;   
         }
     }
 }

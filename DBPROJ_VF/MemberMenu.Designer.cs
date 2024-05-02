@@ -311,6 +311,7 @@
             this.DeitPlanning.TextMarginLeft = 0;
             this.DeitPlanning.TextPadding = new System.Windows.Forms.Padding(0);
             this.DeitPlanning.UseDefaultRadiusAndThickness = true;
+            this.DeitPlanning.Click += new System.EventHandler(this.DeitPlanning_Click);
             // 
             // ChooseDiet
             // 

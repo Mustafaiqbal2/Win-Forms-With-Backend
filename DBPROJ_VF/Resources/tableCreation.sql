@@ -1,4 +1,4 @@
-﻿SELECT * FROM Gym_Member
+﻿
 CREATE TABLE Workout_Plan(
 	id INT IDENTITY(1,1) PRIMARY KEY,
 	name VARCHAR(50) NOT NULL,
@@ -15,6 +15,7 @@ CREATE TABLE GYM_OWNER(
 	lName VARCHAR(50) NOT NULL,
 	DOB DATE
 	);
+
 CREATE TABLE Gym_Admin(
 	UName VARCHAR(50) PRIMARY KEY NOT NULL,
 	pWord VARCHAR(50) NOT NULL,
@@ -30,8 +31,11 @@ CREATE TABLE Gym(
 	noMembers INT DEFAULT 0,
 	noTrainers INT DEFAULT 0,
 	finances INT DEFAULT 0,
-	FOREIGN KEY (ownerUName) REFERENCES GYM_OWNER(UName) ON DELETE CASCADE
+	FOREIGN KEY (ownerUName) REFERENCES GYM_OWNER(UName) --ON DELETE CASCADE
 	);
+
+
+
 CREATE TABLE Trainer(
 	UName VARCHAR(50) PRIMARY KEY NOT NULL,
 	pWord VARCHAR(50) NOT NULL,
@@ -43,7 +47,7 @@ CREATE TABLE Trainer(
 	rating FLOAT(2),
 	gym_ID INT,
 	startDate DATE,
-	FOREIGN KEY (gym_ID) REFERENCES Gym(id) ON DELETE CASCADE
+	FOREIGN KEY (gym_ID) REFERENCES Gym(id) --ON DELETE CASCADE
 	);
 
 CREATE TABLE Gym_Member(
@@ -64,22 +68,26 @@ CREATE TABLE Gym_Member(
 	dietPlan INT DEFAULT NULL,
 	FOREIGN KEY (workPlan) REFERENCES Workout_Plan(id),
 	FOREIGN KEY (dietPlan) REFERENCES Diet_Plan(id),
-	FOREIGN KEY (gym_ID) REFERENCES Gym(id) ON DELETE CASCADE,
-	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) 
+	FOREIGN KEY (gym_ID) REFERENCES Gym(id), --ON DELETE CASCADE,
+	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) ON DELETE SET NULL
 	);
 
 CREATE TABLE Alergy(
 	UName VARCHAR(50),
 	alergy VARCHAR(50),
-	FOREIGN KEY (UName) REFERENCES Gym_Member(UName) ON DELETE CASCADE,
+	FOREIGN KEY (UName) REFERENCES Gym_Member(UName), --ON DELETE CASCADE,
 	PRIMARY KEY (UName, alergy)
 	);
+
+
 CREATE TABLE TRN_PAST_GYM(
 	UName VARCHAR(50),
 	gymName VARCHAR(50),
-	FOREIGN KEY (UName) REFERENCES Trainer(UName) ON DELETE CASCADE,
+	FOREIGN KEY (UName) REFERENCES Trainer(UName), --ON DELETE CASCADE,
 	PRIMARY KEY (UName, gymName)
 	);
+
+
 
 CREATE TABLE Training_Session(
 	sessionID INT IDENTITY(1,1) PRIMARY KEY,
@@ -87,8 +95,8 @@ CREATE TABLE Training_Session(
 	end_time TIME NOT NULL,
 	TrainerUName VARCHAR(50) ,
 	MemberUName VARCHAR(50),
-	FOREIGN KEY (TrainerUName) REFERENCES Trainer(UName) ON DELETE NO ACTION,
-	FOREIGN KEY (MemberUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE
+	FOREIGN KEY (TrainerUName) REFERENCES Trainer(UName), --ON DELETE NO ACTION,
+	FOREIGN KEY (MemberUName) REFERENCES Gym_Member(UName),-- ON DELETE CASCADE
 	);
 CREATE TABLE Franchise_Application(
 	id INT IDENTITY(1,1) PRIMARY KEY,
@@ -96,7 +104,7 @@ CREATE TABLE Franchise_Application(
 	demand INT NOT NULL,
 	proposition VARCHAR(50) NOT NULL,
 	ownerUName VARCHAR(50),
-	FOREIGN KEY (ownerUName) REFERENCES GYM_OWNER(UName) ON DELETE CASCADE
+	FOREIGN KEY (ownerUName) REFERENCES GYM_OWNER(UName), --ON DELETE CASCADE
 	);
 
 CREATE TABLE Trainer_Feedback(
@@ -106,7 +114,7 @@ CREATE TABLE Trainer_Feedback(
 	trainerUName VARCHAR(50) ,
 	memberUName VARCHAR(50),
 	FOREIGN KEY (trainerUName) REFERENCES Trainer(UName),
-	FOREIGN KEY (memberUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE
+	FOREIGN KEY (memberUName) REFERENCES Gym_Member(UName), --ON DELETE CASCADE
 	);
 
 CREATE TABLE exercise(
@@ -150,5 +158,185 @@ CREATE TABLE GYM_Attendance(
 	FOREIGN KEY (memberUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE,
 	FOREIGN KEY (trainerUName) REFERENCES Trainer(UName)
 	);
+
+
+
+
+
+
+
+
+
+
+	--insert triggers---------------------------------------------------------
+
+CREATE TRIGGER increase_member_count
+ON Gym_Member
+AFTER  INSERT
+AS
+BEGIN
+    -- Update the Gym table to increase the member count for the specific gym (inserted is backend table supposedly)
+    UPDATE Gym
+    SET noMembers = noMembers + (SELECT COUNT(*) FROM INSERTED WHERE Gym.id = INSERTED.gym_ID)
+    WHERE id IN (SELECT DISTINCT gym_ID FROM INSERTED);
+END ; 
+
+CREATE TRIGGER increase_TRAINER_count
+ON		Trainer
+AFTER  INSERT
+AS 
+BEGIN
+    -- Update the Gym table to increase the member count for the specific gym (inserted is backend table supposedly)
+    UPDATE Gym
+    SET noTrainers = noTrainers + (SELECT COUNT(*) FROM INSERTED WHERE Gym.id = INSERTED.gym_ID)
+    WHERE id IN (SELECT DISTINCT gym_ID FROM INSERTED);
+END ; 
+
+
+
+CREATE TRIGGER update_Finances
+ON Gym_Member
+AFTER INSERT
+AS
+BEGIN
+    UPDATE Gym
+    SET finances = finances + 
+        (SELECT 
+            CASE 
+                WHEN subscription = 'Bronze' THEN 100  
+                WHEN subscription = 'Silver' THEN 200  
+                WHEN subscription = 'Gold' THEN 300
+				WHEN subscription = 'Platinum' THEN 400
+                ELSE 0  
+            END
+         FROM INSERTED
+         WHERE Gym.id = INSERTED.gym_ID);
+
+   END;
+
+
+
+CREATE TRIGGER Update_trainer_rating
+ON Trainer_Feedback
+AFTER INSERT
+AS
+BEGIN
+    -- Update the trainer's average rating based on the newly inserted feedback
+    UPDATE Trainer
+    SET rating = (
+        SELECT AVG(rating)
+        FROM Trainer_Feedback
+        WHERE Trainer_Feedback.trainerUName = Trainer.UName
+    )
+    WHERE Trainer.UName IN (
+        SELECT trainerUName
+        FROM inserted
+    );
+END;
+
+-- delete and cascade trigs--
+-----------------------------------------------------
+-- OWNER
+-- Create trigger to delete gym and franchise appli when gym owner is deleted
+CREATE TRIGGER trg_delete_owner_gym_and_franchise
+ON GYM_OWNER
+INSTEAD OF DELETE
+AS
+BEGIN
+    -- Delete gyms associated with the deleted owner
+    DELETE FROM Gym
+    WHERE ownerUName IN (SELECT UName FROM DELETED);
+
+    -- Delete franchise applications associated with the deleted owner
+    DELETE FROM Franchise_Application
+    WHERE ownerUName IN (SELECT UName FROM DELETED);
+
+    -- Delete the owner
+    DELETE FROM GYM_OWNER
+    WHERE UName IN (SELECT UName FROM DELETED);
+END;
+
+-- GYM
+CREATE TRIGGER trg_delete_gym_member
+ON Gym
+INSTEAD OF DELETE
+AS
+BEGIN
+    -- delete the member and trainer in this gym
+	DELETE FROM Gym_Member
+    WHERE gym_ID IN (SELECT id FROM DELETED);
+
+	DELETE FROM Trainer
+    WHERE gym_ID IN (SELECT id FROM DELETED);
+
+	-- delete gym
+    DELETE FROM Gym
+    WHERE id IN (SELECT id FROM DELETED);
+END;
+
+-- trainer
+CREATE TRIGGER trg_Trainer
+ON Trainer
+INSTEAD OF DELETE
+AS
+BEGIN
+    -- Decrement the count of trainers from their gym
+    UPDATE Gym
+    SET noTrainers = noTrainers - 1
+    WHERE id IN (SELECT gym_ID FROM DELETED);
+	
+	-- Delete past gyms associated with the deleted trainer
+    DELETE FROM TRN_PAST_GYM
+    WHERE UName IN (SELECT UName FROM DELETED);
+
+    -- Delete training sessions associated with the deleted trainer
+    DELETE FROM Training_Session
+    WHERE TrainerUName IN (SELECT UName FROM DELETED);
+
+	-- Delete feedback associated with the deleted trainer
+    DELETE FROM Trainer_Feedback
+    WHERE trainerUName IN (SELECT UName FROM DELETED);
+
+	-- Delete attendance records associated with the deleted trainer
+    DELETE FROM GYM_Attendance
+    WHERE trainerUName IN (SELECT UName FROM DELETED);
+
+
+    -- Delete the trainer
+    DELETE FROM Trainer
+    WHERE UName IN (SELECT UName FROM DELETED);
+END;
+
+-- MEMBER TRIGGER
+CREATE TRIGGER trg_Member
+ON Gym_Member
+INSTEAD OF DELETE
+AS
+BEGIN
+    -- Decrement the count of members from their gym
+    UPDATE Gym
+    SET noMembers = noMembers - 1
+    WHERE id IN (SELECT gym_ID FROM DELETED);
+	
+	-- Delete allergies associated with the deleted member
+    DELETE FROM Alergy
+    WHERE UName IN (SELECT UName FROM DELETED);
+
+    -- Delete training sessions associated with the deleted member
+    DELETE FROM Training_Session
+    WHERE MemberUName IN (SELECT UName FROM DELETED);
+
+	 -- Delete feedback associated with the deleted member
+    DELETE FROM Trainer_Feedback
+    WHERE memberUName IN (SELECT UName FROM DELETED);
+
+	-- Delete attendance records associated with the deleted member
+    DELETE FROM GYM_Attendance
+    WHERE memberUName IN (SELECT UName FROM DELETED);
+
+    -- Delete the member
+    DELETE FROM Gym_Member
+    WHERE UName IN (SELECT UName FROM DELETED);
+END;
 
 

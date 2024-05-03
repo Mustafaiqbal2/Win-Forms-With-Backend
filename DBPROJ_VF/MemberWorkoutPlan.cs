@@ -21,9 +21,8 @@ namespace DBPROJ_VF
 
         private void WorkoutPlanSubmitButton_Click(object sender, EventArgs e)
         {
-            this.Close(); 
-            MemberMenu menu = new MemberMenu(userID);
-            menu.Show();
+            this.Close();
+            Application.OpenForms["MemberMenu"].Show();
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

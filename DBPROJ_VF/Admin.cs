@@ -23,14 +23,14 @@ namespace DBPROJ_VF
         {
             gym_manage gym_ = new gym_manage(userID);
             gym_.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void gym_req_Click(object sender, EventArgs e)
         {
             requests req = new requests(userID);
             req.Show();
-            this.Close();
+            this.Hide();
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Submit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.WorkSelectDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.workoutPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
+            this.workout_PlanTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Workout_PlanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workoutPlanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +75,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -100,13 +107,13 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(22, 88);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(22, 164);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowHeadersWidth = 51;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(739, 310);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(739, 234);
             this.bunifuDataGridView1.TabIndex = 8;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -198,18 +205,82 @@
             this.Submit.TextMarginLeft = 0;
             this.Submit.TextPadding = new System.Windows.Forms.Padding(0);
             this.Submit.UseDefaultRadiusAndThickness = true;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            // 
+            // WorkSelectDropDown
+            // 
+            this.WorkSelectDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.WorkSelectDropDown.BackgroundColor = System.Drawing.Color.White;
+            this.WorkSelectDropDown.BorderColor = System.Drawing.Color.Silver;
+            this.WorkSelectDropDown.BorderRadius = 1;
+            this.WorkSelectDropDown.Color = System.Drawing.Color.Silver;
+            this.WorkSelectDropDown.DataSource = this.workoutPlanBindingSource;
+            this.WorkSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.WorkSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.WorkSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.WorkSelectDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.WorkSelectDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.WorkSelectDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.WorkSelectDropDown.DisplayMember = "name";
+            this.WorkSelectDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.WorkSelectDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.WorkSelectDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.WorkSelectDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.WorkSelectDropDown.FillDropDown = true;
+            this.WorkSelectDropDown.FillIndicator = false;
+            this.WorkSelectDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WorkSelectDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.WorkSelectDropDown.ForeColor = System.Drawing.Color.Black;
+            this.WorkSelectDropDown.Icon = null;
+            this.WorkSelectDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.WorkSelectDropDown.IndicatorColor = System.Drawing.Color.Gray;
+            this.WorkSelectDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.WorkSelectDropDown.ItemBackColor = System.Drawing.Color.White;
+            this.WorkSelectDropDown.ItemBorderColor = System.Drawing.Color.White;
+            this.WorkSelectDropDown.ItemForeColor = System.Drawing.Color.Black;
+            this.WorkSelectDropDown.ItemHeight = 26;
+            this.WorkSelectDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.WorkSelectDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.WorkSelectDropDown.ItemTopMargin = 3;
+            this.WorkSelectDropDown.Location = new System.Drawing.Point(259, 101);
+            this.WorkSelectDropDown.Name = "WorkSelectDropDown";
+            this.WorkSelectDropDown.Size = new System.Drawing.Size(260, 32);
+            this.WorkSelectDropDown.TabIndex = 0;
+            this.WorkSelectDropDown.Text = null;
+            this.WorkSelectDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.WorkSelectDropDown.TextLeftMargin = 5;
+            this.WorkSelectDropDown.ValueMember = "name";
+            this.WorkSelectDropDown.SelectedIndexChanged += new System.EventHandler(this.bunifuDropdown1_SelectedIndexChanged);
+            // 
+            // workoutPlanBindingSource
+            // 
+            this.workoutPlanBindingSource.DataMember = "Workout_Plan";
+            this.workoutPlanBindingSource.DataSource = this.pROJDataSet;
+            // 
+            // pROJDataSet
+            // 
+            this.pROJDataSet.DataSetName = "PROJDataSet";
+            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // workout_PlanTableAdapter
+            // 
+            this.workout_PlanTableAdapter.ClearBeforeFill = true;
             // 
             // MemberChooseWorkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.WorkSelectDropDown);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "MemberChooseWorkout";
             this.Text = "MemberChooseWorkout";
+            this.Load += new System.EventHandler(this.MemberChooseWorkout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workoutPlanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +291,9 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Submit;
+        private Bunifu.UI.WinForms.BunifuDropdown WorkSelectDropDown;
+        private PROJDataSet pROJDataSet;
+        private System.Windows.Forms.BindingSource workoutPlanBindingSource;
+        private PROJDataSetTableAdapters.Workout_PlanTableAdapter workout_PlanTableAdapter;
     }
 }

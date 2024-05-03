@@ -1,7 +1,13 @@
-﻿SELECT * FROM Gym_Admin
-SELECT * FROM GYM_OWNER
-SELECT * FROM Gym_Member
-SELECT * FROM Trainer
+﻿SELECT * FROM Gym_Member
+CREATE TABLE Workout_Plan(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	);
+CREATE TABLE Diet_Plan(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	purpose VARCHAR(50) NOT NULL,
+	);
 CREATE TABLE GYM_OWNER(
 	UName VARCHAR(50) PRIMARY KEY NOT NULL,
 	pWord VARCHAR(50) NOT NULL,
@@ -54,6 +60,10 @@ CREATE TABLE Gym_Member(
 	trnUName VARCHAR(50),
 	height INT,
 	gym_ID INT,
+	workPlan INT DEFAULT NULL,
+	dietPlan INT DEFAULT NULL,
+	FOREIGN KEY (workPlan) REFERENCES Workout_Plan(id),
+	FOREIGN KEY (dietPlan) REFERENCES Diet_Plan(id),
 	FOREIGN KEY (gym_ID) REFERENCES Gym(id) ON DELETE CASCADE,
 	FOREIGN KEY (trnUname) REFERENCES Trainer(UName) 
 	);
@@ -106,14 +116,6 @@ CREATE TABLE exercise(
 	Reps INT,
 	RestInterval INT
 	);
-CREATE TABLE Workout_Plan(
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	name VARCHAR(50) NOT NULL,
-	trainerUName VARCHAR(50),
-	memUName VARCHAR(50) ,
-	FOREIGN KEY (trainerUName) REFERENCES Trainer(UName),
-	FOREIGN KEY (memUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE
-	);
 CREATE TABLE ExerciseInDay(
 	exerciseName VARCHAR(50) ,
 	dayFK VARCHAR(50),
@@ -130,15 +132,6 @@ CREATE TABLE Meal(
 	fat INT NOT NULL,
 	fiber INT NOT NULL,
 	Allergen VARCHAR(50)
-	);
-CREATE TABLE Diet_Plan(
-	id INT IDENTITY(1,1) PRIMARY KEY,
-	name VARCHAR(50) NOT NULL,
-	purpose VARCHAR(50) NOT NULL,
-	trainerUName VARCHAR(50),
-	memUName VARCHAR(50) ,
-	FOREIGN KEY (trainerUName) REFERENCES Trainer(UName),
-	FOREIGN KEY (memUName) REFERENCES Gym_Member(UName) ON DELETE CASCADE
 	);
 CREATE TABLE MealInDay(
 	mealName VARCHAR(50),

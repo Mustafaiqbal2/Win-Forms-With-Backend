@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberDietPlan));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.DietPlanSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AllergenInputFriday = new System.Windows.Forms.TextBox();
             this.AllergenInputThursday = new System.Windows.Forms.TextBox();
@@ -130,11 +130,11 @@
             this.DietPlanSubmitButton.ColorContrastOnClick = 45;
             this.DietPlanSubmitButton.ColorContrastOnHover = 45;
             this.DietPlanSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.DietPlanSubmitButton.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.DietPlanSubmitButton.CustomizableEdges = borderEdges1;
             this.DietPlanSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DietPlanSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DietPlanSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -199,6 +199,7 @@
             this.DietPlanSubmitButton.TextMarginLeft = 0;
             this.DietPlanSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.DietPlanSubmitButton.UseDefaultRadiusAndThickness = true;
+            this.DietPlanSubmitButton.Click += new System.EventHandler(this.DietPlanSubmitButton_Click);
             // 
             // AllergenInputFriday
             // 

@@ -444,6 +444,7 @@
     <Content Include="Resources\Owner.png" />
     <Content Include="Resources\tableCreation.sql" />
     <Content Include="Resources\tableInsertions.sql" />
+    <Content Include="Resources\triggers.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

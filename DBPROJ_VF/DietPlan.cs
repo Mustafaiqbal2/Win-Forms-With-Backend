@@ -105,12 +105,11 @@ namespace DBPROJ_VF
                     return;
                 }
                 //insert into diet plan
-                string query = "INSERT INTO Diet_Plan(name, purpose, memUName,trainerUName) VALUES(@name, @purpose, @memberID,@trainer)";
+                string query = "INSERT INTO Diet_Plan(name, purpose) VALUES(@name, @purpose)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", planName);
                 cmd.Parameters.AddWithValue("@purpose", purpose);
-                cmd.Parameters.AddWithValue("@memberID", memberID);
-                cmd.Parameters.AddWithValue("@trainer", userID);
+               
                 cmd.ExecuteNonQuery();
             }
             //getPlanID
@@ -123,7 +122,11 @@ namespace DBPROJ_VF
             {
                 planID = drP["id"].ToString();
             }
-
+            string query4 = "UPDATE Gym_Member SET dietPlan = @PlanID WHERE UName = @memberID";
+            SqlCommand cmdE = new SqlCommand(query4, con);
+            cmdE.Parameters.AddWithValue("@PlanID", planID);
+            cmdE.Parameters.AddWithValue("@memberID", memberID);
+            cmdE.ExecuteNonQuery();
             /////MEAL INSERTION
             string portion = "";
             string protien = "";

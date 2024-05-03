@@ -33,19 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberDeitPlanSelect));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.diet_PlanTableAdapter1 = new DBPROJ_VF.PROJDataSetTableAdapters.Diet_PlanTableAdapter();
-            this.dietPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.diet_PlanTableAdapter = new DBPROJ_VF.PROJDataSet2TableAdapters.Diet_PlanTableAdapter();
+            this.DietSelectDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.dietPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet2 = new DBPROJ_VF.PROJDataSet2();
+            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
+            this.diet_PlanTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Diet_PlanTableAdapter();
+            this.submit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDataGridView1
@@ -98,15 +96,16 @@
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(41, 108);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(43, 176);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowHeadersWidth = 51;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(778, 250);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(778, 117);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -121,13 +120,56 @@
             this.label1.Text = "Diet Plans that are available";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // diet_PlanTableAdapter1
+            // DietSelectDropDown
             // 
-            this.diet_PlanTableAdapter1.ClearBeforeFill = true;
+            this.DietSelectDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.DietSelectDropDown.BackgroundColor = System.Drawing.Color.White;
+            this.DietSelectDropDown.BorderColor = System.Drawing.Color.Silver;
+            this.DietSelectDropDown.BorderRadius = 1;
+            this.DietSelectDropDown.Color = System.Drawing.Color.Silver;
+            this.DietSelectDropDown.DataSource = this.dietPlanBindingSource;
+            this.DietSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.DietSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DietSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.DietSelectDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DietSelectDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DietSelectDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DietSelectDropDown.DisplayMember = "name";
+            this.DietSelectDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DietSelectDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.DietSelectDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DietSelectDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DietSelectDropDown.FillDropDown = true;
+            this.DietSelectDropDown.FillIndicator = false;
+            this.DietSelectDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DietSelectDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DietSelectDropDown.ForeColor = System.Drawing.Color.Black;
+            this.DietSelectDropDown.FormattingEnabled = true;
+            this.DietSelectDropDown.Icon = null;
+            this.DietSelectDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DietSelectDropDown.IndicatorColor = System.Drawing.Color.Gray;
+            this.DietSelectDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DietSelectDropDown.ItemBackColor = System.Drawing.Color.White;
+            this.DietSelectDropDown.ItemBorderColor = System.Drawing.Color.White;
+            this.DietSelectDropDown.ItemForeColor = System.Drawing.Color.Black;
+            this.DietSelectDropDown.ItemHeight = 26;
+            this.DietSelectDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.DietSelectDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DietSelectDropDown.ItemTopMargin = 3;
+            this.DietSelectDropDown.Location = new System.Drawing.Point(321, 114);
+            this.DietSelectDropDown.Name = "DietSelectDropDown";
+            this.DietSelectDropDown.Size = new System.Drawing.Size(260, 32);
+            this.DietSelectDropDown.TabIndex = 12;
+            this.DietSelectDropDown.Text = null;
+            this.DietSelectDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DietSelectDropDown.TextLeftMargin = 5;
+            this.DietSelectDropDown.ValueMember = "name";
+            this.DietSelectDropDown.SelectedIndexChanged += new System.EventHandler(this.DietSelectDropDown_SelectedIndexChanged);
             // 
-            // dietPlanBindingSource1
+            // dietPlanBindingSource
             // 
-            this.dietPlanBindingSource1.DataMember = "Diet_Plan";
+            this.dietPlanBindingSource.DataMember = "Diet_Plan";
+            this.dietPlanBindingSource.DataSource = this.pROJDataSet;
             // 
             // pROJDataSet
             // 
@@ -138,14 +180,95 @@
             // 
             this.diet_PlanTableAdapter.ClearBeforeFill = true;
             // 
-            // dietPlanBindingSource
+            // submit
             // 
-            this.dietPlanBindingSource.DataMember = "Diet_Plan";
-            // 
-            // pROJDataSet2
-            // 
-            this.pROJDataSet2.DataSetName = "PROJDataSet2";
-            this.pROJDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.submit.AllowAnimations = true;
+            this.submit.AllowMouseEffects = true;
+            this.submit.AllowToggling = false;
+            this.submit.AnimationSpeed = 200;
+            this.submit.AutoGenerateColors = false;
+            this.submit.AutoRoundBorders = false;
+            this.submit.AutoSizeLeftIcon = true;
+            this.submit.AutoSizeRightIcon = true;
+            this.submit.BackColor = System.Drawing.Color.Transparent;
+            this.submit.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.submit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("submit.BackgroundImage")));
+            this.submit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.submit.ButtonText = "Submit";
+            this.submit.ButtonTextMarginLeft = 0;
+            this.submit.ColorContrastOnClick = 45;
+            this.submit.ColorContrastOnHover = 45;
+            this.submit.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.submit.CustomizableEdges = borderEdges1;
+            this.submit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.submit.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.submit.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.submit.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.submit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.submit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.submit.ForeColor = System.Drawing.Color.White;
+            this.submit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.submit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.submit.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.submit.IconMarginLeft = 11;
+            this.submit.IconPadding = 10;
+            this.submit.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.submit.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.submit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.submit.IconSize = 25;
+            this.submit.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.submit.IdleBorderRadius = 1;
+            this.submit.IdleBorderThickness = 1;
+            this.submit.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.submit.IdleIconLeftImage = null;
+            this.submit.IdleIconRightImage = null;
+            this.submit.IndicateFocus = false;
+            this.submit.Location = new System.Drawing.Point(388, 350);
+            this.submit.Name = "submit";
+            this.submit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.submit.OnDisabledState.BorderRadius = 1;
+            this.submit.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.submit.OnDisabledState.BorderThickness = 1;
+            this.submit.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.submit.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.submit.OnDisabledState.IconLeftImage = null;
+            this.submit.OnDisabledState.IconRightImage = null;
+            this.submit.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.submit.onHoverState.BorderRadius = 1;
+            this.submit.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.submit.onHoverState.BorderThickness = 1;
+            this.submit.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.submit.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.submit.onHoverState.IconLeftImage = null;
+            this.submit.onHoverState.IconRightImage = null;
+            this.submit.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.submit.OnIdleState.BorderRadius = 1;
+            this.submit.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.submit.OnIdleState.BorderThickness = 1;
+            this.submit.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.submit.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.submit.OnIdleState.IconLeftImage = null;
+            this.submit.OnIdleState.IconRightImage = null;
+            this.submit.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.submit.OnPressedState.BorderRadius = 1;
+            this.submit.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.submit.OnPressedState.BorderThickness = 1;
+            this.submit.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.submit.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.submit.OnPressedState.IconLeftImage = null;
+            this.submit.OnPressedState.IconRightImage = null;
+            this.submit.Size = new System.Drawing.Size(150, 39);
+            this.submit.TabIndex = 13;
+            this.submit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.submit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.submit.TextMarginLeft = 0;
+            this.submit.TextPadding = new System.Windows.Forms.Padding(0);
+            this.submit.UseDefaultRadiusAndThickness = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // MemberDeitPlanSelect
             // 
@@ -153,17 +276,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(864, 450);
+            this.ClientSize = new System.Drawing.Size(873, 418);
+            this.Controls.Add(this.submit);
+            this.Controls.Add(this.DietSelectDropDown);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Name = "MemberDeitPlanSelect";
             this.Text = "Available Diet Plans";
             this.Load += new System.EventHandler(this.MemberDeitPlanSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,11 +296,10 @@
 
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private System.Windows.Forms.Label label1;
-        private PROJDataSetTableAdapters.Diet_PlanTableAdapter diet_PlanTableAdapter1;
-        private System.Windows.Forms.BindingSource dietPlanBindingSource1;
+        private Bunifu.UI.WinForms.BunifuDropdown DietSelectDropDown;
         private PROJDataSet pROJDataSet;
-        private PROJDataSet2TableAdapters.Diet_PlanTableAdapter diet_PlanTableAdapter;
         private System.Windows.Forms.BindingSource dietPlanBindingSource;
-        private PROJDataSet2 pROJDataSet2;
+        private PROJDataSetTableAdapters.Diet_PlanTableAdapter diet_PlanTableAdapter;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton submit;
     }
 }

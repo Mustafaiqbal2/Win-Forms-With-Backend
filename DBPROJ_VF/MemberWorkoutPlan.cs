@@ -46,7 +46,7 @@ namespace DBPROJ_VF
             SqlDataReader drD = cmdD.ExecuteReader();
             if (drD.Read())
             {
-                MessageBox.Show("Diet Plan Name already exists");
+                MessageBox.Show("Workout Plan Name already exists");
                 con.Close();
                 return;
             }
@@ -82,11 +82,9 @@ namespace DBPROJ_VF
                     con.Close();
                     return;
                 }
-                string query = "INSERT INTO Workout_Plan(name, memUName,trainerUName) VALUES(@name, @memberID,@trainer)";
+                string query = "INSERT INTO Workout_Plan(name) VALUES(@name)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", planName);
-                cmd.Parameters.AddWithValue("@memberID", userID);
-                cmd.Parameters.AddWithValue("@trainer", trainerID);
                 cmd.ExecuteNonQuery();
             }
             //getPlanID
@@ -99,7 +97,10 @@ namespace DBPROJ_VF
             {
                 planID = drP["id"].ToString();
             }
-
+            string query4 = "UPDATE Gym_Member SET workPlan = @PlanID WHERE UName = @memberID";
+            SqlCommand cmdE = new SqlCommand(query4, con);
+            cmdE.Parameters.AddWithValue("@PlanID", planID);
+            cmdE.Parameters.AddWithValue("@memberID", userID);
             /////MEAL INSERTION
             string machine = "";
             string sets = "";

@@ -107,11 +107,9 @@ namespace DBPROJ_VF
                     return;
                 }
                 //insert into diet plan
-                string query = "INSERT INTO Workout_Plan(name, memUName,trainerUName) VALUES(@name, @memberID,@trainer)";
+                string query = "INSERT INTO Workout_Plan(name) VALUES(@name)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", planName);
-                cmd.Parameters.AddWithValue("@memberID", memberID);
-                cmd.Parameters.AddWithValue("@trainer", userID);
                 cmd.ExecuteNonQuery();
             }
             //getPlanID
@@ -124,7 +122,11 @@ namespace DBPROJ_VF
             {
                 planID = drP["id"].ToString();
             }
-
+            string query4 = "UPDATE Gym_Member SET workPlan = @PlanID WHERE UName = @memberID";
+            SqlCommand cmdE = new SqlCommand(query4, con);
+            cmdE.Parameters.AddWithValue("@PlanID", planID);
+            cmdE.Parameters.AddWithValue("@memberID", memberID);
+            cmdE.ExecuteNonQuery();
             /////MEAL INSERTION
             string machine = "";
             string sets = "";
@@ -207,6 +209,8 @@ namespace DBPROJ_VF
                     cmdC.Parameters.AddWithValue("@EName", names[i]);
                     cmdC.Parameters.AddWithValue("@PlanID", planID);
                     cmdC.ExecuteNonQuery();
+                    //update member workout plan
+
                 }
             }
             MessageBox.Show("Workout Plan Submitted");

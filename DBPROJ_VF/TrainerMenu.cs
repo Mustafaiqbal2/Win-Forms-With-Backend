@@ -25,21 +25,21 @@ namespace DBPROJ_VF
         {
             DietPlan dietPlan = new DietPlan(userID);
             dietPlan.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void CreateWorkoutButton_Click(object sender, EventArgs e)
         {
             WorkoutPlan workout = new WorkoutPlan(userID);
             workout.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void AppointmentsButton_Click(object sender, EventArgs e)
         {
             TrainerAppointment trainer = new TrainerAppointment(userID);
             trainer.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void DietReportsButton_Click(object sender, EventArgs e)
@@ -56,7 +56,12 @@ namespace DBPROJ_VF
         {
             TrainerFeedback feedback = new TrainerFeedback(userID);
             feedback.Show();
-            this.Close();
+            this.Hide();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.Exit();
         }
     }
 }

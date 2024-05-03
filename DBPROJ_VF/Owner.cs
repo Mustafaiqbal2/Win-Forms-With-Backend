@@ -33,14 +33,19 @@ namespace DBPROJ_VF
         {
             AddTrainers add = new AddTrainers(userID);
             add.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void manage_account_Click(object sender, EventArgs e)
         {
             deleteAccounts del = new deleteAccounts(userID);
             del.Show();
-            this.Close();
+            this.Hide();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.Exit();
         }
     }
 }

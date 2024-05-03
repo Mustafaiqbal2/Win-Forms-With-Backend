@@ -72,7 +72,12 @@ namespace DBPROJ_VF
                 Application.OpenForms["Form1"].Show();
                 this.Close();
             }
-
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["Form1"].Show();
+            this.Close();
         }
     }
 }

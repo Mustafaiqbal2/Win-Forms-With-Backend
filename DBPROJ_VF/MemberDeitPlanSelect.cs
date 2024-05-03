@@ -33,5 +33,11 @@ namespace DBPROJ_VF
         {
 
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["MemberMenu"].Show();
+            this.Close();
+        }
     }
 }

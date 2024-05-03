@@ -25,5 +25,11 @@ namespace DBPROJ_VF
             this.trainer_FeedbackTableAdapter.Fill(this.pROJDataSet2.Trainer_Feedback);
 
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["TraienrMenu"].Show();
+            this.Close();
+        }
     }
 }

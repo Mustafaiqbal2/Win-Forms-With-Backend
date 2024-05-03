@@ -31,5 +31,11 @@ namespace DBPROJ_VF
            
             
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["Admin"].Show();
+            this.Close();
+        }
     }
 }

@@ -25,5 +25,11 @@ namespace DBPROJ_VF
             MemberMenu menu = new MemberMenu(userID);
             menu.Show();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["MemberMenu"].Show();
+            this.Close();
+        }
     }
 }

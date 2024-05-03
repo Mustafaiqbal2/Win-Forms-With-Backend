@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlan));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PlanNameInput = new System.Windows.Forms.TextBox();
@@ -85,6 +86,12 @@
             this.AllergenInputThursday = new System.Windows.Forms.TextBox();
             this.AllergenInputFriday = new System.Windows.Forms.TextBox();
             this.DietPlanSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
+            this.gymMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gym_MemberTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Gym_MemberTableAdapter();
+            this.fKAlergyUName6EF57B66BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alergyTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.AlergyTableAdapter();
+            this.gymMemberBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.portionInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProtienInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarbsInputMonday)).BeginInit();
@@ -110,6 +117,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputWednesday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputThursday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputFriday)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKAlergyUName6EF57B66BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -184,6 +195,7 @@
             this.MemberSelectDropDown.Text = "Select Member";
             this.MemberSelectDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.MemberSelectDropDown.TextLeftMargin = 5;
+            this.MemberSelectDropDown.ValueMember = "UName";
             // 
             // label3
             // 
@@ -614,11 +626,11 @@
             this.DietPlanSubmitButton.ColorContrastOnClick = 45;
             this.DietPlanSubmitButton.ColorContrastOnHover = 45;
             this.DietPlanSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.DietPlanSubmitButton.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.DietPlanSubmitButton.CustomizableEdges = borderEdges2;
             this.DietPlanSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DietPlanSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DietPlanSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -683,6 +695,35 @@
             this.DietPlanSubmitButton.TextMarginLeft = 0;
             this.DietPlanSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.DietPlanSubmitButton.UseDefaultRadiusAndThickness = true;
+            this.DietPlanSubmitButton.Click += new System.EventHandler(this.DietPlanSubmitButton_Click);
+            // 
+            // pROJDataSet
+            // 
+            this.pROJDataSet.DataSetName = "PROJDataSet";
+            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gymMemberBindingSource
+            // 
+            this.gymMemberBindingSource.DataMember = "Gym_Member";
+            this.gymMemberBindingSource.DataSource = this.pROJDataSet;
+            // 
+            // gym_MemberTableAdapter
+            // 
+            this.gym_MemberTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKAlergyUName6EF57B66BindingSource
+            // 
+            this.fKAlergyUName6EF57B66BindingSource.DataMember = "FK__Alergy__UName__6EF57B66";
+            this.fKAlergyUName6EF57B66BindingSource.DataSource = this.gymMemberBindingSource;
+            // 
+            // alergyTableAdapter
+            // 
+            this.alergyTableAdapter.ClearBeforeFill = true;
+            // 
+            // gymMemberBindingSource1
+            // 
+            this.gymMemberBindingSource1.DataMember = "Gym_Member";
+            this.gymMemberBindingSource1.DataSource = this.pROJDataSet;
             // 
             // DietPlan
             // 
@@ -748,6 +789,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DietPlan";
             this.Text = "DietPlan";
+            this.Load += new System.EventHandler(this.DietPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.portionInputMonday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProtienInputMonday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarbsInputMonday)).EndInit();
@@ -773,6 +815,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputWednesday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputThursday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FiberInputFriday)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKAlergyUName6EF57B66BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -835,5 +881,11 @@
         private System.Windows.Forms.TextBox AllergenInputThursday;
         private System.Windows.Forms.TextBox AllergenInputFriday;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DietPlanSubmitButton;
+        private PROJDataSet pROJDataSet;
+        private System.Windows.Forms.BindingSource gymMemberBindingSource;
+        private PROJDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter;
+        private System.Windows.Forms.BindingSource fKAlergyUName6EF57B66BindingSource;
+        private PROJDataSetTableAdapters.AlergyTableAdapter alergyTableAdapter;
+        private System.Windows.Forms.BindingSource gymMemberBindingSource1;
     }
 }

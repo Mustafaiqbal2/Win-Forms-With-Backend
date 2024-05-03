@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainerAppointment));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.AppointmentSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.StartTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +46,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.DeleteSessionDropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.DeleteSessionButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
+            this.gymMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gym_MemberTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Gym_MemberTableAdapter();
+            this.trainingSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.training_SessionTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Training_SessionTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingSessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,11 +89,11 @@
             this.AppointmentSubmitButton.ColorContrastOnClick = 45;
             this.AppointmentSubmitButton.ColorContrastOnHover = 45;
             this.AppointmentSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.AppointmentSubmitButton.CustomizableEdges = borderEdges5;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.AppointmentSubmitButton.CustomizableEdges = borderEdges7;
             this.AppointmentSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AppointmentSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AppointmentSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -144,6 +158,7 @@
             this.AppointmentSubmitButton.TextMarginLeft = 0;
             this.AppointmentSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.AppointmentSubmitButton.UseDefaultRadiusAndThickness = true;
+            this.AppointmentSubmitButton.Click += new System.EventHandler(this.AppointmentSubmitButton_Click);
             // 
             // StartTimePicker
             // 
@@ -194,12 +209,14 @@
             this.ScheduleSessionDropDown.BorderColor = System.Drawing.Color.Silver;
             this.ScheduleSessionDropDown.BorderRadius = 1;
             this.ScheduleSessionDropDown.Color = System.Drawing.Color.Silver;
+            this.ScheduleSessionDropDown.DataSource = this.gymMemberBindingSource;
             this.ScheduleSessionDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.ScheduleSessionDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ScheduleSessionDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ScheduleSessionDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ScheduleSessionDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.ScheduleSessionDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ScheduleSessionDropDown.DisplayMember = "UName";
             this.ScheduleSessionDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ScheduleSessionDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.ScheduleSessionDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -228,6 +245,8 @@
             this.ScheduleSessionDropDown.Text = "Select Member";
             this.ScheduleSessionDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ScheduleSessionDropDown.TextLeftMargin = 5;
+            this.ScheduleSessionDropDown.ValueMember = "UName";
+            this.ScheduleSessionDropDown.SelectedIndexChanged += new System.EventHandler(this.ScheduleSessionDropDown_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -256,12 +275,14 @@
             this.DeleteSessionDropdown.BorderColor = System.Drawing.Color.Silver;
             this.DeleteSessionDropdown.BorderRadius = 1;
             this.DeleteSessionDropdown.Color = System.Drawing.Color.Silver;
+            this.DeleteSessionDropdown.DataSource = this.trainingSessionBindingSource;
             this.DeleteSessionDropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DeleteSessionDropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DeleteSessionDropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.DeleteSessionDropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DeleteSessionDropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.DeleteSessionDropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DeleteSessionDropdown.DisplayMember = "sessionID";
             this.DeleteSessionDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.DeleteSessionDropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.DeleteSessionDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -290,6 +311,8 @@
             this.DeleteSessionDropdown.Text = "Select Member";
             this.DeleteSessionDropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DeleteSessionDropdown.TextLeftMargin = 5;
+            this.DeleteSessionDropdown.ValueMember = "sessionID";
+            this.DeleteSessionDropdown.SelectedIndexChanged += new System.EventHandler(this.DeleteSessionDropdown_SelectedIndexChanged);
             // 
             // DeleteSessionButton
             // 
@@ -310,11 +333,11 @@
             this.DeleteSessionButton.ColorContrastOnClick = 45;
             this.DeleteSessionButton.ColorContrastOnHover = 45;
             this.DeleteSessionButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.DeleteSessionButton.CustomizableEdges = borderEdges6;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.DeleteSessionButton.CustomizableEdges = borderEdges8;
             this.DeleteSessionButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DeleteSessionButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DeleteSessionButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -379,6 +402,91 @@
             this.DeleteSessionButton.TextMarginLeft = 0;
             this.DeleteSessionButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.DeleteSessionButton.UseDefaultRadiusAndThickness = true;
+            this.DeleteSessionButton.Click += new System.EventHandler(this.DeleteSessionButton_Click);
+            // 
+            // bunifuDataGridView1
+            // 
+            this.bunifuDataGridView1.AllowCustomTheming = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView1.CurrentTheme.Name = null;
+            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
+            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(19, 80);
+            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
+            this.bunifuDataGridView1.RowHeadersVisible = false;
+            this.bunifuDataGridView1.RowHeadersWidth = 51;
+            this.bunifuDataGridView1.RowTemplate.Height = 40;
+            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(603, 310);
+            this.bunifuDataGridView1.TabIndex = 11;
+            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
+            // 
+            // pROJDataSet
+            // 
+            this.pROJDataSet.DataSetName = "PROJDataSet";
+            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gymMemberBindingSource
+            // 
+            this.gymMemberBindingSource.DataMember = "Gym_Member";
+            this.gymMemberBindingSource.DataSource = this.pROJDataSet;
+            // 
+            // gym_MemberTableAdapter
+            // 
+            this.gym_MemberTableAdapter.ClearBeforeFill = true;
+            // 
+            // trainingSessionBindingSource
+            // 
+            this.trainingSessionBindingSource.DataMember = "Training_Session";
+            this.trainingSessionBindingSource.DataSource = this.pROJDataSet;
+            // 
+            // training_SessionTableAdapter
+            // 
+            this.training_SessionTableAdapter.ClearBeforeFill = true;
             // 
             // TrainerAppointment
             // 
@@ -387,6 +495,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(942, 482);
+            this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.DeleteSessionButton);
             this.Controls.Add(this.DeleteSessionDropdown);
             this.Controls.Add(this.label5);
@@ -398,8 +507,14 @@
             this.Controls.Add(this.StartTimePicker);
             this.Controls.Add(this.AppointmentSubmitButton);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "TrainerAppointment";
             this.Text = "TrainerAppointment";
+            this.Load += new System.EventHandler(this.TrainerAppointment_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainingSessionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +533,11 @@
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuDropdown DeleteSessionDropdown;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteSessionButton;
+        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
+        private PROJDataSet pROJDataSet;
+        private System.Windows.Forms.BindingSource gymMemberBindingSource;
+        private PROJDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter;
+        private System.Windows.Forms.BindingSource trainingSessionBindingSource;
+        private PROJDataSetTableAdapters.Training_SessionTableAdapter training_SessionTableAdapter;
     }
 }

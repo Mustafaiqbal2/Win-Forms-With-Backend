@@ -49,14 +49,10 @@ VALUES (4.5, 'Great trainer, very motivating', 'trainer1', 'member1'),
        (4.0, 'Knowledgeable but could improve punctuality', 'trainer2', 'member2');
 
 -- Insert data into Workout_Plan table
-INSERT INTO Workout_Plan (name, type, trainerUName, memUName)
+INSERT INTO Workout_Plan (name, purpose, trainerUName, memUName)
 VALUES ('Beginner Full Body Workout', 'Strength', 'trainer1', 'member1'),
        ('Advanced Split Routine', 'Hypertrophy', 'trainer2', 'member2');
 
--- Insert data into workout_day table
-INSERT INTO workout_day (planID, wDay)
-VALUES (1, 'Monday'),
-       (2, 'Wednesday');
 
 -- Insert data into exercise table
 INSERT INTO exercise (name, machine, targetMuscle, Setss, Reps, RestInterval)
@@ -74,14 +70,9 @@ VALUES ('Grilled Chicken Salad', 1, 30, 10, 5, 8, NULL),
        ('Salmon with Quinoa', 1, 25, 20, 10, 6, 'Fish');
 
 -- Insert data into Diet_Plan table
-INSERT INTO Diet_Plan (name, type, purpose, trainerUName, memUName)
-VALUES ('Weight Loss Meal Plan', 'Balanced', 'Reduce body fat', 'trainer1', 'member1'),
-       ('Muscle Gain Meal Plan', 'High Protein', 'Increase muscle mass', 'trainer2', 'member2');
-
--- Insert data into meal_day table
-INSERT INTO meal_day (planID, mDay)
-VALUES (1, 'Monday'),
-       (2, 'Wednesday');
+INSERT INTO Diet_Plan (name, purpose, trainerUName, memUName)
+VALUES ('Weight Loss Meal Plan', 'Reduce body fat', 'trainer1', 'member1'),
+       ('Muscle Gain Meal Plan', 'Increase muscle mass', 'trainer2', 'member2');
 
 -- Insert data into MealInDay table
 INSERT INTO MealInDay (mealName, dayFK, planFK)

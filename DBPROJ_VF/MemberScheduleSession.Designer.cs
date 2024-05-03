@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberScheduleSession));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label4 = new System.Windows.Forms.Label();
-            this.ScheduleSessionDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EndTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -43,53 +42,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(296, 101);
+            this.label4.Location = new System.Drawing.Point(297, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 22);
             this.label4.TabIndex = 13;
             this.label4.Text = "Schedule A Session";
-            // 
-            // ScheduleSessionDropDown
-            // 
-            this.ScheduleSessionDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.ScheduleSessionDropDown.BackgroundColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.BorderColor = System.Drawing.Color.Silver;
-            this.ScheduleSessionDropDown.BorderRadius = 1;
-            this.ScheduleSessionDropDown.Color = System.Drawing.Color.Silver;
-            this.ScheduleSessionDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.ScheduleSessionDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ScheduleSessionDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ScheduleSessionDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ScheduleSessionDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ScheduleSessionDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ScheduleSessionDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ScheduleSessionDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.ScheduleSessionDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ScheduleSessionDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ScheduleSessionDropDown.FillDropDown = true;
-            this.ScheduleSessionDropDown.FillIndicator = false;
-            this.ScheduleSessionDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScheduleSessionDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ScheduleSessionDropDown.ForeColor = System.Drawing.Color.Black;
-            this.ScheduleSessionDropDown.FormattingEnabled = true;
-            this.ScheduleSessionDropDown.Icon = null;
-            this.ScheduleSessionDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ScheduleSessionDropDown.IndicatorColor = System.Drawing.Color.Gray;
-            this.ScheduleSessionDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ScheduleSessionDropDown.ItemBackColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemBorderColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemForeColor = System.Drawing.Color.Black;
-            this.ScheduleSessionDropDown.ItemHeight = 26;
-            this.ScheduleSessionDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ScheduleSessionDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ScheduleSessionDropDown.ItemTopMargin = 3;
-            this.ScheduleSessionDropDown.Location = new System.Drawing.Point(300, 269);
-            this.ScheduleSessionDropDown.Name = "ScheduleSessionDropDown";
-            this.ScheduleSessionDropDown.Size = new System.Drawing.Size(260, 32);
-            this.ScheduleSessionDropDown.TabIndex = 12;
-            this.ScheduleSessionDropDown.Text = "Select Trainer";
-            this.ScheduleSessionDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ScheduleSessionDropDown.TextLeftMargin = 5;
             // 
             // label3
             // 
@@ -97,7 +54,7 @@
             this.label3.BackColor = System.Drawing.Color.Navy;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(297, 209);
+            this.label3.Location = new System.Drawing.Point(298, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 18);
             this.label3.TabIndex = 11;
@@ -109,7 +66,7 @@
             this.label2.BackColor = System.Drawing.Color.Navy;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(297, 153);
+            this.label2.Location = new System.Drawing.Point(298, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 18);
             this.label2.TabIndex = 10;
@@ -118,7 +75,7 @@
             // EndTimePicker
             // 
             this.EndTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.EndTimePicker.Location = new System.Drawing.Point(436, 206);
+            this.EndTimePicker.Location = new System.Drawing.Point(437, 263);
             this.EndTimePicker.Name = "EndTimePicker";
             this.EndTimePicker.ShowUpDown = true;
             this.EndTimePicker.Size = new System.Drawing.Size(118, 22);
@@ -127,7 +84,7 @@
             // StartTimePicker
             // 
             this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.StartTimePicker.Location = new System.Drawing.Point(436, 149);
+            this.StartTimePicker.Location = new System.Drawing.Point(437, 206);
             this.StartTimePicker.Name = "StartTimePicker";
             this.StartTimePicker.ShowUpDown = true;
             this.StartTimePicker.Size = new System.Drawing.Size(118, 22);
@@ -221,6 +178,7 @@
             this.AppointmentSubmitButton.TextMarginLeft = 0;
             this.AppointmentSubmitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.AppointmentSubmitButton.UseDefaultRadiusAndThickness = true;
+            this.AppointmentSubmitButton.Click += new System.EventHandler(this.AppointmentSubmitButton_Click);
             // 
             // MemberScheduleSession
             // 
@@ -231,7 +189,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AppointmentSubmitButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ScheduleSessionDropDown);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EndTimePicker);
@@ -247,7 +204,6 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private Bunifu.UI.WinForms.BunifuDropdown ScheduleSessionDropDown;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker EndTimePicker;

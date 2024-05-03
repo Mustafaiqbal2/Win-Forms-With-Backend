@@ -67,7 +67,6 @@
             this.MachineNameInputMonday = new System.Windows.Forms.TextBox();
             this.ExerciseNameInputMonday = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.MemberSelectDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.PlanNameInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -475,51 +474,9 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Monday";
             // 
-            // MemberSelectDropDown
-            // 
-            this.MemberSelectDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.MemberSelectDropDown.BackgroundColor = System.Drawing.Color.White;
-            this.MemberSelectDropDown.BorderColor = System.Drawing.Color.Silver;
-            this.MemberSelectDropDown.BorderRadius = 1;
-            this.MemberSelectDropDown.Color = System.Drawing.Color.Silver;
-            this.MemberSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.MemberSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.MemberSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.MemberSelectDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.MemberSelectDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MemberSelectDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.MemberSelectDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MemberSelectDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.MemberSelectDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MemberSelectDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.MemberSelectDropDown.FillDropDown = true;
-            this.MemberSelectDropDown.FillIndicator = false;
-            this.MemberSelectDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemberSelectDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.MemberSelectDropDown.ForeColor = System.Drawing.Color.Black;
-            this.MemberSelectDropDown.FormattingEnabled = true;
-            this.MemberSelectDropDown.Icon = null;
-            this.MemberSelectDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.MemberSelectDropDown.IndicatorColor = System.Drawing.Color.Gray;
-            this.MemberSelectDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.MemberSelectDropDown.ItemBackColor = System.Drawing.Color.White;
-            this.MemberSelectDropDown.ItemBorderColor = System.Drawing.Color.White;
-            this.MemberSelectDropDown.ItemForeColor = System.Drawing.Color.Black;
-            this.MemberSelectDropDown.ItemHeight = 26;
-            this.MemberSelectDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.MemberSelectDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.MemberSelectDropDown.ItemTopMargin = 3;
-            this.MemberSelectDropDown.Location = new System.Drawing.Point(623, 24);
-            this.MemberSelectDropDown.Name = "MemberSelectDropDown";
-            this.MemberSelectDropDown.Size = new System.Drawing.Size(192, 32);
-            this.MemberSelectDropDown.TabIndex = 48;
-            this.MemberSelectDropDown.Text = "Select Member";
-            this.MemberSelectDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.MemberSelectDropDown.TextLeftMargin = 5;
-            // 
             // PlanNameInput
             // 
-            this.PlanNameInput.Location = new System.Drawing.Point(403, 49);
+            this.PlanNameInput.Location = new System.Drawing.Point(484, 24);
             this.PlanNameInput.Name = "PlanNameInput";
             this.PlanNameInput.Size = new System.Drawing.Size(197, 22);
             this.PlanNameInput.TabIndex = 47;
@@ -530,7 +487,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(280, 49);
+            this.label2.Location = new System.Drawing.Point(361, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 46;
@@ -592,7 +549,6 @@
             this.Controls.Add(this.MachineNameInputMonday);
             this.Controls.Add(this.ExerciseNameInputMonday);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.MemberSelectDropDown);
             this.Controls.Add(this.PlanNameInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -657,7 +613,6 @@
         private System.Windows.Forms.TextBox MachineNameInputMonday;
         private System.Windows.Forms.TextBox ExerciseNameInputMonday;
         private System.Windows.Forms.Label label3;
-        private Bunifu.UI.WinForms.BunifuDropdown MemberSelectDropDown;
         private System.Windows.Forms.TextBox PlanNameInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

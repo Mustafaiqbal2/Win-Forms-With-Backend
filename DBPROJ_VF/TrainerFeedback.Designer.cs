@@ -36,16 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.pROJDataSet2 = new DBPROJ_VF.PROJDataSet2();
             this.trainerFeedbackBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROJDataSet2 = new DBPROJ_VF.PROJDataSet2();
             this.trainer_FeedbackTableAdapter = new DBPROJ_VF.PROJDataSet2TableAdapters.Trainer_FeedbackTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memberUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OverallRating = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainerFeedbackBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +76,6 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView1.AutoGenerateColumns = false;
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -93,11 +89,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.memberUNameDataGridViewTextBoxColumn,
-            this.ratingDataGridViewTextBoxColumn,
-            this.commentDataGridViewTextBoxColumn});
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -116,7 +107,6 @@
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.DataSource = this.trainerFeedbackBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -140,52 +130,30 @@
             this.bunifuDataGridView1.Size = new System.Drawing.Size(898, 344);
             this.bunifuDataGridView1.TabIndex = 2;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // pROJDataSet2
-            // 
-            this.pROJDataSet2.DataSetName = "PROJDataSet2";
-            this.pROJDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
             // 
             // trainerFeedbackBindingSource
             // 
             this.trainerFeedbackBindingSource.DataMember = "Trainer_Feedback";
             this.trainerFeedbackBindingSource.DataSource = this.pROJDataSet2;
             // 
+            // pROJDataSet2
+            // 
+            this.pROJDataSet2.DataSetName = "PROJDataSet2";
+            this.pROJDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // trainer_FeedbackTableAdapter
             // 
             this.trainer_FeedbackTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // OverallRating
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // memberUNameDataGridViewTextBoxColumn
-            // 
-            this.memberUNameDataGridViewTextBoxColumn.DataPropertyName = "memberUName";
-            this.memberUNameDataGridViewTextBoxColumn.HeaderText = "memberUName";
-            this.memberUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.memberUNameDataGridViewTextBoxColumn.Name = "memberUNameDataGridViewTextBoxColumn";
-            this.memberUNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ratingDataGridViewTextBoxColumn
-            // 
-            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
-            this.ratingDataGridViewTextBoxColumn.HeaderText = "rating";
-            this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
-            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
-            this.commentDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.OverallRating.AutoSize = true;
+            this.OverallRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.OverallRating.Location = new System.Drawing.Point(827, 441);
+            this.OverallRating.Name = "OverallRating";
+            this.OverallRating.Size = new System.Drawing.Size(0, 39);
+            this.OverallRating.TabIndex = 3;
             // 
             // TrainerFeedback
             // 
@@ -194,6 +162,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(942, 482);
+            this.Controls.Add(this.OverallRating);
             this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -201,8 +170,8 @@
             this.Text = "TrainerFeedback";
             this.Load += new System.EventHandler(this.TrainerFeedback_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainerFeedbackBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,9 +185,6 @@
         private PROJDataSet2 pROJDataSet2;
         private System.Windows.Forms.BindingSource trainerFeedbackBindingSource;
         private PROJDataSet2TableAdapters.Trainer_FeedbackTableAdapter trainer_FeedbackTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn memberUNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label OverallRating;
     }
 }

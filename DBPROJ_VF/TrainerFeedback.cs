@@ -29,7 +29,6 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.OpenForms["TraienrMenu"].Show();
-            this.Close();
         }
     }
 }

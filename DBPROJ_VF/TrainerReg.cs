@@ -69,15 +69,14 @@ namespace DBPROJ_VF
                 cmd.Dispose();
                 con.Close();
                 MessageBox.Show("Trainer Registered Successfully");
-                Application.OpenForms["Form1"].Show();
+                Application.OpenForms["Login"].Show();
                 this.Close();
             }
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-            Application.OpenForms["Form1"].Show();
-            this.Close();
+            Application.OpenForms["Login"].Show();
         }
     }
 }

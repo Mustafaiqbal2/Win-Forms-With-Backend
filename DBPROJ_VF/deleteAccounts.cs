@@ -44,7 +44,6 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.OpenForms["Owner"].Show();
-            this.Close();
         }
 
 

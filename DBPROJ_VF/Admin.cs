@@ -36,7 +36,6 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.Exit();
-            this.Close();
         }
     }
 }

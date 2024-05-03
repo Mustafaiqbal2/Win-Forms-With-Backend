@@ -136,7 +136,7 @@ namespace DBPROJ_VF
                 }
                 con.Close();
                 MessageBox.Show("Member Registered Successfully");
-                Application.OpenForms["Form1"].Show();
+                Application.OpenForms["Login"].Show();
                 this.Close();
             }
         }
@@ -188,8 +188,7 @@ namespace DBPROJ_VF
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-            Application.OpenForms["Form1"].Show();
-            this.Close();
+            Application.OpenForms["Login"].Show();
         }
     }
 }

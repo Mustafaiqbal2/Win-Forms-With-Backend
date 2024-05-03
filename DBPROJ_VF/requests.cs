@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +40,69 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.OpenForms["Admin"].Show();
+        }
+        bool convertToBool(string val)
+        {
+            if (val == "1")
+            { return true; }
+            else
+            { return false; }
+        }
+        private void approve_Click(object sender, EventArgs e)
+        {
+            string query1 = "DELETE FROM Franchise_Application WHERE id = @id";
+            string query2 = "INSERT INTO Gym(location,ownerUName) VALUES(@location,@owner)";
+            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            connection.Open();
+            foreach (DataGridViewRow row in applications.Rows)
+            {
+                // Check if the checkbox in the first column is checked
+                if (row.Cells[0].Value != null && convertToBool(row.Cells[0].Value.ToString()))
+                {
+                    // Get the userID from the second column
+                    string userID = row.Cells[1].Value.ToString();
+                    string location = row.Cells[2].Value.ToString();
+                    string owner = row.Cells[5].Value.ToString();
+                    // Delete the row from the DataGridView
+                    applications.Rows.Remove(row);
+
+                    using (SqlCommand command = new SqlCommand(query1, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", userID);
+                        command.ExecuteNonQuery();
+                    }
+                    using (SqlCommand command = new SqlCommand(query2, connection))
+                    {
+                        command.Parameters.AddWithValue("@location", location);
+                        command.Parameters.AddWithValue("@owner", owner);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        private void reject_Click(object sender, EventArgs e)
+        {
+            string query1 = "DELETE FROM Franchise_Application WHERE id = @id";
+            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            connection.Open();
+            foreach (DataGridViewRow row in applications.Rows)
+            {
+                // Check if the checkbox in the first column is checked
+                if (row.Cells[0].Value != null && convertToBool(row.Cells[0].Value.ToString()))
+                {
+                    // Get the userID from the second column
+                    string userID = row.Cells[1].Value.ToString();
+                    // Delete the row from the DataGridView
+                    applications.Rows.Remove(row);
+
+                    using (SqlCommand command = new SqlCommand(query1, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", userID);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
         }
     }
 }

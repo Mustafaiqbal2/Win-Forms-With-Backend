@@ -310,6 +310,7 @@
             this.submit.TextMarginLeft = 0;
             this.submit.TextPadding = new System.Windows.Forms.Padding(0);
             this.submit.UseDefaultRadiusAndThickness = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // mem
             // 
@@ -353,7 +354,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView2.ColumnHeadersHeight = 40;
             this.bunifuDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.uNameDataGridViewTextBoxColumn1,

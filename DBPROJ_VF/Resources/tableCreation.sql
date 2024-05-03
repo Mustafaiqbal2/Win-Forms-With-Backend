@@ -1,4 +1,15 @@
-﻿CREATE TABLE GYM_OWNER(
+﻿SELECT * FROM Gym
+SELECT * FROM Trainer
+SELECT * FROM Gym_Admin
+SELECT* FROM GYM_OWNER
+
+INSERT INTO Gym (rating, location, ownerUName, noMembers, noTrainers, finances) VALUES (4.5, 'Gym1', 'i221139@nu.edu.pk', 0, 0, 0);
+INSERT INTO Trainer 
+VALUES ('bro', 'bro', 'bro', 'bro', 'Male', '1999-01-01', 0, 0, 3, '2021-01-01');
+
+SELECT * FROM Franchise_Application
+INSERT INTO Franchise_Application (location, demand, proposition, ownerUName) VALUES ('Isloo', 100, 'Gym1', 'i221139@nu.edu.pk');
+CREATE TABLE GYM_OWNER(
 	UName VARCHAR(50) PRIMARY KEY NOT NULL,
 	pWord VARCHAR(50) NOT NULL,
 	fName VARCHAR(50) NOT NULL,

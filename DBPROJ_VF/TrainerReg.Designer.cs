@@ -55,6 +55,7 @@
             this.gender = new Bunifu.UI.WinForms.BunifuDropdown();
             this.exp = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.GymSelect = new Bunifu.UI.WinForms.BunifuDropdown();
             this.SuspendLayout();
             // 
             // fname
@@ -84,7 +85,7 @@
             this.fname.IconRight = null;
             this.fname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.fname.Lines = new string[0];
-            this.fname.Location = new System.Drawing.Point(244, 204);
+            this.fname.Location = new System.Drawing.Point(178, 158);
             this.fname.MaxLength = 32767;
             this.fname.MinimumSize = new System.Drawing.Size(1, 1);
             this.fname.Modified = false;
@@ -158,7 +159,7 @@
             this.lname.IconRight = null;
             this.lname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.lname.Lines = new string[0];
-            this.lname.Location = new System.Drawing.Point(244, 261);
+            this.lname.Location = new System.Drawing.Point(178, 202);
             this.lname.MaxLength = 32767;
             this.lname.MinimumSize = new System.Drawing.Size(1, 1);
             this.lname.Modified = false;
@@ -232,7 +233,7 @@
             this.email.IconRight = null;
             this.email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.email.Lines = new string[0];
-            this.email.Location = new System.Drawing.Point(631, 293);
+            this.email.Location = new System.Drawing.Point(509, 224);
             this.email.MaxLength = 32767;
             this.email.MinimumSize = new System.Drawing.Size(1, 1);
             this.email.Modified = false;
@@ -306,7 +307,7 @@
             this.password.IconRight = null;
             this.password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.password.Lines = new string[0];
-            this.password.Location = new System.Drawing.Point(631, 346);
+            this.password.Location = new System.Drawing.Point(509, 268);
             this.password.MaxLength = 32767;
             this.password.MinimumSize = new System.Drawing.Size(1, 1);
             this.password.Modified = false;
@@ -372,10 +373,10 @@
             this.dob.IconColor = System.Drawing.Color.Gray;
             this.dob.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dob.LeftTextMargin = 5;
-            this.dob.Location = new System.Drawing.Point(245, 320);
+            this.dob.Location = new System.Drawing.Point(178, 246);
             this.dob.MinimumSize = new System.Drawing.Size(4, 32);
             this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(185, 32);
+            this.dob.Size = new System.Drawing.Size(155, 32);
             this.dob.TabIndex = 4;
             // 
             // start
@@ -397,10 +398,10 @@
             this.start.IconColor = System.Drawing.Color.Gray;
             this.start.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.start.LeftTextMargin = 5;
-            this.start.Location = new System.Drawing.Point(244, 440);
+            this.start.Location = new System.Drawing.Point(178, 331);
             this.start.MinimumSize = new System.Drawing.Size(4, 32);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(186, 32);
+            this.start.Size = new System.Drawing.Size(155, 32);
             this.start.TabIndex = 5;
             // 
             // gender
@@ -440,7 +441,7 @@
             "Male",
             "Female"});
             this.gender.ItemTopMargin = 3;
-            this.gender.Location = new System.Drawing.Point(244, 379);
+            this.gender.Location = new System.Drawing.Point(178, 293);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(155, 32);
             this.gender.TabIndex = 6;
@@ -488,7 +489,7 @@
             "4",
             "5"});
             this.exp.ItemTopMargin = 3;
-            this.exp.Location = new System.Drawing.Point(244, 499);
+            this.exp.Location = new System.Drawing.Point(178, 382);
             this.exp.Name = "exp";
             this.exp.Size = new System.Drawing.Size(155, 32);
             this.exp.TabIndex = 7;
@@ -543,7 +544,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(631, 416);
+            this.bunifuButton1.Location = new System.Drawing.Point(509, 398);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -586,12 +587,60 @@
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // GymSelect
+            // 
+            this.GymSelect.BackColor = System.Drawing.Color.Transparent;
+            this.GymSelect.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.GymSelect.BorderColor = System.Drawing.Color.Silver;
+            this.GymSelect.BorderRadius = 1;
+            this.GymSelect.Color = System.Drawing.Color.Silver;
+            this.GymSelect.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.GymSelect.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.GymSelect.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.GymSelect.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.GymSelect.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GymSelect.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.GymSelect.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GymSelect.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.GymSelect.DropDownHeight = 70;
+            this.GymSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GymSelect.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.GymSelect.DropDownWidth = 70;
+            this.GymSelect.FillDropDown = true;
+            this.GymSelect.FillIndicator = false;
+            this.GymSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GymSelect.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GymSelect.ForeColor = System.Drawing.Color.Black;
+            this.GymSelect.FormattingEnabled = true;
+            this.GymSelect.Icon = null;
+            this.GymSelect.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GymSelect.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.GymSelect.IndicatorColor = System.Drawing.Color.Gray;
+            this.GymSelect.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.GymSelect.IntegralHeight = false;
+            this.GymSelect.ItemBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.GymSelect.ItemBorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.GymSelect.ItemForeColor = System.Drawing.Color.Black;
+            this.GymSelect.ItemHeight = 26;
+            this.GymSelect.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.GymSelect.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.GymSelect.ItemTopMargin = 3;
+            this.GymSelect.Location = new System.Drawing.Point(359, 331);
+            this.GymSelect.Name = "GymSelect";
+            this.GymSelect.Size = new System.Drawing.Size(305, 32);
+            this.GymSelect.TabIndex = 27;
+            this.GymSelect.Text = null;
+            this.GymSelect.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.GymSelect.TextLeftMargin = 5;
+            // 
             // TrainerReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1039, 535);
+            this.Controls.Add(this.GymSelect);
             this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.exp);
             this.Controls.Add(this.gender);
@@ -601,6 +650,7 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.lname);
             this.Controls.Add(this.fname);
+            this.DoubleBuffered = true;
             this.Name = "TrainerReg";
             this.Text = "TrainerReg";
             this.ResumeLayout(false);
@@ -618,5 +668,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown gender;
         private Bunifu.UI.WinForms.BunifuDropdown exp;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        public Bunifu.UI.WinForms.BunifuDropdown GymSelect;
     }
 }

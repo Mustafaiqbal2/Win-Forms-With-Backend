@@ -1,5 +1,4 @@
-﻿
-CREATE TABLE Workout_Plan(
+﻿CREATE TABLE Workout_Plan(
 	id INT IDENTITY(1,1) PRIMARY KEY,
 	name VARCHAR(50) NOT NULL,
 	);
@@ -163,8 +162,88 @@ CREATE TABLE GYM_Attendance(
 
 
 
+	-- audit logs--
+
+	CREATE TABLE Audit_Log (
+    logID INT IDENTITY(1,1) PRIMARY KEY,
+    tableName VARCHAR(50) NOT NULL,
+    operationType VARCHAR(10) NOT NULL,
+    operationTime DATETIME DEFAULT GETDATE(),
+    userName VARCHAR(50)
+);
 
 
+CREATE TRIGGER trg_Gym_Member_Audit
+ON Gym_Member
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    DECLARE @OperationType VARCHAR(10);
+
+    IF EXISTS(SELECT * FROM inserted)
+    BEGIN
+        IF EXISTS(SELECT * FROM deleted)
+            SET @OperationType = 'UPDATE';
+        ELSE
+            SET @OperationType = 'INSERT';
+    END
+    ELSE IF EXISTS(SELECT * FROM deleted)
+    BEGIN
+        SET @OperationType = 'DELETE';
+    END
+
+    INSERT INTO Audit_Log (tableName, operationType, operationTime, userName)
+    VALUES ('Gym_Member', @OperationType, GETDATE(), SUSER_NAME());
+END;
+
+
+-- Trigger for Trainer table
+CREATE TRIGGER trg_Trainer_Audit
+ON Trainer
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    DECLARE @OperationTypeTrainer VARCHAR(10);
+
+    IF EXISTS(SELECT * FROM inserted)
+    BEGIN
+        IF EXISTS(SELECT * FROM deleted)
+            SET @OperationTypeTrainer = 'UPDATE';
+        ELSE
+            SET @OperationTypeTrainer = 'INSERT';
+    END
+    ELSE IF EXISTS(SELECT * FROM deleted)
+    BEGIN
+        SET @OperationTypeTrainer = 'DELETE';
+    END
+
+    INSERT INTO Audit_Log (tableName, operationType, operationTime, userName)
+    VALUES ('Trainer', @OperationTypeTrainer, GETDATE(), SUSER_NAME());
+END;
+
+-- Trigger for GYM_OWNER table
+CREATE TRIGGER trg_GYM_OWNER_Audit
+ON GYM_OWNER
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    DECLARE @OperationTypeOwner VARCHAR(10);
+
+    IF EXISTS(SELECT * FROM inserted)
+    BEGIN
+        IF EXISTS(SELECT * FROM deleted)
+            SET @OperationTypeOwner = 'UPDATE';
+        ELSE
+            SET @OperationTypeOwner = 'INSERT';
+    END
+    ELSE IF EXISTS(SELECT * FROM deleted)
+    BEGIN
+        SET @OperationTypeOwner = 'DELETE';
+    END
+
+    INSERT INTO Audit_Log (tableName, operationType, operationTime, userName)
+    VALUES ('GYM_OWNER', @OperationTypeOwner, GETDATE(), SUSER_NAME());
+END;
 
 
 
@@ -338,5 +417,7 @@ BEGIN
     DELETE FROM Gym_Member
     WHERE UName IN (SELECT UName FROM DELETED);
 END;
+
+
 
 

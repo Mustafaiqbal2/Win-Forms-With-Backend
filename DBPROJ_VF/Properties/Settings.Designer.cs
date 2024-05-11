@@ -12,7 +12,7 @@ namespace DBPROJ_VF.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -42,6 +42,28 @@ namespace DBPROJ_VF.Properties {
         public string SaadBhoiConnection {
             get {
                 return ((string)(this["SaadBhoiConnection"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-E15Q53Q\\SQLEXPRESS;Initial Catalog=master;Integrated Security" +
+            "=True;Encrypt=True;TrustServerCertificate=True")]
+        public string masterConnectionStringAtif {
+            get {
+                return ((string)(this["masterConnectionStringAtif"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-E15Q53Q\\SQLEXPRESS;Initial Catalog=Projectfinal;Integrated Se" +
+            "curity=True;Encrypt=False;TrustServerCertificate=True")]
+        public string ProjectfinalConnectionString {
+            get {
+                return ((string)(this["ProjectfinalConnectionString"]));
             }
         }
     }

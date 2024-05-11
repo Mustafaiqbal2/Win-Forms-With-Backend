@@ -1,4 +1,7 @@
-﻿CREATE TABLE Workout_Plan(
+﻿
+select * from trainer;
+select * from gym_member
+CREATE TABLE Workout_Plan(
 	id INT IDENTITY(1,1) PRIMARY KEY,
 	name VARCHAR(50) NOT NULL,
 	);

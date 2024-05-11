@@ -110,5 +110,36 @@ namespace DBPROJ_VF
         {
             gridRefresh();
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            string query = @"
+        SELECT 
+            id AS 'Plan ID',
+            name AS 'Workout Plan Name'
+        FROM 
+            Workout_Plan;";
+
+            try
+            {
+                
+
+
+                using (SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True"))
+                {
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable table = new DataTable();
+
+                    adapter.Fill(table);
+                    bunifuDataGridView1.DataSource = table;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
     }
 }

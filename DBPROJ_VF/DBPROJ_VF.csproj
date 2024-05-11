@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Bunifu\Bunifu.Licensing.dll</HintPath>
@@ -190,6 +193,11 @@
     <Compile Include="gym_manage.Designer.cs">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MemberChooseWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +240,18 @@
     <Compile Include="MemberWorkoutPlan.Designer.cs">
       <DependentUpon>MemberWorkoutPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="OwnerMemberReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerMemberReport.Designer.cs">
+      <DependentUpon>OwnerMemberReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerTrainerReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerTrainerReports.Designer.cs">
+      <DependentUpon>OwnerTrainerReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="PROJDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,6 +266,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PROJDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectfinalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectfinalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTesting.Designer.cs">
+      <DependentUpon>ReportTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="requests.cs">
       <SubType>Form</SubType>
@@ -347,8 +378,14 @@
       <DependentUpon>Owner.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OwnerMemberReport.resx">
+      <DependentUpon>OwnerMemberReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OwnerReg.resx">
       <DependentUpon>OwnerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerTrainerReports.resx">
+      <DependentUpon>OwnerTrainerReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -357,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterMember.resx">
       <DependentUpon>RegisterMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTesting.resx">
+      <DependentUpon>ReportTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="requests.resx">
       <DependentUpon>requests.cs</DependentUpon>
@@ -376,6 +416,18 @@
     <EmbeddedResource Include="WorkoutPlan.resx">
       <DependentUpon>WorkoutPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="PROJDataSet.xsc">
       <DependentUpon>PROJDataSet.xsd</DependentUpon>
     </None>
@@ -409,6 +461,17 @@
     <None Include="PROJDataSet2.xss">
       <DependentUpon>PROJDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="ProjectfinalDataSet.xsc">
+      <DependentUpon>ProjectfinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectfinalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectfinalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectfinalDataSet.xss">
+      <DependentUpon>ProjectfinalDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -423,6 +486,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Book1.xlsx" />
     <None Include="Resources\freepik-export-20240428105435LfBw.jpeg" />
   </ItemGroup>
   <ItemGroup>
@@ -445,6 +509,9 @@
     <Content Include="Resources\tableCreation.sql" />
     <Content Include="Resources\tableInsertions.sql" />
     <Content Include="Resources\triggers.sql" />
+    <Content Include="Resources\updatedtablecreation.sql">
+      <SubType>Form</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

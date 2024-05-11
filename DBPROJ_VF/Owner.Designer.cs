@@ -425,6 +425,7 @@
             this.DoubleBuffered = true;
             this.Name = "Owner";
             this.Text = "Owner";
+            this.Load += new System.EventHandler(this.Owner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

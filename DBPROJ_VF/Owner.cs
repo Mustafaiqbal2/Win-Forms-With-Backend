@@ -21,12 +21,16 @@ namespace DBPROJ_VF
 
         private void traiRep_Click(object sender, EventArgs e)
         {
-
+            OwnerTrainerReports mem = new OwnerTrainerReports(userID);
+            mem.Show();
+            this.Hide();
         }
 
         private void memReport_Click(object sender, EventArgs e)
         {
-
+            OwnerMemberReport mem = new OwnerMemberReport(userID);
+            mem.Show();
+            this.Hide();
         }
 
         private void add_trainer_Click(object sender, EventArgs e)
@@ -46,6 +50,11 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.Exit();
+        }
+
+        private void Owner_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

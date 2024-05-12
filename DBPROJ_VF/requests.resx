@@ -158,21 +158,18 @@
     <value>True</value>
   </metadata>
   <metadata name="franchiseApplicationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>423, 17</value>
+    <value>206, 17</value>
   </metadata>
-  <metadata name="pROJDataSet1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
-  <metadata name="pROJDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="projectfinalDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="franchise_ApplicationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>715, 17</value>
+    <value>498, 17</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAA/7JJREFUeF7snYdWK7uyrs/7v8w9Z++1ZiTnnHPOzhgwzjZ165dcdrkpAzaGCUyN
+        vgAADr4B6kKxwAAA/7JJREFUeF7snYdWK7uyrs/7v8w9Z++1ZiTnnHPOzhgwzjZ165dcdrkpAzaGCUyN
         wTew261cUuuvVqv/Z+66RnPXDzSfJfcfLPHn5RuilVuixQb4rsGxhZuHV4N0A58XsZleseLUzDWQ74vX
         7b8HvjbWmNENVpyBwN+CHmMxdsq1XVhgcGwpi+v+gzuG674D53CYoesKzTbCrnJ869yvZnI1WovEZWH1
         yXZ8Hjqhy9IL0WsM0tT5W0z7PEylqjSTqbtjS5lG2SPIXEij4+6Fx/XRjpWmJlpfUaw0u8GKs59YaWqs

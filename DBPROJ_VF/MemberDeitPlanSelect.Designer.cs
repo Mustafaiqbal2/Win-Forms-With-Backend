@@ -38,14 +38,14 @@
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.DietSelectDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.dietPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.diet_PlanTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Diet_PlanTableAdapter();
+            this.dietPlanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
             this.submit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.diet_PlanTableAdapter1 = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.Diet_PlanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDataGridView1
@@ -129,7 +129,7 @@
             this.DietSelectDropDown.BorderColor = System.Drawing.Color.Silver;
             this.DietSelectDropDown.BorderRadius = 1;
             this.DietSelectDropDown.Color = System.Drawing.Color.Silver;
-            this.DietSelectDropDown.DataSource = this.dietPlanBindingSource;
+            this.DietSelectDropDown.DataSource = this.dietPlanBindingSource1;
             this.DietSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.DietSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.DietSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -168,19 +168,15 @@
             this.DietSelectDropDown.ValueMember = "name";
             this.DietSelectDropDown.SelectedIndexChanged += new System.EventHandler(this.DietSelectDropDown_SelectedIndexChanged);
             // 
-            // dietPlanBindingSource
+            // dietPlanBindingSource1
             // 
-            this.dietPlanBindingSource.DataMember = "Diet_Plan";
-            this.dietPlanBindingSource.DataSource = this.pROJDataSet;
+            this.dietPlanBindingSource1.DataMember = "Diet_Plan";
+            this.dietPlanBindingSource1.DataSource = this.projectfinalDataSet;
             // 
-            // pROJDataSet
+            // projectfinalDataSet
             // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // diet_PlanTableAdapter
-            // 
-            this.diet_PlanTableAdapter.ClearBeforeFill = true;
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // submit
             // 
@@ -353,7 +349,7 @@
             this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton1.OnPressedState.IconLeftImage = null;
             this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(91, 26);
+            this.bunifuButton1.Size = new System.Drawing.Size(48, 26);
             this.bunifuButton1.TabIndex = 14;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -361,6 +357,10 @@
             this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
+            // diet_PlanTableAdapter1
+            // 
+            this.diet_PlanTableAdapter1.ClearBeforeFill = true;
             // 
             // MemberDeitPlanSelect
             // 
@@ -378,8 +378,8 @@
             this.Text = "Available Diet Plans";
             this.Load += new System.EventHandler(this.MemberDeitPlanSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dietPlanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,10 +390,10 @@
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuDropdown DietSelectDropDown;
-        private PROJDataSet pROJDataSet;
-        private System.Windows.Forms.BindingSource dietPlanBindingSource;
-        private PROJDataSetTableAdapters.Diet_PlanTableAdapter diet_PlanTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton submit;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource dietPlanBindingSource1;
+        private ProjectfinalDataSetTableAdapters.Diet_PlanTableAdapter diet_PlanTableAdapter1;
     }
 }

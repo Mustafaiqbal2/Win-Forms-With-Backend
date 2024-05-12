@@ -28,7 +28,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -49,10 +49,9 @@ namespace DBPROJ_VF
 
         private void DietPlan_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym_Member' table. You can move, or remove it, as needed.
+            this.gym_MemberTableAdapter1.Fill(this.projectfinalDataSet.Gym_Member);
             // TODO: This line of code loads data into the 'pROJDataSet.Alergy' table. You can move, or remove it, as needed.
-            this.alergyTableAdapter.Fill(this.pROJDataSet.Alergy);
-            // TODO: This line of code loads data into the 'pROJDataSet.Gym_Member' table. You can move, or remove it, as needed.
-            this.gym_MemberTableAdapter.Fill(this.pROJDataSet.Gym_Member);
 
         }
 
@@ -65,7 +64,7 @@ namespace DBPROJ_VF
             names[3] = MealNameInputThursday.Text;
             names[4] = Friday.Text;
             bool flag = false;
-            SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             con.Open();
             ///////////////DIET INSERTION
             string planName = PlanNameInput.Text;

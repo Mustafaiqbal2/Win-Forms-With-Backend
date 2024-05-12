@@ -228,6 +228,12 @@
     <Compile Include="MemberDietPlan.Designer.cs">
       <DependentUpon>MemberDietPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberMachineReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberMachineReport.Designer.cs">
+      <DependentUpon>MemberMachineReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberScheduleSession.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,12 @@
     <Compile Include="TrainerAppointment.Designer.cs">
       <DependentUpon>TrainerAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainerDietReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerDietReport.Designer.cs">
+      <DependentUpon>TrainerDietReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainerFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +357,12 @@
     </Compile>
     <Compile Include="TrainerReg.Designer.cs">
       <DependentUpon>TrainerReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerWorkoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerWorkoutReport.Designer.cs">
+      <DependentUpon>TrainerWorkoutReport.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkoutPlan.cs">
       <SubType>Form</SubType>
@@ -385,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberDietPlan.resx">
       <DependentUpon>MemberDietPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberMachineReport.resx">
+      <DependentUpon>MemberMachineReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberScheduleSession.resx">
       <DependentUpon>MemberScheduleSession.cs</DependentUpon>
@@ -431,6 +452,9 @@
     <EmbeddedResource Include="TrainerAppointment.resx">
       <DependentUpon>TrainerAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrainerDietReport.resx">
+      <DependentUpon>TrainerDietReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrainerFeedback.resx">
       <DependentUpon>TrainerFeedback.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerReg.resx">
       <DependentUpon>TrainerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerWorkoutReport.resx">
+      <DependentUpon>TrainerWorkoutReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkoutPlan.resx">
       <DependentUpon>WorkoutPlan.cs</DependentUpon>
@@ -536,9 +563,7 @@
     <Content Include="Resources\tableCreation.sql" />
     <Content Include="Resources\tableInsertions.sql" />
     <Content Include="Resources\triggers.sql" />
-    <Content Include="Resources\updatedtablecreation.sql">
-      <SubType>Form</SubType>
-    </Content>
+    <Content Include="Resources\updatedsql.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

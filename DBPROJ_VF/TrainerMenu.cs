@@ -44,12 +44,16 @@ namespace DBPROJ_VF
 
         private void DietReportsButton_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
+            TrainerDietReport diet = new TrainerDietReport(userID);
+            diet.Show();
         }
 
         private void WorkoutReportsButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TrainerWorkoutReport workout = new TrainerWorkoutReport(userID);
+            workout.Show(); 
         }
 
         private void ViewFeedbackButton_Click(object sender, EventArgs e)

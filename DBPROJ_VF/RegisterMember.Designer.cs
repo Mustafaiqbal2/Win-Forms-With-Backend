@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterMember));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -83,8 +84,13 @@
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.gender = new Bunifu.UI.WinForms.BunifuDropdown();
             this.weight = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.GymDropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.gymBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gymTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.GymTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuTextBox1
@@ -1127,51 +1133,54 @@
             this.weight.WordWrap = true;
             this.weight.TextChanged += new System.EventHandler(this.weight_TextChanged);
             // 
-            // bunifuDropdown1
+            // GymDropdown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.BorderRadius = 1;
-            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.bunifuDropdown1.DropDownHeight = 70;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.DropDownWidth = 70;
-            this.bunifuDropdown1.FillDropDown = true;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.IntegralHeight = false;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemTopMargin = 3;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(631, 443);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(182, 32);
-            this.bunifuDropdown1.TabIndex = 26;
-            this.bunifuDropdown1.Text = null;
-            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.TextLeftMargin = 5;
+            this.GymDropdown.BackColor = System.Drawing.Color.Transparent;
+            this.GymDropdown.BackgroundColor = System.Drawing.Color.White;
+            this.GymDropdown.BorderColor = System.Drawing.Color.Silver;
+            this.GymDropdown.BorderRadius = 1;
+            this.GymDropdown.Color = System.Drawing.Color.Silver;
+            this.GymDropdown.DataSource = this.gymBindingSource;
+            this.GymDropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.GymDropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.GymDropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.GymDropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.GymDropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GymDropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.GymDropdown.DisplayMember = "id";
+            this.GymDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GymDropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.GymDropdown.DropDownHeight = 70;
+            this.GymDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GymDropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.GymDropdown.DropDownWidth = 70;
+            this.GymDropdown.FillDropDown = true;
+            this.GymDropdown.FillIndicator = false;
+            this.GymDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GymDropdown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GymDropdown.ForeColor = System.Drawing.Color.Black;
+            this.GymDropdown.FormattingEnabled = true;
+            this.GymDropdown.Icon = null;
+            this.GymDropdown.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GymDropdown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.GymDropdown.IndicatorColor = System.Drawing.Color.Gray;
+            this.GymDropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.GymDropdown.IntegralHeight = false;
+            this.GymDropdown.ItemBackColor = System.Drawing.Color.White;
+            this.GymDropdown.ItemBorderColor = System.Drawing.Color.White;
+            this.GymDropdown.ItemForeColor = System.Drawing.Color.Black;
+            this.GymDropdown.ItemHeight = 26;
+            this.GymDropdown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.GymDropdown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.GymDropdown.ItemTopMargin = 3;
+            this.GymDropdown.Location = new System.Drawing.Point(631, 443);
+            this.GymDropdown.Name = "GymDropdown";
+            this.GymDropdown.Size = new System.Drawing.Size(182, 32);
+            this.GymDropdown.TabIndex = 26;
+            this.GymDropdown.Text = null;
+            this.GymDropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.GymDropdown.TextLeftMargin = 5;
+            this.GymDropdown.ValueMember = "id";
             // 
             // bunifuLabel12
             // 
@@ -1191,6 +1200,20 @@
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel12.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gymBindingSource
+            // 
+            this.gymBindingSource.DataMember = "Gym";
+            this.gymBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // gymTableAdapter
+            // 
+            this.gymTableAdapter.ClearBeforeFill = true;
+            // 
             // RegisterMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1199,7 +1222,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(948, 588);
             this.Controls.Add(this.bunifuLabel12);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.GymDropdown);
             this.Controls.Add(this.weight);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.gender);
@@ -1229,6 +1252,8 @@
             this.Name = "RegisterMember";
             this.Text = "Member Registeration";
             this.Load += new System.EventHandler(this.RegisterMember_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1261,7 +1286,10 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         public Bunifu.UI.WinForms.BunifuDropdown gender;
         private Bunifu.UI.WinForms.BunifuTextBox weight;
-        public Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        public Bunifu.UI.WinForms.BunifuDropdown GymDropdown;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource gymBindingSource;
+        private ProjectfinalDataSetTableAdapters.GymTableAdapter gymTableAdapter;
     }
 }

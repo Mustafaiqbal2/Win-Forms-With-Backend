@@ -38,20 +38,18 @@
             this.approve = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.reject = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.applications = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.franchiseApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet1 = new DBPROJ_VF.PROJDataSet1();
-            this.franchise_ApplicationTableAdapter = new DBPROJ_VF.PROJDataSet1TableAdapters.Franchise_ApplicationTableAdapter();
             this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.franchiseApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.franchise_ApplicationTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.Franchise_ApplicationTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.demandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.propositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.propositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ownerUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.applications)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franchiseApplicationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // approve
@@ -305,25 +303,6 @@
             this.applications.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.applications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.applications_CellContentClick);
             // 
-            // franchiseApplicationBindingSource
-            // 
-            this.franchiseApplicationBindingSource.DataMember = "Franchise_Application";
-            this.franchiseApplicationBindingSource.DataSource = this.pROJDataSet1BindingSource;
-            // 
-            // pROJDataSet1BindingSource
-            // 
-            this.pROJDataSet1BindingSource.DataSource = this.pROJDataSet1;
-            this.pROJDataSet1BindingSource.Position = 0;
-            // 
-            // pROJDataSet1
-            // 
-            this.pROJDataSet1.DataSetName = "PROJDataSet1";
-            this.pROJDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // franchise_ApplicationTableAdapter
-            // 
-            this.franchise_ApplicationTableAdapter.ClearBeforeFill = true;
-            // 
             // checkBox
             // 
             this.checkBox.FalseValue = "0";
@@ -332,6 +311,20 @@
             this.checkBox.MinimumWidth = 6;
             this.checkBox.Name = "checkBox";
             this.checkBox.TrueValue = "1";
+            // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // franchiseApplicationBindingSource
+            // 
+            this.franchiseApplicationBindingSource.DataMember = "Franchise_Application";
+            this.franchiseApplicationBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // franchise_ApplicationTableAdapter
+            // 
+            this.franchise_ApplicationTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -361,8 +354,6 @@
             this.propositionDataGridViewTextBoxColumn.HeaderText = "proposition";
             this.propositionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.propositionDataGridViewTextBoxColumn.Name = "propositionDataGridViewTextBoxColumn";
-            this.propositionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.propositionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ownerUNameDataGridViewTextBoxColumn
             // 
@@ -386,9 +377,8 @@
             this.Text = "Applications";
             this.Load += new System.EventHandler(this.requests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.applications)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franchiseApplicationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,15 +387,14 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton approve;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton reject;
         private Bunifu.UI.WinForms.BunifuDataGridView applications;
-        private System.Windows.Forms.BindingSource pROJDataSet1BindingSource;
-        private PROJDataSet1 pROJDataSet1;
-        private System.Windows.Forms.BindingSource franchiseApplicationBindingSource;
-        private PROJDataSet1TableAdapters.Franchise_ApplicationTableAdapter franchise_ApplicationTableAdapter;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkBox;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource franchiseApplicationBindingSource;
+        private ProjectfinalDataSetTableAdapters.Franchise_ApplicationTableAdapter franchise_ApplicationTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn demandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewLinkColumn propositionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn propositionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ownerUNameDataGridViewTextBoxColumn;
     }
 }

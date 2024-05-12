@@ -27,7 +27,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable2 = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -58,7 +58,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             string gymMemberQuery = "SELECT m.UName FROM Gym_Member m " +
@@ -83,10 +83,10 @@ namespace DBPROJ_VF
 
         private void TrainerAppointment_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pROJDataSet.Training_Session' table. You can move, or remove it, as needed.
-            this.training_SessionTableAdapter.Fill(this.pROJDataSet.Training_Session);
-            // TODO: This line of code loads data into the 'pROJDataSet.Gym_Member' table. You can move, or remove it, as needed.
-            this.gym_MemberTableAdapter.Fill(this.pROJDataSet.Gym_Member);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Training_Session' table. You can move, or remove it, as needed.
+            this.training_SessionTableAdapter1.Fill(this.projectfinalDataSet.Training_Session);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym_Member' table. You can move, or remove it, as needed.
+            this.gym_MemberTableAdapter1.Fill(this.projectfinalDataSet.Gym_Member);
 
         }
 
@@ -102,7 +102,7 @@ namespace DBPROJ_VF
 
         private void DeleteSessionButton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
             string deleteSessionQuery = "DELETE FROM Training_Session WHERE sessionID = @sessionID";
             using (SqlCommand command = new SqlCommand(deleteSessionQuery, connection))
@@ -136,7 +136,7 @@ namespace DBPROJ_VF
             else
             {
                 string query = "INSERT INTO Training_Session (start_time, end_time, TrainerUName, MemberUName) VALUES (@sTime, @eTime, @trainer, @member)";
-                SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+                SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

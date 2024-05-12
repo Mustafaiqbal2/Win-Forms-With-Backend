@@ -24,7 +24,8 @@ namespace DBPROJ_VF
 
         private void gym_manage_Load(object sender, EventArgs e)
         {
-            this.gymTableAdapter.Fill(this.pROJDataSet.Gym);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym' table. You can move, or remove it, as needed.
+            this.gymTableAdapter.Fill(this.projectfinalDataSet.Gym);
         }
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,7 +47,7 @@ namespace DBPROJ_VF
         private void revoke_Click(object sender, EventArgs e)
         {
             string query1 = "DELETE FROM Gym WHERE id = @id";
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
             foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
             {

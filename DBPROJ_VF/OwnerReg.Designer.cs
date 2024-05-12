@@ -228,6 +228,7 @@
             this.lname.TextPlaceholder = "Enter text";
             this.lname.UseSystemPasswordChar = false;
             this.lname.WordWrap = true;
+            this.lname.TextChanged += new System.EventHandler(this.lname_TextChanged);
             // 
             // email
             // 

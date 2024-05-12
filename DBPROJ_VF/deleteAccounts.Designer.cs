@@ -37,9 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gymMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.gym_MemberTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Gym_MemberTableAdapter();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.uNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,43 +45,32 @@
             this.regdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trnUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gymMemberBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.trainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.trainerTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.TrainerTableAdapter();
             this.submit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.mem = new System.Windows.Forms.Label();
             this.Trainers = new System.Windows.Forms.Label();
             this.bunifuDataGridView2 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.gymMemberBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.gym_MemberTableAdapter1 = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.Gym_MemberTableAdapter();
+            this.trainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trainerTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.TrainerTableAdapter();
             this.uNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pWordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.explvlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gymIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gymMemberBindingSource
-            // 
-            this.gymMemberBindingSource.DataMember = "Gym_Member";
-            this.gymMemberBindingSource.DataSource = this.pROJDataSet;
-            // 
-            // pROJDataSet
-            // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gym_MemberTableAdapter
-            // 
-            this.gym_MemberTableAdapter.ClearBeforeFill = true;
             // 
             // bunifuDataGridView1
             // 
@@ -133,7 +119,7 @@
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.DataSource = this.gymMemberBindingSource1;
+            this.bunifuDataGridView1.DataSource = this.gymMemberBindingSource2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -156,6 +142,7 @@
             this.bunifuDataGridView1.Size = new System.Drawing.Size(940, 181);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
             // 
             // checkBox
             // 
@@ -207,20 +194,6 @@
             this.trnUNameDataGridViewTextBoxColumn.HeaderText = "trnUName";
             this.trnUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.trnUNameDataGridViewTextBoxColumn.Name = "trnUNameDataGridViewTextBoxColumn";
-            // 
-            // gymMemberBindingSource1
-            // 
-            this.gymMemberBindingSource1.DataMember = "Gym_Member";
-            this.gymMemberBindingSource1.DataSource = this.pROJDataSet;
-            // 
-            // trainerBindingSource
-            // 
-            this.trainerBindingSource.DataMember = "Trainer";
-            this.trainerBindingSource.DataSource = this.pROJDataSet;
-            // 
-            // trainerTableAdapter
-            // 
-            this.trainerTableAdapter.ClearBeforeFill = true;
             // 
             // submit
             // 
@@ -358,12 +331,14 @@
             this.bunifuDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.uNameDataGridViewTextBoxColumn1,
+            this.pWordDataGridViewTextBoxColumn,
             this.fNameDataGridViewTextBoxColumn1,
             this.lNameDataGridViewTextBoxColumn1,
             this.genderDataGridViewTextBoxColumn,
             this.dOBDataGridViewTextBoxColumn,
             this.explvlDataGridViewTextBoxColumn,
             this.ratingDataGridViewTextBoxColumn,
+            this.gymIDDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn});
             this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView2.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -416,12 +391,42 @@
             this.Column1.Name = "Column1";
             this.Column1.TrueValue = "1";
             // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gymMemberBindingSource2
+            // 
+            this.gymMemberBindingSource2.DataMember = "Gym_Member";
+            this.gymMemberBindingSource2.DataSource = this.projectfinalDataSet;
+            // 
+            // gym_MemberTableAdapter1
+            // 
+            this.gym_MemberTableAdapter1.ClearBeforeFill = true;
+            // 
+            // trainerBindingSource
+            // 
+            this.trainerBindingSource.DataMember = "Trainer";
+            this.trainerBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // trainerTableAdapter
+            // 
+            this.trainerTableAdapter.ClearBeforeFill = true;
+            // 
             // uNameDataGridViewTextBoxColumn1
             // 
             this.uNameDataGridViewTextBoxColumn1.DataPropertyName = "UName";
             this.uNameDataGridViewTextBoxColumn1.HeaderText = "UName";
             this.uNameDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.uNameDataGridViewTextBoxColumn1.Name = "uNameDataGridViewTextBoxColumn1";
+            // 
+            // pWordDataGridViewTextBoxColumn
+            // 
+            this.pWordDataGridViewTextBoxColumn.DataPropertyName = "pWord";
+            this.pWordDataGridViewTextBoxColumn.HeaderText = "pWord";
+            this.pWordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pWordDataGridViewTextBoxColumn.Name = "pWordDataGridViewTextBoxColumn";
             // 
             // fNameDataGridViewTextBoxColumn1
             // 
@@ -465,6 +470,13 @@
             this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
             // 
+            // gymIDDataGridViewTextBoxColumn
+            // 
+            this.gymIDDataGridViewTextBoxColumn.DataPropertyName = "gym_ID";
+            this.gymIDDataGridViewTextBoxColumn.HeaderText = "gym_ID";
+            this.gymIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gymIDDataGridViewTextBoxColumn.Name = "gymIDDataGridViewTextBoxColumn";
+            // 
             // startDateDataGridViewTextBoxColumn
             // 
             this.startDateDataGridViewTextBoxColumn.DataPropertyName = "startDate";
@@ -488,25 +500,18 @@
             this.Name = "deleteAccounts";
             this.Text = "deleteAccounts";
             this.Load += new System.EventHandler(this.deleteAccounts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private PROJDataSet pROJDataSet;
-        private System.Windows.Forms.BindingSource gymMemberBindingSource;
-        private PROJDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private System.Windows.Forms.BindingSource gymMemberBindingSource1;
-        private System.Windows.Forms.BindingSource trainerBindingSource;
-        private PROJDataSetTableAdapters.TrainerTableAdapter trainerTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton submit;
         private System.Windows.Forms.Label mem;
         private System.Windows.Forms.Label Trainers;
@@ -519,13 +524,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trnUNameDataGridViewTextBoxColumn;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource gymMemberBindingSource2;
+        private ProjectfinalDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter1;
+        private System.Windows.Forms.BindingSource trainerBindingSource;
+        private ProjectfinalDataSetTableAdapters.TrainerTableAdapter trainerTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn uNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pWordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn explvlDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ratingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gymIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
     }
 }

@@ -60,7 +60,7 @@ namespace DBPROJ_VF
         private void AdditionalReports_Click(object sender, EventArgs e)
         {
             this.Hide();
-            OwnerAdditionalReports rep = new OwnerAdditionalReports();
+            OwnerAdditionalReports rep = new OwnerAdditionalReports(userID);
             rep.Show();
 
         }

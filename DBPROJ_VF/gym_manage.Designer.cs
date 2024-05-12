@@ -36,22 +36,20 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ownerUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noMembersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noTrainersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.financesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gymBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.gymTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.GymTableAdapter();
             this.revoke = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.financesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noTrainersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noMembersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ownerUNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.gymBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gymTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.GymTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDataGridView1
@@ -135,81 +133,6 @@
             this.checkBox.MinimumWidth = 6;
             this.checkBox.Name = "checkBox";
             this.checkBox.TrueValue = "1";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ratingDataGridViewTextBoxColumn
-            // 
-            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
-            this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
-            this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
-            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ownerUNameDataGridViewTextBoxColumn
-            // 
-            this.ownerUNameDataGridViewTextBoxColumn.DataPropertyName = "ownerUName";
-            this.ownerUNameDataGridViewTextBoxColumn.HeaderText = "Owner";
-            this.ownerUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ownerUNameDataGridViewTextBoxColumn.Name = "ownerUNameDataGridViewTextBoxColumn";
-            this.ownerUNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noMembersDataGridViewTextBoxColumn
-            // 
-            this.noMembersDataGridViewTextBoxColumn.DataPropertyName = "noMembers";
-            this.noMembersDataGridViewTextBoxColumn.HeaderText = "Members";
-            this.noMembersDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noMembersDataGridViewTextBoxColumn.Name = "noMembersDataGridViewTextBoxColumn";
-            this.noMembersDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noTrainersDataGridViewTextBoxColumn
-            // 
-            this.noTrainersDataGridViewTextBoxColumn.DataPropertyName = "noTrainers";
-            this.noTrainersDataGridViewTextBoxColumn.HeaderText = "Trainers";
-            this.noTrainersDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noTrainersDataGridViewTextBoxColumn.Name = "noTrainersDataGridViewTextBoxColumn";
-            this.noTrainersDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // financesDataGridViewTextBoxColumn
-            // 
-            this.financesDataGridViewTextBoxColumn.DataPropertyName = "finances";
-            this.financesDataGridViewTextBoxColumn.HeaderText = "Finances";
-            this.financesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.financesDataGridViewTextBoxColumn.Name = "financesDataGridViewTextBoxColumn";
-            this.financesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gymBindingSource
-            // 
-            this.gymBindingSource.DataMember = "Gym";
-            this.gymBindingSource.DataSource = this.pROJDataSetBindingSource;
-            // 
-            // pROJDataSetBindingSource
-            // 
-            this.pROJDataSetBindingSource.DataSource = this.pROJDataSet;
-            this.pROJDataSetBindingSource.Position = 0;
-            // 
-            // pROJDataSet
-            // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gymTableAdapter
-            // 
-            this.gymTableAdapter.ClearBeforeFill = true;
             // 
             // revoke
             // 
@@ -301,6 +224,76 @@
             this.revoke.UseDefaultRadiusAndThickness = true;
             this.revoke.Click += new System.EventHandler(this.revoke_Click);
             // 
+            // financesDataGridViewTextBoxColumn
+            // 
+            this.financesDataGridViewTextBoxColumn.DataPropertyName = "finances";
+            this.financesDataGridViewTextBoxColumn.HeaderText = "Finances";
+            this.financesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.financesDataGridViewTextBoxColumn.Name = "financesDataGridViewTextBoxColumn";
+            this.financesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noTrainersDataGridViewTextBoxColumn
+            // 
+            this.noTrainersDataGridViewTextBoxColumn.DataPropertyName = "noTrainers";
+            this.noTrainersDataGridViewTextBoxColumn.HeaderText = "Trainers";
+            this.noTrainersDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noTrainersDataGridViewTextBoxColumn.Name = "noTrainersDataGridViewTextBoxColumn";
+            this.noTrainersDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noMembersDataGridViewTextBoxColumn
+            // 
+            this.noMembersDataGridViewTextBoxColumn.DataPropertyName = "noMembers";
+            this.noMembersDataGridViewTextBoxColumn.HeaderText = "Members";
+            this.noMembersDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noMembersDataGridViewTextBoxColumn.Name = "noMembersDataGridViewTextBoxColumn";
+            this.noMembersDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ownerUNameDataGridViewTextBoxColumn
+            // 
+            this.ownerUNameDataGridViewTextBoxColumn.DataPropertyName = "ownerUName";
+            this.ownerUNameDataGridViewTextBoxColumn.HeaderText = "Owner";
+            this.ownerUNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ownerUNameDataGridViewTextBoxColumn.Name = "ownerUNameDataGridViewTextBoxColumn";
+            this.ownerUNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ratingDataGridViewTextBoxColumn
+            // 
+            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
+            this.ratingDataGridViewTextBoxColumn.HeaderText = "Rating";
+            this.ratingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
+            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gymBindingSource
+            // 
+            this.gymBindingSource.DataMember = "Gym";
+            this.gymBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // gymTableAdapter
+            // 
+            this.gymTableAdapter.ClearBeforeFill = true;
+            // 
             // gym_manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,9 +308,8 @@
             this.Text = "gym_manage";
             this.Load += new System.EventHandler(this.gym_manage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,10 +317,6 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
-        private System.Windows.Forms.BindingSource pROJDataSetBindingSource;
-        private PROJDataSet pROJDataSet;
-        private System.Windows.Forms.BindingSource gymBindingSource;
-        private PROJDataSetTableAdapters.GymTableAdapter gymTableAdapter;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton revoke;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -338,5 +326,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noMembersDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noTrainersDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn financesDataGridViewTextBoxColumn;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource gymBindingSource;
+        private ProjectfinalDataSetTableAdapters.GymTableAdapter gymTableAdapter;
     }
 }

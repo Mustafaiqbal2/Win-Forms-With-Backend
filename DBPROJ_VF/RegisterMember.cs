@@ -60,6 +60,8 @@ namespace DBPROJ_VF
 
         private void RegisterMember_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym' table. You can move, or remove it, as needed.
+            this.gymTableAdapter.Fill(this.projectfinalDataSet.Gym);
 
         }
 
@@ -74,7 +76,8 @@ namespace DBPROJ_VF
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
-        {
+        {   
+            string gym_id = GymDropdown.Text;   
             join.CustomFormat = "yyyy-MM-dd";
             dob.CustomFormat = "yyyy-MM-dd";
             dob.Format = DateTimePickerFormat.Custom;
@@ -91,14 +94,16 @@ namespace DBPROJ_VF
             string weigh = weight.Text;
             string heigh = height.Text;
             string pass = password.Text;
-            if (fname == "" || lname == "" || ema == "" || dob1 == "" || joinDate == "" || gend == "" || subs == "" || goa == "" || weigh == "" || heigh == "" || pass == "")
+            if (fname == "" || lname == "" || ema == "" || dob1 == "" || joinDate == "" || gend == "" || subs == "" || goa == "" || weigh == "" || heigh == "" || pass == "" || gym_id =="")
             {
                 MessageBox.Show("Please fill all the fields");
+                MessageBox.Show(gym_id);
+                
             }
             else
             {
                 
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-M12NPKF\\SQLEXPRESS;Initial Catalog=PROJ;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+                SqlConnection con = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
                 con.Open();
                 string queryA = "SELECT * FROM Gym_Member WHERE Uname = '" + ema + "'";
                 SqlCommand cmdA = new SqlCommand(queryA, con);
@@ -111,7 +116,7 @@ namespace DBPROJ_VF
                     dr.Close();
                     return;
                 }
-                string query = "INSERT INTO Gym_Member(Uname,pWord,fName,lName,DOB,wieght,reg_date,goal,gender,subscription,height)" +
+                string query = "INSERT INTO Gym_Member(Uname,pWord,fName,lName,DOB,wieght,reg_date,goal,gender,subscription,height,gym_ID )" +
                     " VALUES(" +
                     "'" + ema + "'," +
                     "'" + pass + "'," +
@@ -123,7 +128,9 @@ namespace DBPROJ_VF
                     "'" + goa + "'," +
                     "'" + gend + "'," +
                     "'" + subs + "'," +
-                    "" + heigh + "" +
+                    "" + heigh + "," +
+                    "" + gym_id + ""+ 
+
                     ")";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();

@@ -41,7 +41,7 @@ namespace DBPROJ_VF
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-M12NPKF\\SQLEXPRESS;Initial Catalog=PROJ;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+                SqlConnection con = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
                 con.Open();
                 string queryA = "select * from Trainer where UName = '" + em + "'";
                 SqlCommand cmdA = new SqlCommand(queryA, con);
@@ -86,6 +86,16 @@ namespace DBPROJ_VF
         {
             // TODO: This line of code loads data into the 'projectfinalDataSet.Gym' table. You can move, or remove it, as needed.
             this.gymTableAdapter.Fill(this.projectfinalDataSet.Gym);
+
+        }
+
+        private void GymSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exp_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

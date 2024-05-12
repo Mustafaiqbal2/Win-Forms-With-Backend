@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OwnerAdditionalReports));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,7 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.DayDropdown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.MachineDropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.exerciseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.exerciseTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.exerciseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.reportDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // MachineSubmit
@@ -197,13 +203,13 @@
             this.reportDataGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.reportDataGridView.HeaderBgColor = System.Drawing.Color.Empty;
             this.reportDataGridView.HeaderForeColor = System.Drawing.Color.White;
-            this.reportDataGridView.Location = new System.Drawing.Point(-7, 68);
+            this.reportDataGridView.Location = new System.Drawing.Point(115, 68);
             this.reportDataGridView.Name = "reportDataGridView";
             this.reportDataGridView.RowHeadersVisible = false;
             this.reportDataGridView.RowHeadersWidth = 51;
             this.reportDataGridView.RowTemplate.Height = 40;
             this.reportDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.reportDataGridView.Size = new System.Drawing.Size(749, 376);
+            this.reportDataGridView.Size = new System.Drawing.Size(627, 376);
             this.reportDataGridView.TabIndex = 3;
             this.reportDataGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -348,11 +354,18 @@
             this.DayDropdown.ItemHeight = 26;
             this.DayDropdown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.DayDropdown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DayDropdown.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
             this.DayDropdown.ItemTopMargin = 3;
             this.DayDropdown.Location = new System.Drawing.Point(756, 68);
             this.DayDropdown.Name = "DayDropdown";
             this.DayDropdown.Size = new System.Drawing.Size(92, 32);
             this.DayDropdown.TabIndex = 11;
+            this.DayDropdown.Text = null;
             this.DayDropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DayDropdown.TextLeftMargin = 5;
             // 
@@ -363,12 +376,14 @@
             this.MachineDropdown.BorderColor = System.Drawing.Color.Silver;
             this.MachineDropdown.BorderRadius = 1;
             this.MachineDropdown.Color = System.Drawing.Color.Silver;
+            this.MachineDropdown.DataSource = this.exerciseBindingSource;
             this.MachineDropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.MachineDropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.MachineDropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.MachineDropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.MachineDropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.MachineDropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.MachineDropdown.DisplayMember = "machine";
             this.MachineDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.MachineDropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.MachineDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -394,8 +409,24 @@
             this.MachineDropdown.Name = "MachineDropdown";
             this.MachineDropdown.Size = new System.Drawing.Size(83, 32);
             this.MachineDropdown.TabIndex = 12;
+            this.MachineDropdown.Text = null;
             this.MachineDropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.MachineDropdown.TextLeftMargin = 5;
+            this.MachineDropdown.ValueMember = "machine";
+            // 
+            // exerciseBindingSource
+            // 
+            this.exerciseBindingSource.DataMember = "exercise";
+            this.exerciseBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // exerciseTableAdapter
+            // 
+            this.exerciseTableAdapter.ClearBeforeFill = true;
             // 
             // OwnerAdditionalReports
             // 
@@ -412,7 +443,10 @@
             this.Controls.Add(this.reportDataGridView);
             this.Name = "OwnerAdditionalReports";
             this.Text = "OwnerAdditionalReports";
+            this.Load += new System.EventHandler(this.OwnerAdditionalReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exerciseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +462,8 @@
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuDropdown DayDropdown;
         private Bunifu.UI.WinForms.BunifuDropdown MachineDropdown;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource exerciseBindingSource;
+        private ProjectfinalDataSetTableAdapters.exerciseTableAdapter exerciseTableAdapter;
     }
 }

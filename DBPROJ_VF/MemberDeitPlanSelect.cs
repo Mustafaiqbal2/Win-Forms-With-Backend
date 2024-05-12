@@ -24,7 +24,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -47,7 +47,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -58,12 +58,14 @@ namespace DBPROJ_VF
             }
             connection.Close();
             DietSelectDropDown.DataSource = gymMemberDataTable;
-            gridRefresh();
+        //    gridRefresh();
         }
 
         private void MemberDeitPlanSelect_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Diet_Plan' table. You can move, or remove it, as needed.
+            this.diet_PlanTableAdapter1.Fill(this.projectfinalDataSet.Diet_Plan);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace DBPROJ_VF
 
         private void submit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             con.Open();
             //update the diet plan of the user
             string planID = "";
@@ -122,10 +124,11 @@ namespace DBPROJ_VF
 
             try
             {
-                
 
 
-                using (SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True"))
+
+                using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True"))
+         
                 {
                     SqlCommand command = new SqlCommand(query, connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);

@@ -23,8 +23,8 @@ namespace DBPROJ_VF
 
         private void requests_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pROJDataSet1.Franchise_Application' table. You can move, or remove it, as needed.
-            this.franchise_ApplicationTableAdapter.Fill(this.pROJDataSet1.Franchise_Application);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Franchise_Application' table. You can move, or remove it, as needed.
+            this.franchise_ApplicationTableAdapter.Fill(this.projectfinalDataSet.Franchise_Application);
 
         }
 
@@ -52,7 +52,7 @@ namespace DBPROJ_VF
         {
             string query1 = "DELETE FROM Franchise_Application WHERE id = @id";
             string query2 = "INSERT INTO Gym(location,ownerUName) VALUES(@location,@owner)";
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
             foreach (DataGridViewRow row in applications.Rows)
             {
@@ -84,7 +84,7 @@ namespace DBPROJ_VF
         private void reject_Click(object sender, EventArgs e)
         {
             string query1 = "DELETE FROM Franchise_Application WHERE id = @id";
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
             foreach (DataGridViewRow row in applications.Rows)
             {

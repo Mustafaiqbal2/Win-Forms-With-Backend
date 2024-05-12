@@ -126,11 +126,11 @@
         z+sG8N6LRRlSBnkAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="gymMemberBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>164, 17</value>
+  <metadata name="gymMemberBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>461, 58</value>
   </metadata>
-  <metadata name="trainingSessionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>645, 17</value>
+  <metadata name="trainingSessionBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>958, 58</value>
   </metadata>
   <data name="DeleteSessionButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -140,19 +140,19 @@
         z+sG8N6LRRlSBnkAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="pROJDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="projectfinalDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>272, 58</value>
   </metadata>
-  <metadata name="gym_MemberTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>405, 17</value>
+  <metadata name="gym_MemberTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>710, 58</value>
   </metadata>
-  <metadata name="training_SessionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 58</value>
+  <metadata name="training_SessionTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 99</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAYAAADsEGyPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7snQW8HcX5/v8tLRIg7u5GEpIQD3EkEIK7u7s7BAKEAIFACBLcrYVC
+        wQAADsEBuJFr7QAA/7JJREFUeF7snQW8HcX5/v8tLRIg7u5GEpIQD3EkEIK7u7s7BAKEAIFACBLcrYVC
         lbbUW+ruDqWOFNe+/3lmz3POe+bOOffcQPrrpU/4fNndmXd098zO+9zZ3f/34Q9/yIQQQgghhPjf4sMV
         1gZr29pVrNOUddZNWC+yTpk2Bet61k/YoMy665ENE9pW06ZdFetF2id0sPXW93RsQpv1OxVsQDondKlm
         Q9A1sn6ZbgndC9p6epTZINKzQjvQK0PvKjZs3ydD34R+tmEHT39r24QBBR3JwIRBkXakExicMCRhqLXr

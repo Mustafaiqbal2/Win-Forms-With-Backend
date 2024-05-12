@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutPlan));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PlanNameInput = new System.Windows.Forms.TextBox();
@@ -72,9 +72,9 @@
             this.RepsInputFriday = new System.Windows.Forms.NumericUpDown();
             this.RestIntervalInputFriday = new System.Windows.Forms.NumericUpDown();
             this.WorkoutPlanSubmitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pROJDataSet = new DBPROJ_VF.PROJDataSet();
-            this.gymMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gym_MemberTableAdapter = new DBPROJ_VF.PROJDataSetTableAdapters.Gym_MemberTableAdapter();
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.gymMemberBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gym_MemberTableAdapter1 = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.Gym_MemberTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputMonday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputMonday)).BeginInit();
@@ -90,8 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputFriday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputFriday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputFriday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +133,7 @@
             this.MemberSelectDropDown.BorderColor = System.Drawing.Color.Silver;
             this.MemberSelectDropDown.BorderRadius = 1;
             this.MemberSelectDropDown.Color = System.Drawing.Color.Silver;
-            this.MemberSelectDropDown.DataSource = this.gymMemberBindingSource;
+            this.MemberSelectDropDown.DataSource = this.gymMemberBindingSource1;
             this.MemberSelectDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.MemberSelectDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.MemberSelectDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -489,11 +489,11 @@
             this.WorkoutPlanSubmitButton.ColorContrastOnClick = 45;
             this.WorkoutPlanSubmitButton.ColorContrastOnHover = 45;
             this.WorkoutPlanSubmitButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.WorkoutPlanSubmitButton.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.WorkoutPlanSubmitButton.CustomizableEdges = borderEdges2;
             this.WorkoutPlanSubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.WorkoutPlanSubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.WorkoutPlanSubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -560,19 +560,19 @@
             this.WorkoutPlanSubmitButton.UseDefaultRadiusAndThickness = true;
             this.WorkoutPlanSubmitButton.Click += new System.EventHandler(this.WorkoutPlanSubmitButton_Click);
             // 
-            // pROJDataSet
+            // projectfinalDataSet
             // 
-            this.pROJDataSet.DataSetName = "PROJDataSet";
-            this.pROJDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gymMemberBindingSource
+            // gymMemberBindingSource1
             // 
-            this.gymMemberBindingSource.DataMember = "Gym_Member";
-            this.gymMemberBindingSource.DataSource = this.pROJDataSet;
+            this.gymMemberBindingSource1.DataMember = "Gym_Member";
+            this.gymMemberBindingSource1.DataSource = this.projectfinalDataSet;
             // 
-            // gym_MemberTableAdapter
+            // gym_MemberTableAdapter1
             // 
-            this.gym_MemberTableAdapter.ClearBeforeFill = true;
+            this.gym_MemberTableAdapter1.ClearBeforeFill = true;
             // 
             // WorkoutPlan
             // 
@@ -640,8 +640,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SetsInputFriday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepsInputFriday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RestIntervalInputFriday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pROJDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,8 +690,8 @@
         private System.Windows.Forms.NumericUpDown RepsInputFriday;
         private System.Windows.Forms.NumericUpDown RestIntervalInputFriday;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton WorkoutPlanSubmitButton;
-        private PROJDataSet pROJDataSet;
-        private System.Windows.Forms.BindingSource gymMemberBindingSource;
-        private PROJDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter;
+        private ProjectfinalDataSet projectfinalDataSet;
+        private System.Windows.Forms.BindingSource gymMemberBindingSource1;
+        private ProjectfinalDataSetTableAdapters.Gym_MemberTableAdapter gym_MemberTableAdapter1;
     }
 }

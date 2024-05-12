@@ -23,7 +23,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -45,7 +45,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Gym Member query
@@ -56,7 +56,7 @@ namespace DBPROJ_VF
             }
             connection.Close();
             WorkSelectDropDown.DataSource = gymMemberDataTable;
-            gridRefresh();
+            //gridRefresh();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,7 +71,9 @@ namespace DBPROJ_VF
 
         private void MemberChooseWorkout_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pROJDataSet.Workout_Plan' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Workout_Plan' table. You can move, or remove it, as needed.
+            this.workout_PlanTableAdapter.Fill(this.projectfinalDataSet.Workout_Plan);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Workout_Plan' table. You can move, or remove it, as needed.
 
         }
 
@@ -82,7 +84,7 @@ namespace DBPROJ_VF
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection con = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             con.Open();
             //update the diet plan of the user
             string planID = "";
@@ -103,6 +105,11 @@ namespace DBPROJ_VF
             cmdE.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Diet Plan Updated");
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

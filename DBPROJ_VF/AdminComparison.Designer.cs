@@ -199,6 +199,7 @@
             this.MachineSubmit.TextMarginLeft = 0;
             this.MachineSubmit.TextPadding = new System.Windows.Forms.Padding(0);
             this.MachineSubmit.UseDefaultRadiusAndThickness = true;
+            this.MachineSubmit.Click += new System.EventHandler(this.MachineSubmit_Click);
             // 
             // AdminComparison
             // 

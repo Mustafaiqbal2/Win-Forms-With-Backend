@@ -22,6 +22,10 @@ namespace DBPROJ_VF
 
         private void deleteAccounts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Trainer' table. You can move, or remove it, as needed.
+            this.trainerTableAdapter.Fill(this.projectfinalDataSet.Trainer);
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym_Member' table. You can move, or remove it, as needed.
+            this.gym_MemberTableAdapter1.Fill(this.projectfinalDataSet.Gym_Member);
             string trainerQuery = "SELECT * FROM Trainer " +
                                  "JOIN Gym g ON g.id = gym_ID " +
                                  "WHERE g.ownerUName = @UserID";
@@ -34,7 +38,7 @@ namespace DBPROJ_VF
             DataTable gymMemberDataTable = new DataTable();
 
             // Open the connection
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
 
             // Execute the Trainer query
@@ -64,7 +68,7 @@ namespace DBPROJ_VF
         {
             try
             {
-                this.gym_MemberTableAdapter.FillBy(this.pROJDataSet.Gym_Member);
+                    this.gym_MemberTableAdapter1.Fill(this.projectfinalDataSet.Gym_Member);
             }
             catch (System.Exception ex)
             {
@@ -88,7 +92,7 @@ namespace DBPROJ_VF
         {
             string query1 = "DELETE FROM Gym_Member WHERE UName = @id";
             string query2 = "DELETE FROM Trainer WHERE UName = @id";
-            SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True");
             connection.Open();
             foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
             {
@@ -125,6 +129,11 @@ namespace DBPROJ_VF
                 }
             }
             connection.Close();
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

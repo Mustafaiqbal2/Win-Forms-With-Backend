@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.advancedDataGridView = new ADGV.AdvancedDataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
             this.gymMemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectfinalDataSet = new DBPROJ_VF.ProjectfinalDataSet();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.gym_MemberTableAdapter = new DBPROJ_VF.ProjectfinalDataSetTableAdapters.Gym_MemberTableAdapter();
             this.uNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pWordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wieghtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,8 +50,8 @@
             this.workPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dietPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // advancedDataGridView
@@ -65,9 +65,9 @@
             this.pWordDataGridViewTextBoxColumn,
             this.fNameDataGridViewTextBoxColumn,
             this.lNameDataGridViewTextBoxColumn,
-            this.dOBDataGridViewTextBoxColumn,
             this.wieghtDataGridViewTextBoxColumn,
             this.regdateDataGridViewTextBoxColumn,
+            this.dOBDataGridViewTextBoxColumn,
             this.goalDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
             this.subscriptionDataGridViewTextBoxColumn,
@@ -78,16 +78,26 @@
             this.dietPlanDataGridViewTextBoxColumn});
             this.advancedDataGridView.DataSource = this.gymMemberBindingSource;
             this.advancedDataGridView.DateWithTime = false;
-            this.advancedDataGridView.Location = new System.Drawing.Point(2, 26);
+            this.advancedDataGridView.Location = new System.Drawing.Point(2, 61);
             this.advancedDataGridView.Name = "advancedDataGridView";
             this.advancedDataGridView.RowHeadersWidth = 51;
             this.advancedDataGridView.RowTemplate.Height = 24;
-            this.advancedDataGridView.Size = new System.Drawing.Size(1398, 335);
+            this.advancedDataGridView.Size = new System.Drawing.Size(1398, 300);
             this.advancedDataGridView.TabIndex = 0;
             this.advancedDataGridView.TimeFilter = false;
             this.advancedDataGridView.SortStringChanged += new System.EventHandler(this.advancedDataGridView_SortStringChanged);
             this.advancedDataGridView.FilterStringChanged += new System.EventHandler(this.advancedDataGridView_FilterStringChanged);
             this.advancedDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.advancedDataGridView_CellContentClick);
+            // 
+            // gymMemberBindingSource
+            // 
+            this.gymMemberBindingSource.DataMember = "Gym_Member";
+            this.gymMemberBindingSource.DataSource = this.projectfinalDataSet;
+            // 
+            // projectfinalDataSet
+            // 
+            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
+            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblTotal
             // 
@@ -98,16 +108,6 @@
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "Total rows ; 0 ";
             this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
-            // 
-            // projectfinalDataSet
-            // 
-            this.projectfinalDataSet.DataSetName = "ProjectfinalDataSet";
-            this.projectfinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gymMemberBindingSource
-            // 
-            this.gymMemberBindingSource.DataMember = "Gym_Member";
-            this.gymMemberBindingSource.DataSource = this.projectfinalDataSet;
             // 
             // gym_MemberTableAdapter
             // 
@@ -149,15 +149,6 @@
             this.lNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.lNameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            this.dOBDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.dOBDataGridViewTextBoxColumn.Width = 125;
-            // 
             // wieghtDataGridViewTextBoxColumn
             // 
             this.wieghtDataGridViewTextBoxColumn.DataPropertyName = "wieght";
@@ -175,6 +166,15 @@
             this.regdateDataGridViewTextBoxColumn.Name = "regdateDataGridViewTextBoxColumn";
             this.regdateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.regdateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            this.dOBDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dOBDataGridViewTextBoxColumn.Width = 125;
             // 
             // goalDataGridViewTextBoxColumn
             // 
@@ -259,8 +259,8 @@
             this.Text = "Advanced data grid";
             this.Load += new System.EventHandler(this.ReportTesting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymMemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectfinalDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,9 +276,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pWordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wieghtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn regdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDataGridViewTextBoxColumn;

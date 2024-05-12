@@ -37,30 +37,31 @@ namespace DBPROJ_VF
         {
             string query = @"
                 SELECT 
-                    t.UName AS 'Trainer Username',
-                    t.fName AS 'First Name',
-                    t.lName AS 'Last Name',
-                    t.gender AS 'Gender',
-                    t.DOB AS 'Date of Birth',
-                    t.exp_lvl AS 'Experience Level',
-                    t.rating AS 'Rating',
-                    COUNT(ts.MemberUName) AS 'Number of Clients',
-                    t.startDate AS 'Start Date'
-                FROM 
-                    Trainer t
-                LEFT JOIN 
-                    Training_Session ts ON t.UName = ts.TrainerUName
-                GROUP BY 
-                    t.UName, t.fName, t.lName, t.gender, t.DOB, t.exp_lvl, t.rating, t.startDate;";
+    t.UName AS 'Trainer Username',
+    t.fName AS 'First Name',
+    t.lName AS 'Last Name',
+    t.DOB AS 'Date of Birth',
+    t.exp_lvl AS 'Experience Level',
+    t.rating AS 'Rating',
+    t.startDate AS 'Start Date',
+    g.location AS 'Gym Location'
+FROM 
+    Trainer t
+LEFT JOIN 
+    Gym g ON t.gym_ID = g.id
+WHERE 
+    g.ownerUName = @UserID; -- Replace 'current_gym_owner_username' with the actual username of the current gym owner;";
 
             try
             {
 
 
 
-                using (SqlConnection connection = new SqlConnection("Data Source=172.23.129.23;Initial Catalog=PROJ;User ID=Boys;Password=12345678;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source = DESKTOP-E15Q53Q\\SQLEXPRESS; Initial Catalog = Projectfinal; Integrated Security = True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True"))
                 {
                     SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable table = new DataTable();
 

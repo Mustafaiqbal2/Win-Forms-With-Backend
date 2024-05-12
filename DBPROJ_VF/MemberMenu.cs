@@ -69,8 +69,16 @@ namespace DBPROJ_VF
         private void AdditionalReports_Click(object sender, EventArgs e)
         {
             this.Hide(); 
-            MemberAdditionalReports reports = new MemberAdditionalReports();
+            MemberAdditionalReports reports = new MemberAdditionalReports(userID);
             reports.Show();
+        }
+
+        private void Report_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MemberMachineReport report = new MemberMachineReport(userID);
+            report.Show();
+
         }
     }
 }

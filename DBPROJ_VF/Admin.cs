@@ -40,6 +40,7 @@ namespace DBPROJ_VF
 
         private void AdditionalReports_Click(object sender, EventArgs e)
         {
+            //one report left comparisons of total members of gyms in past 6 months
             ReportTesting rep = new ReportTesting();
             rep.Show();
             this.Hide();

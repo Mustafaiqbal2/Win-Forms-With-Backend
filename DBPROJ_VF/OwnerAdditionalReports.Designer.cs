@@ -141,6 +141,7 @@
             this.MachineSubmit.TextMarginLeft = 0;
             this.MachineSubmit.TextPadding = new System.Windows.Forms.Padding(0);
             this.MachineSubmit.UseDefaultRadiusAndThickness = true;
+            this.MachineSubmit.Click += new System.EventHandler(this.MachineSubmit_Click);
             // 
             // label1
             // 
@@ -450,6 +451,7 @@
             this.newmemReport.TextMarginLeft = 0;
             this.newmemReport.TextPadding = new System.Windows.Forms.Padding(0);
             this.newmemReport.UseDefaultRadiusAndThickness = true;
+            this.newmemReport.Click += new System.EventHandler(this.newmemReport_Click);
             // 
             // label2
             // 

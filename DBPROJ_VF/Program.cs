@@ -16,7 +16,7 @@ namespace DBPROJ_VF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportTesting() );
+            Application.Run(new Admin("admin") );
         }
     }
 }

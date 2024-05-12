@@ -198,6 +198,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MemberAdditionalReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberAdditionalReports.Designer.cs">
+      <DependentUpon>MemberAdditionalReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberChooseWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,12 @@
     </Compile>
     <Compile Include="MemberWorkoutPlan.Designer.cs">
       <DependentUpon>MemberWorkoutPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerAdditionalReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerAdditionalReports.Designer.cs">
+      <DependentUpon>OwnerAdditionalReports.cs</DependentUpon>
     </Compile>
     <Compile Include="OwnerMemberReport.cs">
       <SubType>Form</SubType>
@@ -353,6 +365,9 @@
     <EmbeddedResource Include="gym_manage.resx">
       <DependentUpon>gym_manage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemberAdditionalReports.resx">
+      <DependentUpon>MemberAdditionalReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemberChooseWorkout.resx">
       <DependentUpon>MemberChooseWorkout.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +392,9 @@
     <EmbeddedResource Include="Owner.resx">
       <DependentUpon>Owner.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerAdditionalReports.resx">
+      <DependentUpon>OwnerAdditionalReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OwnerMemberReport.resx">
       <DependentUpon>OwnerMemberReport.cs</DependentUpon>

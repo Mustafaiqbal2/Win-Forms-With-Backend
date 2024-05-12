@@ -37,5 +37,12 @@ namespace DBPROJ_VF
             base.OnFormClosing(e);
             Application.Exit();
         }
+
+        private void AdditionalReports_Click(object sender, EventArgs e)
+        {
+            ReportTesting rep = new ReportTesting();
+            rep.Show();
+            this.Hide();
+        }
     }
 }

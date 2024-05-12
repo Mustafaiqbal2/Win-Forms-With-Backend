@@ -16,7 +16,11 @@ namespace DBPROJ_VF
         {
             InitializeComponent();
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.OpenForms["Admin"].Show();
+        }
         private void ReportTesting_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectfinalDataSet.Gym_Member' table. You can move, or remove it, as needed.

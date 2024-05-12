@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.gym_man = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.gym_req = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdditionalReports = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
             // gym_man
@@ -226,6 +228,96 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Admin Homepage";
             // 
+            // AdditionalReports
+            // 
+            this.AdditionalReports.AllowAnimations = true;
+            this.AdditionalReports.AllowMouseEffects = true;
+            this.AdditionalReports.AllowToggling = false;
+            this.AdditionalReports.AnimationSpeed = 200;
+            this.AdditionalReports.AutoGenerateColors = false;
+            this.AdditionalReports.AutoRoundBorders = false;
+            this.AdditionalReports.AutoSizeLeftIcon = true;
+            this.AdditionalReports.AutoSizeRightIcon = true;
+            this.AdditionalReports.BackColor = System.Drawing.Color.Transparent;
+            this.AdditionalReports.BackColor1 = System.Drawing.Color.LightCyan;
+            this.AdditionalReports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdditionalReports.BackgroundImage")));
+            this.AdditionalReports.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AdditionalReports.ButtonText = "Additional Reports";
+            this.AdditionalReports.ButtonTextMarginLeft = 0;
+            this.AdditionalReports.ColorContrastOnClick = 45;
+            this.AdditionalReports.ColorContrastOnHover = 45;
+            this.AdditionalReports.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.AdditionalReports.CustomizableEdges = borderEdges3;
+            this.AdditionalReports.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AdditionalReports.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AdditionalReports.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.AdditionalReports.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.AdditionalReports.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.AdditionalReports.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.AdditionalReports.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AdditionalReports.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdditionalReports.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.AdditionalReports.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.AdditionalReports.IconMarginLeft = 11;
+            this.AdditionalReports.IconPadding = 10;
+            this.AdditionalReports.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AdditionalReports.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.AdditionalReports.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.AdditionalReports.IconSize = 25;
+            this.AdditionalReports.IdleBorderColor = System.Drawing.Color.DimGray;
+            this.AdditionalReports.IdleBorderRadius = 100;
+            this.AdditionalReports.IdleBorderThickness = 3;
+            this.AdditionalReports.IdleFillColor = System.Drawing.Color.LightCyan;
+            this.AdditionalReports.IdleIconLeftImage = null;
+            this.AdditionalReports.IdleIconRightImage = null;
+            this.AdditionalReports.IndicateFocus = false;
+            this.AdditionalReports.Location = new System.Drawing.Point(241, 396);
+            this.AdditionalReports.Name = "AdditionalReports";
+            this.AdditionalReports.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AdditionalReports.OnDisabledState.BorderRadius = 100;
+            this.AdditionalReports.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AdditionalReports.OnDisabledState.BorderThickness = 3;
+            this.AdditionalReports.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.AdditionalReports.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.AdditionalReports.OnDisabledState.IconLeftImage = null;
+            this.AdditionalReports.OnDisabledState.IconRightImage = null;
+            this.AdditionalReports.onHoverState.BorderColor = System.Drawing.Color.DarkCyan;
+            this.AdditionalReports.onHoverState.BorderRadius = 100;
+            this.AdditionalReports.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AdditionalReports.onHoverState.BorderThickness = 3;
+            this.AdditionalReports.onHoverState.FillColor = System.Drawing.Color.CadetBlue;
+            this.AdditionalReports.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.AdditionalReports.onHoverState.IconLeftImage = null;
+            this.AdditionalReports.onHoverState.IconRightImage = null;
+            this.AdditionalReports.OnIdleState.BorderColor = System.Drawing.Color.DimGray;
+            this.AdditionalReports.OnIdleState.BorderRadius = 100;
+            this.AdditionalReports.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AdditionalReports.OnIdleState.BorderThickness = 3;
+            this.AdditionalReports.OnIdleState.FillColor = System.Drawing.Color.LightCyan;
+            this.AdditionalReports.OnIdleState.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AdditionalReports.OnIdleState.IconLeftImage = null;
+            this.AdditionalReports.OnIdleState.IconRightImage = null;
+            this.AdditionalReports.OnPressedState.BorderColor = System.Drawing.Color.DarkCyan;
+            this.AdditionalReports.OnPressedState.BorderRadius = 100;
+            this.AdditionalReports.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.AdditionalReports.OnPressedState.BorderThickness = 3;
+            this.AdditionalReports.OnPressedState.FillColor = System.Drawing.Color.LightCyan;
+            this.AdditionalReports.OnPressedState.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AdditionalReports.OnPressedState.IconLeftImage = null;
+            this.AdditionalReports.OnPressedState.IconRightImage = null;
+            this.AdditionalReports.Size = new System.Drawing.Size(339, 48);
+            this.AdditionalReports.TabIndex = 7;
+            this.AdditionalReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AdditionalReports.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AdditionalReports.TextMarginLeft = 0;
+            this.AdditionalReports.TextPadding = new System.Windows.Forms.Padding(0);
+            this.AdditionalReports.UseDefaultRadiusAndThickness = true;
+            this.AdditionalReports.Click += new System.EventHandler(this.AdditionalReports_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,6 +325,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(812, 551);
+            this.Controls.Add(this.AdditionalReports);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gym_req);
             this.Controls.Add(this.gym_man);
@@ -249,5 +342,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton gym_man;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton gym_req;
         private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton AdditionalReports;
     }
 }

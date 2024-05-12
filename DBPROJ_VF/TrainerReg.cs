@@ -20,6 +20,7 @@ namespace DBPROJ_VF
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            string gym_id = GymSelect.Text;
             dob.CustomFormat = "yyyy-MM-dd";
             start.CustomFormat = "yyyy-MM-dd";
             start.Format = DateTimePickerFormat.Custom;
@@ -33,9 +34,10 @@ namespace DBPROJ_VF
             string exp1 = exp.Text;
             string gend = gender.Text;
             MessageBox.Show(dob1);
-            if (fna == "" || lna == "" || em == "" || pass == "" || exp1 == "" || gend == "")
+            if (fna == "" || lna == "" || em == "" || pass == "" || exp1 == "" || gend == "" || gym_id == "")
             {
                 MessageBox.Show("Please fill all the fields");
+                MessageBox.Show(gym_id);
             }
             else
             {
@@ -52,7 +54,7 @@ namespace DBPROJ_VF
                     dr.Close();
                     return;
                 }
-                string query = "INSERT INTO Trainer(UName,pWord,fName,lName,gender,DOB,exp_lvl,startDate)" +
+                string query = "INSERT INTO Trainer(UName,pWord,fName,lName,gender,DOB,exp_lvl,startDate ,gym_ID)" +
                     " values(" +
                     "'" + em + "'," +
                     "'" + pass + "'," +
@@ -61,7 +63,8 @@ namespace DBPROJ_VF
                     "'" + gend + "'," +
                     "'" + dob1 + "'," +
                     "" + exp1 + "," +
-                    "'" + start1 + "'" +
+                    "'" + start1 + "'," +
+                    ""  + gym_id + "" + 
                     ")";
                 MessageBox.Show(query);
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -77,6 +80,13 @@ namespace DBPROJ_VF
         {
             base.OnFormClosing(e);
             Application.OpenForms["Login"].Show();
+        }
+
+        private void TrainerReg_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projectfinalDataSet.Gym' table. You can move, or remove it, as needed.
+            this.gymTableAdapter.Fill(this.projectfinalDataSet.Gym);
+
         }
     }
 }

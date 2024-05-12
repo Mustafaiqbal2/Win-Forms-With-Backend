@@ -127,22 +127,6 @@
         QmCC
 </value>
   </data>
-  <data name="MachineText.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAF0AAAAZCAYAAABTuCK5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABySURBVGhD7dCxDcAwDMRA7T+VDI2RMTJADAFqMoDNhgS+
-        +fLCoKrqyczPnV07D3lEH3a+dh5y0W8lOpDoQKIDiQ4kOpDoQKIDiQ4kOpDoQKIDiQ4kOpDoQKIDiQ4k
-        OpDoQKID/dDXWm8f7uzaecjtbhEbRTbvdk/++NgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="DayText.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGUAAAAZCAYAAAAonOB1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABzSURBVGhD7dExDcBADARB80fll2EERgDkZclNEHiLXema
-        aycMWlU9mfm53bXDkET0Yfu1w5CIQkkUYKIAEwWYKMBEASYKMFGAiQJMFGCiABMFmCjARAEmCjBRgIkC
-        TBRgogATBdgP5Zzz9uF21w5DYqwiLs4lwPPCIIGqAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="newmemReport.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMUAAAAlCAYAAADyfC1yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

@@ -684,6 +684,7 @@
             this.AdditionalReports.TextMarginLeft = 0;
             this.AdditionalReports.TextPadding = new System.Windows.Forms.Padding(0);
             this.AdditionalReports.UseDefaultRadiusAndThickness = true;
+            this.AdditionalReports.Click += new System.EventHandler(this.AdditionalReports_Click);
             // 
             // MemberMenu
             // 

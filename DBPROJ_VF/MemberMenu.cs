@@ -65,5 +65,12 @@ namespace DBPROJ_VF
         {
             Application.Exit();
         }
+
+        private void AdditionalReports_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            MemberAdditionalReports reports = new MemberAdditionalReports();
+            reports.Show();
+        }
     }
 }

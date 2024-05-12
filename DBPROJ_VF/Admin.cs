@@ -45,5 +45,17 @@ namespace DBPROJ_VF
             rep.Show();
             this.Hide();
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comparison_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            AdminComparison comp = new AdminComparison();
+            comp.Show();
+        }
     }
 }

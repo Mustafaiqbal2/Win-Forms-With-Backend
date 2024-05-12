@@ -16,5 +16,10 @@ namespace DBPROJ_VF
         {
             InitializeComponent();
         }
+
+        private void MachineSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
